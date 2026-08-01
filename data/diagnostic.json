@@ -1,12 +1,17 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-08-01T20:02:51Z",
+  "started": "2026-08-01T21:33:14Z",
   "steps": [
+    {
+      "step": "gdown failed — falling back to direct download",
+      "ok": false,
+      "detail": "download() got an unexpected keyword argument 'fuzzy'"
+    },
     {
       "step": "Oracle's Elixir unavailable — continuing with Riot only",
       "ok": false,
-      "detail": "Drive returned HTML instead of CSV (rate limited or moved)"
+      "detail": "Drive still returned HTML — file may be rate limited or moved"
     },
     {
       "step": "Riot live rows: 5540",
@@ -27,9 +32,10 @@
   "outcome": "ok",
   "requests": 1720,
   "since": "2026-05-03",
+  "oe_file_id": "1hnpbrUpBMS1TZI7IovfpKeZfWJH1Aptm",
   "oe_rows": 0,
   "oe_newest": "",
-  "riot_events": 2661,
+  "riot_events": 2662,
   "riot_games_found": 555,
   "riot_games_ok": 554,
   "riot_games_failed": 1,
@@ -104,5 +110,5 @@
       ]
     ]
   },
-  "finished": "2026-08-01T20:15:06Z"
+  "finished": "2026-08-01T21:46:41Z"
 }
