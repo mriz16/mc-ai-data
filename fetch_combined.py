@@ -28,6 +28,7 @@ import traceback
 import urllib.error
 import urllib.parse
 import urllib.request
+from http.cookiejar import CookieJar
 from datetime import datetime, timedelta, timezone
 
 # ── Oracle's Elixir (history) ──
@@ -113,32 +114,67 @@ def oe_file_id():
 
 
 def oe_download(fid):
-    """Drive serves large files behind a confirmation form, not a simple redirect.
+    """Fetch a large public Drive file.
 
-    Run #16 failed here: the plain uc?export=download call returned the interstitial
-    HTML and the naive confirm= parser could not satisfy it. gdown implements Drive's
-    current form flow properly; the direct usercontent endpoint is kept as a fallback
-    so a missing dependency cannot take the whole pipeline down.
+    Two failure modes seen on the runner, both handled here:
+      * gdown's signature varies by version — run #17 died on an unexpected
+        `fuzzy` argument, so each call form is tried in turn.
+      * Drive gates large files behind a CONFIRMATION FORM, not a redirect. The
+        naive `confirm=` guess returned the interstitial HTML again. The manual
+        path now parses the form's action plus every hidden input and submits it
+        with the session cookies, which is what the browser actually does.
     """
+    out = "oe_raw.csv"
+
     try:
         import gdown                                            # noqa: PLC0415
-        out = "oe_raw.csv"
-        gdown.download(id=fid, output=out, quiet=True, fuzzy=True)
-        if os.path.exists(out) and os.path.getsize(out) > 1_000_000:
-            with open(out, "rb") as f:
-                return f.read()
-        raise RuntimeError("gdown produced no usable file")
+        forms = [
+            lambda: gdown.download(id=fid, output=out, quiet=True),
+            lambda: gdown.download("https://drive.google.com/uc?id=" + fid, out, quiet=True),
+            lambda: gdown.download("https://drive.google.com/uc?id=" + fid, output=out, quiet=True),
+        ]
+        for f in forms:
+            try:
+                if os.path.exists(out):
+                    os.remove(out)
+                f()
+            except TypeError:
+                continue                                        # wrong signature for this version
+            except Exception:                                   # noqa: BLE001
+                continue
+            if os.path.exists(out) and os.path.getsize(out) > 1_000_000:
+                with open(out, "rb") as fh:
+                    return fh.read()
+        note("gdown produced no usable file — using manual download", False)
     except ImportError:
-        note("gdown not installed — falling back to direct download", False)
-    except Exception as e:                                       # noqa: BLE001
-        note("gdown failed — falling back to direct download", False, e)
+        note("gdown not installed — using manual download", False)
 
-    url = ("https://drive.usercontent.google.com/download?id=" + fid
-           + "&export=download&confirm=t")
-    raw = oe_get(url)
-    if b"<html" in raw[:400].lower():
-        raise RuntimeError("Drive still returned HTML — file may be rate limited or moved")
-    return raw
+    # Manual: carry cookies and complete Drive's confirmation form.
+    jar = CookieJar()
+    opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(jar))
+    opener.addheaders = [("User-Agent", "Mozilla/5.0 (compatible; MC-AI/8.0)")]
+
+    def fetch(u):
+        with opener.open(u, timeout=300) as r:
+            return r.read()
+
+    data = fetch("https://drive.google.com/uc?export=download&id=" + fid)
+    if b"<html" in data[:600].lower():
+        html = data.decode("utf-8", "replace")
+        m = re.search(r'action="([^"]+)"', html)
+        action = (m.group(1).replace("&amp;", "&") if m
+                  else "https://drive.usercontent.google.com/download")
+        fields = dict(re.findall(r'name="([^"]+)"\s+value="([^"]*)"', html))
+        fields.setdefault("id", fid)
+        fields.setdefault("export", "download")
+        fields.setdefault("confirm", "t")
+        url = action + ("&" if "?" in action else "?") + urllib.parse.urlencode(fields)
+        DIAG["oe_confirm_url"] = url[:160]
+        data = fetch(url)
+
+    if b"<html" in data[:600].lower() or len(data) < 1_000_000:
+        raise RuntimeError("Drive returned %d bytes of HTML, not the CSV" % len(data))
+    return data
 
 
 def oe_rows(since):
