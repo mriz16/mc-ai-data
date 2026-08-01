@@ -1,0 +1,57 @@
+# .github/workflows/update-data.yml
+name: Update LoL data
+
+on:
+  schedule:
+    # Every 6 hours. GitHub cron is UTC. Adjust freely — more often is fine,
+    # the Leaguepedia query is small and the runner minutes are free on public repos.
+    - cron: "0 */6 * * *"
+  workflow_dispatch:        # lets you trigger it by hand from the Actions tab
+
+permissions:
+  contents: write           # required so the job can commit the refreshed feed
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Fetch Leaguepedia data
+        env:
+          DAYS: "120"       # rolling window kept in the feed
+        run: python fetch_data.py
+
+      - name: Commit if changed
+        id: commit
+        run: |
+          git config user.name  "mc-ai-bot"
+          git config user.email "actions@github.com"
+          git add data/latest.json
+          if git diff --staged --quiet; then
+            echo "no changes"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "data: refresh $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      # jsDelivr caches branch URLs for ~12h. Purging makes the new file live
+      # immediately, so the app sees fresh data on the next pull.
+      - name: Purge jsDelivr cache
+        if: steps.commit.outputs.changed == 'true'
+        run: |
+          curl -sS "https://purge.jsdelivr.net/gh/${GITHUB_REPOSITORY}@main/data/latest.json" || true
+          echo
+          echo "Feed URL: https://cdn.jsdelivr.net/gh/${GITHUB_REPOSITORY}@main/data/latest.json"
