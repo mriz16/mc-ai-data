@@ -7,6 +7,13 @@ on:
     # the Leaguepedia query is small and the runner minutes are free on public repos.
     - cron: "0 */6 * * *"
   workflow_dispatch:        # lets you trigger it by hand from the Actions tab
+    inputs:
+      days:
+        description: "How many days of history to pull (45 is fast, 120 is full)"
+        required: false
+        default: "120"
+        type: choice
+        options: ["30", "45", "60", "90", "120"]
 
 permissions:
   contents: write           # required so the job can commit the refreshed feed
@@ -29,7 +36,10 @@ jobs:
 
       - name: Fetch Leaguepedia data
         env:
-          DAYS: "120"       # rolling window kept in the feed
+          # Manual runs use the dropdown; scheduled runs use the full window.
+          DAYS: ${{ github.event.inputs.days || '120' }}
+          LP_USERNAME: ${{ secrets.LP_USERNAME }}
+          LP_PASSWORD: ${{ secrets.LP_PASSWORD }}
         run: python fetch_data.py
 
       - name: Commit if changed
