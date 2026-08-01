@@ -44,6 +44,29 @@ ROLE_MAP = {"top": "top", "jungle": "jng", "jng": "jng", "mid": "mid",
             "middle": "mid", "bottom": "bot", "bot": "bot", "adc": "bot",
             "support": "sup", "sup": "sup"}
 
+# Riot spells leagues out in full; the model (and every validated table in it —
+# LEAGUE_TK, event ratios, the source-exclusion chips) keys on Oracle's Elixir short
+# codes. Normalise here so the feed is canonical and nothing downstream changes.
+LEAGUE_MAP = {
+    "Esports World Cup": "EWC", "Prime League": "PRM", "Arabian League": "AL",
+    "La Ligue Française": "LFL", "La Ligue Francaise": "LFL",
+    "Circuito Desafiante": "CD", "Hellenic Legends League": "HLL",
+    "LoL Italian Tournament": "LIT", "LCK Challengers": "LCKC",
+    "LCK Challengers League": "LCKC", "Liga Portuguesa": "LPLOL",
+    "Road of Legends": "ROL", "Esports Balkan League": "EBL",
+    "North American Challengers League": "NACL",
+    "Worlds": "WLDs", "World Championship": "WLDs",
+    "First Stand": "FST", "KeSPA Cup": "KeSPA Cup",
+    "Liga Latinoamérica": "LLA", "Liga Latinoamerica": "LLA",
+    "Tencent LoL Pro League": "LPL", "LoL Champions Korea": "LCK",
+    "LoL EMEA Championship": "LEC", "League Championship Series": "LCS",
+    "League of Legends Championship Pacific": "LCP",
+    "Ultraliga": "UL", "Nordic Legends League": "NLC",
+    "Liga Nexo": "LRN", "Liga Regional Norte": "LRN",
+    "Liga Regional Sur": "LRS", "Elite Series": "LES",
+    "CBLOL Academy": "CBLOLA",
+}
+
 OUT_FIELDS = ["player", "team", "champion", "kills", "deaths", "assists", "cs",
               "position", "teamkills", "result", "gameid", "league", "date",
               "patch", "gamelength"]
@@ -148,7 +171,10 @@ def build_rows(since):
         if date < since:
             continue
         lg = e.get("league") or {}
-        league = lg.get("name") or lg.get("slug") or ""
+        raw_league = lg.get("name") or lg.get("slug") or ""
+        league = LEAGUE_MAP.get(raw_league, raw_league)
+        if raw_league != league:
+            DIAG.setdefault("league_renames", {})[raw_league] = league
         match = e.get("match") or {}
         teams = match.get("teams") or []
         tnames = [t.get("name") or t.get("code") or "" for t in teams]
