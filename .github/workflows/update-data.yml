@@ -40,7 +40,7 @@ jobs:
           DAYS: ${{ github.event.inputs.days || '30' }}
           LP_USERNAME: ${{ secrets.LP_USERNAME }}
           LP_PASSWORD: ${{ secrets.LP_PASSWORD }}
-        run: python fetch_riot.py
+        run: python fetch_combined.py
 
       - name: Commit if changed
         id: commit
