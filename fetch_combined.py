@@ -99,21 +99,52 @@ def oe_get(url, timeout=240):
         return r.read()
 
 
-def oe_rows(since):
+def oe_file_id():
+    """Locate this year's CSV inside the public Drive folder."""
+    override = os.environ.get("OE_FILE_ID", "").strip()
+    if override:
+        return override
     html = oe_get("https://drive.google.com/drive/folders/" + FOLDER_ID).decode("utf-8", "replace")
     pat = r'"([a-zA-Z0-9_-]{25,})"(?=[^}]{0,400}' + re.escape(OE_YEAR) + r'[^}]{0,200}\.csv)'
     m = re.search(pat, html) or re.search(r'"([a-zA-Z0-9_-]{25,})"(?=[^}]{0,400}\.csv)', html)
     if not m:
         raise RuntimeError("could not find this year's CSV in the Drive folder")
-    fid = m.group(1)
-    base = "https://drive.google.com/uc?export=download&id=" + fid
-    raw = oe_get(base)
-    head = raw[:600].decode("utf-8", "replace")
-    if "<html" in head.lower() and "confirm" in head.lower():
-        tok = re.search(r"confirm=([0-9A-Za-z_-]+)", head)
-        raw = oe_get(base + "&confirm=" + (tok.group(1) if tok else "t"))
-    if b"<html" in raw[:200].lower():
-        raise RuntimeError("Drive returned HTML instead of CSV (rate limited or moved)")
+    return m.group(1)
+
+
+def oe_download(fid):
+    """Drive serves large files behind a confirmation form, not a simple redirect.
+
+    Run #16 failed here: the plain uc?export=download call returned the interstitial
+    HTML and the naive confirm= parser could not satisfy it. gdown implements Drive's
+    current form flow properly; the direct usercontent endpoint is kept as a fallback
+    so a missing dependency cannot take the whole pipeline down.
+    """
+    try:
+        import gdown                                            # noqa: PLC0415
+        out = "oe_raw.csv"
+        gdown.download(id=fid, output=out, quiet=True, fuzzy=True)
+        if os.path.exists(out) and os.path.getsize(out) > 1_000_000:
+            with open(out, "rb") as f:
+                return f.read()
+        raise RuntimeError("gdown produced no usable file")
+    except ImportError:
+        note("gdown not installed — falling back to direct download", False)
+    except Exception as e:                                       # noqa: BLE001
+        note("gdown failed — falling back to direct download", False, e)
+
+    url = ("https://drive.usercontent.google.com/download?id=" + fid
+           + "&export=download&confirm=t")
+    raw = oe_get(url)
+    if b"<html" in raw[:400].lower():
+        raise RuntimeError("Drive still returned HTML — file may be rate limited or moved")
+    return raw
+
+
+def oe_rows(since):
+    fid = oe_file_id()
+    DIAG["oe_file_id"] = fid
+    raw = oe_download(fid)
     DIAG["oe_mb"] = round(len(raw) / 1e6, 2)
 
     rows = []
