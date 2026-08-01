@@ -1,0 +1,102 @@
+{
+  "started": "2026-08-01T14:25:06Z",
+  "api": "https://lol.fandom.com/api.php",
+  "steps": [
+    {
+      "step": "MediaWiki API reachable (HTTP 200)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "step": "Cargo failed for ScoreboardPlayers",
+      "ok": false,
+      "detail": "You've exceeded your rate limit. Please wait some time and try again."
+    },
+    {
+      "step": "Cargo failed for ScoreboardGames",
+      "ok": false,
+      "detail": "You've exceeded your rate limit. Please wait some time and try again."
+    },
+    {
+      "step": "ScoreboardPlayers: combined query rejected",
+      "ok": false,
+      "detail": "You've exceeded your rate limit. Please wait some time and try again."
+    },
+    {
+      "step": "ScoreboardPlayers: accepted=OverviewPage",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "step": "ScoreboardPlayers: rejected=Link,Team,Champion,Kills,Deaths,Assists,Role,GameId,DateTime_UTC,CS,TeamKills,PlayerWin",
+      "ok": false,
+      "detail": ""
+    },
+    {
+      "step": "ScoreboardGames: combined query rejected",
+      "ok": false,
+      "detail": "You've exceeded your rate limit. Please wait some time and try again."
+    },
+    {
+      "step": "ScoreboardGames: accepted=none",
+      "ok": false,
+      "detail": ""
+    },
+    {
+      "step": "ScoreboardGames: rejected=GameId,Patch,Gamelength_Number,DateTime_UTC",
+      "ok": false,
+      "detail": ""
+    },
+    {
+      "step": "cannot build feed, missing core columns: Link,Team,Champion,Kills,Deaths,Assists,Role,GameId,DateTime_UTC",
+      "ok": false,
+      "detail": ""
+    }
+  ],
+  "columns": {
+    "ScoreboardPlayers": {
+      "accepted": [
+        "OverviewPage"
+      ],
+      "rejected": {
+        "Link": "You've exceeded your rate limit. Please wait some time and try again.",
+        "Team": "You've exceeded your rate limit. Please wait some time and try again.",
+        "Champion": "You've exceeded your rate limit. Please wait some time and try again.",
+        "Kills": "You've exceeded your rate limit. Please wait some time and try again.",
+        "Deaths": "You've exceeded your rate limit. Please wait some time and try again.",
+        "Assists": "You've exceeded your rate limit. Please wait some time and try again.",
+        "Role": "You've exceeded your rate limit. Please wait some time and try again.",
+        "GameId": "You've exceeded your rate limit. Please wait some time and try again.",
+        "DateTime_UTC": "You've exceeded your rate limit. Please wait some time and try again.",
+        "CS": "You've exceeded your rate limit. Please wait some time and try again.",
+        "TeamKills": "You've exceeded your rate limit. Please wait some time and try again.",
+        "PlayerWin": "You've exceeded your rate limit. Please wait some time and try again."
+      }
+    },
+    "ScoreboardGames": {
+      "accepted": [],
+      "rejected": {
+        "GameId": "You've exceeded your rate limit. Please wait some time and try again.",
+        "Patch": "You've exceeded your rate limit. Please wait some time and try again.",
+        "Gamelength_Number": "You've exceeded your rate limit. Please wait some time and try again.",
+        "DateTime_UTC": "You've exceeded your rate limit. Please wait some time and try again."
+      }
+    }
+  },
+  "outcome": "missing_core_columns",
+  "since": "2026-04-03",
+  "siteinfo_status": 200,
+  "siteinfo_sample": "{\"batchcomplete\":\"\",\"query\":{\"general\":{\"mainpage\":\"League of Legends Esports Wiki\",\"base\":\"https://lol.fandom.com/wiki/League_of_Legends_Esports_Wiki\",\"sitename\":\"Leaguepedia | League of Legends Esports Wiki\",\"logo\":\"https://images.wikia.com/lolesports_gamepedia_en/images/b/bc/Wiki.png\",\"generator\"",
+  "missing_core": [
+    "Link",
+    "Team",
+    "Champion",
+    "Kills",
+    "Deaths",
+    "Assists",
+    "Role",
+    "GameId",
+    "DateTime_UTC"
+  ],
+  "finished": "2026-08-01T14:25:15Z"
+}
