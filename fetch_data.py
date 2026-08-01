@@ -1,20 +1,27 @@
 #!/usr/bin/env python3
 """
-MC AI — data pipeline (v3).
+MC AI — data pipeline (v4).
 
 Pulls LoL esports match data from Leaguepedia's Cargo API and writes a compact
-JSON feed that the app fetches through jsDelivr.
+JSON feed the app fetches through jsDelivr.
 
-v3 exists because runs #1 and #2 failed fast and the only way to see why was to
-read Action logs by hand. This version NEVER fails the job during diagnosis:
-it writes everything it learns to data/diagnostic.json and commits it, so the
-findings are readable straight from the repo.
+WHAT ACTUALLY BROKE RUNS #1-#3
+Not the schema. Every failure carried the same message:
+    "You've exceeded your rate limit. Please wait some time and try again."
+Leaguepedia throttles anonymous API traffic, and GitHub-hosted runners come from
+cloud IP ranges that get throttled hard. v3's column probe made it look like a
+schema fault because it fired 17 rapid requests and recorded each throttled reply
+as a rejected column.
 
-Ladder it walks, recording each result:
-  1. Is the MediaWiki API reachable at all?          (action=query&meta=siteinfo)
-  2. Does Cargo respond for this table?              (fields=_pageName)
-  3. Which columns does the wiki actually accept?    (each tested alone)
-  4. Fetch, merge and write the feed.
+v4 therefore treats throttling as the primary condition to engineer around:
+  * Rate-limit responses are RETRIED with exponential backoff (30s → 8min),
+    never mistaken for an error.
+  * A fixed pause between every request keeps us under the limiter.
+  * No column probing — that was self-inflicted request spam. One verification
+    query runs first, and only a genuine schema error is reported as such.
+  * maxlag is set so the wiki can ask us to slow down politely.
+  * Partial progress is kept: if throttling wins late in the run, whatever was
+    fetched is still written rather than thrown away.
 """
 
 import json
@@ -28,17 +35,18 @@ import urllib.request
 from datetime import datetime, timedelta, timezone
 
 API = "https://lol.fandom.com/api.php"
-UA = "MC-AI-pipeline/3.0 (personal analytics project)"
-LIMIT = 500
+# Fandom asks for a descriptive agent; anonymous generic agents are throttled harder.
+UA = "MC-AI-pipeline/4.0 (personal LoL esports analytics; github.com/mriz16/mc-ai-data)"
 
+LIMIT = int(os.environ.get("PAGE_LIMIT", "500"))
 DAYS = int(os.environ.get("DAYS", "120"))
 MAX_PAGES = int(os.environ.get("MAX_PAGES", "400"))
+PAUSE = float(os.environ.get("PAUSE", "2.5"))        # seconds between requests
+BACKOFF = [30, 60, 120, 240, 480]                    # rate-limit waits
 
-SP_CORE = ["Link", "Team", "Champion", "Kills", "Deaths", "Assists",
-           "Role", "GameId", "OverviewPage", "DateTime_UTC"]
-SP_OPTIONAL = ["CS", "TeamKills", "PlayerWin"]
-SG_CORE = ["GameId"]
-SG_OPTIONAL = ["Patch", "Gamelength_Number", "DateTime_UTC"]
+SP_FIELDS = ["Link", "Team", "Champion", "Kills", "Deaths", "Assists", "CS",
+             "Role", "TeamKills", "PlayerWin", "GameId", "OverviewPage", "DateTime_UTC"]
+SG_FIELDS = ["GameId", "Patch", "Gamelength_Number", "DateTime_UTC"]
 
 ROLE_MAP = {"top": "top", "toplane": "top", "jungle": "jng", "jng": "jng",
             "mid": "mid", "middle": "mid", "bot": "bot", "adc": "bot",
@@ -48,90 +56,86 @@ OUT_FIELDS = ["player", "team", "champion", "kills", "deaths", "assists", "cs",
               "position", "teamkills", "result", "gameid", "league", "date",
               "patch", "gamelength"]
 
-DIAG = {"started": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "api": API, "steps": [], "columns": {}, "outcome": "incomplete"}
+DIAG = {"version": 4, "started": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "steps": [], "outcome": "incomplete", "rate_limit_waits": 0, "requests": 0}
 
 
-def note(step, ok, detail=""):
-    DIAG["steps"].append({"step": step, "ok": bool(ok), "detail": str(detail)[:600]})
-    print(("  [ok]   " if ok else "  [FAIL] ") + step + ((" :: " + str(detail)[:220]) if detail else ""), flush=True)
+def note(msg, ok=True, detail=""):
+    DIAG["steps"].append({"step": msg, "ok": bool(ok), "detail": str(detail)[:500]})
+    print(("  [ok]   " if ok else "  [FAIL] ") + msg + ((" :: " + str(detail)[:200]) if detail else ""), flush=True)
 
 
-def raw_get(params, timeout=45):
+def is_rate_limited(text):
+    t = (text or "").lower()
+    return "rate limit" in t or "ratelimited" in t or "exceeded your" in t
+
+
+def api_get(params, tries=len(BACKOFF) + 1):
+    """GET with patient backoff. Rate limiting is a wait, never an error."""
+    params = dict(params)
+    params.setdefault("format", "json")
+    params.setdefault("maxlag", "5")
     url = API + "?" + urllib.parse.urlencode(params)
-    req = urllib.request.Request(url, headers={"User-Agent": UA})
-    try:
-        with urllib.request.urlopen(req, timeout=timeout) as r:
-            body = r.read().decode("utf-8", "replace")
-            return r.status, body, url
-    except urllib.error.HTTPError as e:
-        return e.code, e.read().decode("utf-8", "replace"), url
-    except Exception as e:                                    # noqa: BLE001
-        return 0, "EXCEPTION: %s" % e, url
+    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "application/json"})
 
-
-def cargo(table, fields, where="", offset=0, limit=LIMIT):
-    params = {"action": "cargoquery", "tables": table, "fields": ",".join(fields),
-              "limit": str(limit), "offset": str(offset), "format": "json"}
-    if where:
-        params["where"] = where
-    status, body, url = raw_get(params)
-    if status != 200:
-        raise RuntimeError("HTTP %s :: %s" % (status, body[:220]))
-    try:
-        data = json.loads(body)
-    except ValueError:
-        raise RuntimeError("non-JSON response :: %s" % body[:220])
-    if "error" in data:
-        err = data["error"]
-        raise RuntimeError(err.get("info") or err.get("code") or json.dumps(err)[:220])
-    return data.get("cargoquery", [])
-
-
-def probe_columns(table, core, optional):
-    candidate = list(core) + list(optional)
-    try:
-        cargo(table, candidate, limit=1)
-        note("%s: all %d columns accepted" % (table, len(candidate)), True)
-        DIAG["columns"][table] = {"accepted": candidate, "rejected": []}
-        return candidate
-    except RuntimeError as e:
-        note("%s: combined query rejected" % table, False, e)
-
-    good, bad = [], {}
-    for f in candidate:
+    for attempt in range(tries):
+        DIAG["requests"] += 1
+        body, status = None, 0
         try:
-            cargo(table, [f], limit=1)
-            good.append(f)
-        except RuntimeError as e:
-            bad[f] = str(e)[:200]
-        time.sleep(0.2)
-    DIAG["columns"][table] = {"accepted": good, "rejected": bad}
-    note("%s: accepted=%s" % (table, ",".join(good) or "none"), bool(good))
-    note("%s: rejected=%s" % (table, ",".join(bad) or "none"), not bad)
-    return good
+            with urllib.request.urlopen(req, timeout=90) as r:
+                status, body = r.status, r.read().decode("utf-8", "replace")
+        except urllib.error.HTTPError as e:
+            status, body = e.code, e.read().decode("utf-8", "replace")
+        except Exception as e:                                   # noqa: BLE001
+            body = "EXCEPTION: %s" % e
 
-
-def page_all(table, fields, where, label):
-    rows, offset = [], 0
-    for _ in range(MAX_PAGES):
-        for attempt in range(4):
+        throttled = status in (429, 503) or is_rate_limited(body)
+        if not throttled and status == 200 and body:
             try:
-                batch = cargo(table, fields, where, offset=offset)
-                break
-            except RuntimeError as e:
-                wait = 6 * (attempt + 1)
-                print("    retry %d :: %s (waiting %ds)" % (attempt + 1, str(e)[:120], wait), flush=True)
-                time.sleep(wait)
-        else:
-            raise RuntimeError("%s failed repeatedly at offset %d" % (label, offset))
-        rows.extend(i.get("title", {}) for i in batch)
-        print("    %s offset %6d -> %3d (total %d)" % (label, offset, len(batch), len(rows)), flush=True)
+                data = json.loads(body)
+            except ValueError:
+                raise RuntimeError("non-JSON reply :: %s" % body[:200])
+            if "error" in data:
+                info = data["error"].get("info", "") or data["error"].get("code", "")
+                if is_rate_limited(info) or data["error"].get("code") == "maxlag":
+                    throttled = True
+                else:
+                    raise RuntimeError("Cargo error :: %s" % info[:220])
+            if not throttled:
+                time.sleep(PAUSE)
+                return data
+
+        if attempt < tries - 1:
+            wait = BACKOFF[min(attempt, len(BACKOFF) - 1)]
+            DIAG["rate_limit_waits"] += 1
+            print("    throttled (HTTP %s) — waiting %ds then retrying" % (status, wait), flush=True)
+            time.sleep(wait)
+
+    raise RuntimeError("still throttled after %d attempts" % tries)
+
+
+def cargo(table, fields, where="", offset=0, limit=None):
+    p = {"action": "cargoquery", "tables": table, "fields": ",".join(fields),
+         "limit": str(limit or LIMIT), "offset": str(offset)}
+    if where:
+        p["where"] = where
+    return api_get(p).get("cargoquery", [])
+
+
+def page_all(table, fields, where, label, sink):
+    offset = 0
+    for _ in range(MAX_PAGES):
+        try:
+            batch = cargo(table, fields, where, offset=offset)
+        except RuntimeError as e:
+            note("%s stopped at offset %d — keeping partial data" % (label, offset), False, e)
+            return False
+        sink.extend(i.get("title", {}) for i in batch)
+        print("    %s offset %6d -> %3d rows (total %d)" % (label, offset, len(batch), len(sink)), flush=True)
         if len(batch) < LIMIT:
-            break
+            return True
         offset += LIMIT
-        time.sleep(0.4)
-    return rows
+    return True
 
 
 def num(v, d=0):
@@ -149,64 +153,46 @@ def pick(d, *names, default=""):
     return default
 
 
-def write_diag():
+def write(path, obj, compact=True):
     os.makedirs("data", exist_ok=True)
-    DIAG["finished"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-    with open("data/diagnostic.json", "w", encoding="utf-8") as f:
-        json.dump(DIAG, f, indent=2, ensure_ascii=False)
-    print("\nWrote data/diagnostic.json (outcome=%s)" % DIAG["outcome"], flush=True)
+    with open(path, "w", encoding="utf-8") as f:
+        if compact:
+            json.dump(obj, f, separators=(",", ":"), ensure_ascii=False)
+        else:
+            json.dump(obj, f, indent=2, ensure_ascii=False)
 
 
 def run():
     since = (datetime.now(timezone.utc) - timedelta(days=DAYS)).strftime("%Y-%m-%d")
     DIAG["since"] = since
-    print("MC AI pipeline v3 — %sd window since %s\n" % (DAYS, since), flush=True)
+    print("MC AI pipeline v4 — %sd window since %s (pause %.1fs)\n" % (DAYS, since, PAUSE), flush=True)
 
-    # 1. reachability
-    status, body, _ = raw_get({"action": "query", "meta": "siteinfo", "format": "json"})
-    DIAG["siteinfo_status"] = status
-    DIAG["siteinfo_sample"] = body[:300]
-    note("MediaWiki API reachable (HTTP %s)" % status, status == 200, body[:200] if status != 200 else "")
-    if status != 200:
-        DIAG["outcome"] = "api_unreachable"
+    # One verification query. Only a real schema error is treated as such.
+    try:
+        cargo("ScoreboardPlayers", SP_FIELDS, limit=1)
+        note("schema verified — all %d player columns valid" % len(SP_FIELDS))
+    except RuntimeError as e:
+        note("schema check failed", False, e)
+        DIAG["outcome"] = "schema_error"
+        DIAG["schema_error"] = str(e)[:400]
         return
 
-    # 2. does Cargo answer for these tables
-    for tbl in ("ScoreboardPlayers", "ScoreboardGames"):
-        try:
-            cargo(tbl, ["_pageName"], limit=1)
-            note("Cargo responds for %s" % tbl, True)
-        except RuntimeError as e:
-            note("Cargo failed for %s" % tbl, False, e)
-            DIAG["outcome"] = "cargo_table_unavailable"
+    where_sp = "ScoreboardPlayers.DateTime_UTC >= '%s 00:00:00'" % since
+    where_sg = "ScoreboardGames.DateTime_UTC >= '%s 00:00:00'" % since
 
-    # 3. column probe
-    sp = probe_columns("ScoreboardPlayers", SP_CORE, SP_OPTIONAL)
-    sg = probe_columns("ScoreboardGames", SG_CORE, SG_OPTIONAL)
-
-    missing = [c for c in SP_CORE if c not in sp]
-    if missing:
-        DIAG["outcome"] = "missing_core_columns"
-        DIAG["missing_core"] = missing
-        note("cannot build feed, missing core columns: %s" % ",".join(missing), False)
-        return
-
-    # 4. fetch
-    date_col = "DateTime_UTC" if "DateTime_UTC" in sp else None
-    where_sp = ("ScoreboardPlayers.%s >= '%s 00:00:00'" % (date_col, since)) if date_col else ""
-    players = page_all("ScoreboardPlayers", sp, where_sp, "SP")
+    print("\nFetching player rows…", flush=True)
+    players = []
+    complete_sp = page_all("ScoreboardPlayers", SP_FIELDS, where_sp, "SP", players)
     DIAG["player_rows"] = len(players)
-    if players:
-        DIAG["sample_player_row"] = {k: str(v)[:60] for k, v in list(players[0].items())[:20]}
 
+    print("\nFetching game metadata…", flush=True)
+    graw = []
+    page_all("ScoreboardGames", SG_FIELDS, where_sg, "SG", graw)
     games = {}
-    if len(sg) > 1:
-        sg_date = "DateTime_UTC" if "DateTime_UTC" in sg else None
-        where_sg = ("ScoreboardGames.%s >= '%s 00:00:00'" % (sg_date, since)) if sg_date else ""
-        for g in page_all("ScoreboardGames", sg, where_sg, "SG"):
-            gid = str(pick(g, "GameId"))
-            if gid:
-                games[gid] = g
+    for g in graw:
+        gid = str(pick(g, "GameId"))
+        if gid:
+            games[gid] = g
     DIAG["game_rows"] = len(games)
 
     rows, seen = [], set()
@@ -237,34 +223,36 @@ def run():
 
     if not rows:
         DIAG["outcome"] = "zero_rows"
-        note("query succeeded but produced no rows", False)
+        note("no rows built", False)
         return
 
     rows.sort(key=lambda r: r[12])
     leagues = {}
     for r in rows:
         leagues[r[11]] = leagues.get(r[11], 0) + 1
+
     payload = {"generated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
                "since": since, "newest": rows[-1][12], "count": len(rows),
+               "complete": complete_sp,
                "leagues": sorted(leagues.items(), key=lambda kv: -kv[1]),
                "fields": OUT_FIELDS, "rows": rows}
-    os.makedirs("data", exist_ok=True)
-    with open("data/latest.json", "w", encoding="utf-8") as f:
-        json.dump(payload, f, separators=(",", ":"), ensure_ascii=False)
-    DIAG["outcome"] = "ok"
+    write("data/latest.json", payload)
+    DIAG["outcome"] = "ok" if complete_sp else "ok_partial"
     DIAG["written"] = {"rows": len(rows), "newest": payload["newest"],
                        "mb": round(os.path.getsize("data/latest.json") / 1e6, 2),
                        "leagues": payload["leagues"][:15]}
-    note("wrote data/latest.json — %d rows, newest %s" % (len(rows), payload["newest"]), True)
+    note("wrote data/latest.json — %d rows, newest %s" % (len(rows), payload["newest"]))
 
 
 if __name__ == "__main__":
     try:
         run()
-    except Exception:                                          # noqa: BLE001
+    except Exception:                                            # noqa: BLE001
         DIAG["outcome"] = "exception"
         DIAG["traceback"] = traceback.format_exc()[-2500:]
         print(DIAG["traceback"], file=sys.stderr)
-    write_diag()
-    # Always exit 0 so the diagnostic gets committed and can be read from the repo.
+    DIAG["finished"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    write("data/diagnostic.json", DIAG, compact=False)
+    print("\noutcome=%s | requests=%d | throttle waits=%d"
+          % (DIAG["outcome"], DIAG["requests"], DIAG["rate_limit_waits"]), flush=True)
     sys.exit(0)
