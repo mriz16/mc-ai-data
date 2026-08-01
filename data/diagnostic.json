@@ -1,7 +1,7 @@
 {
   "version": 7,
   "source": "riot_esports",
-  "started": "2026-08-01T15:51:15Z",
+  "started": "2026-08-01T16:32:20Z",
   "steps": [
     {
       "step": "league catalogue: 44 entries",
@@ -38,8 +38,8 @@
   "requests": 563,
   "samples": {
     "getLeagues": "[{\"id\": \"98767975604431411\", \"slug\": \"worlds\", \"name\": \"Worlds\", \"region\": \"INTERNATIONAL\", \"image\": \"http://static.lolesports.com/leagues/1592594612171_WorldsDarkBG.png\", \"priority\": 1, \"displayPriority\": {\"position\": 0, \"status\": \"force_selected\"}}, {\"id\": \"98767991325878492\", \"slug\": \"msi\", \"name\": \"MSI\", \"region\": \"INTERNATIONAL\", \"image\": \"http://static.lolesports.com/leagues/1592594634248_MSIDarkBG.png\", \"priority\": 1, \"displayPriority\": {\"position\": 1, \"status\": \"force_selected\"}}]",
-    "getCompletedEvents": "[{\"startTime\": \"2026-07-10T23:00:00Z\", \"blockName\": \"Week 4\", \"league\": {\"name\": \"LRS\"}, \"match\": {\"id\": \"116520721101367138\", \"type\": \"normal\", \"teams\": [{\"name\": \"Docta Esports Club\", \"code\": \"DEC\", \"image\": \"http://static.lolesports.com/teams/1781849600840_DOCTA-DOH.png\", \"result\": {\"gameWins\": 0}}, {\"name\": \"Maze Gaming\", \"code\": \"MAZ\", \"image\": \"http://static.lolesports.com/teams/1643036820055_maze-ColorLight.png\", \"result\": {\"gameWins\": 2}}], \"strategy\": {\"type\": \"bestOf\", \"count\": 3}}, \"games\": [{\"id\": \"116520721101367139\", \"vods\": [{\"parameter\": \"opd5j4x-4mw\"}]}, {\"id\": \"116520721101367140\", \"vods\": [{\"parameter\": \"opd5j4x-4mw\"}]}, {\"id\": \"116520721101367141\", \"vods\": []}]}]",
-    "window": "{\"esportsGameId\": \"116520721101367139\", \"gameMetadata\": {\"patchVersion\": \"16.13.790.6961\", \"blueTeamMetadata\": {\"esportsTeamId\": \"116775295130449796\", \"participantMetadata\": [{\"participantId\": 1, \"esportsPlayerId\": \"107582822912249933\", \"summonerName\": \"DEC Dinastik\", \"championId\": \"KSante\", \"role\": \"top\"}, {\"participantId\": 2, \"esportsPlayerId\": \"114194409057606977\", \"summonerName\": \"DEC Alluk\", \"championId\": \"LeeSin\", \"role\": \"jungle\"}, {\"participantId\": 3, \"esportsPlayerId\": \"109807890482619918\", \"summonerName\": \"DEC Saifer\", \"championId\": \"TwistedFate\", \"role\": \"mid\"}, {\"participantId\": 4, \"esportsPlayerId\": \"116871756840512757\", \"summonerName\": \"DEC Syunko\", \"championId\": \"Cassiopeia\", \"role\": \"bottom\"}, {\"participantId\": 5, \"esportsPlayerId\": \"107582137795431723\", \"summonerName\": \"DEC Lac\", \"championId\": \"Nautilus\", \"role\": \"support\"}]}, \"redTeamMetadata\": {\"esportsTeamId\": \"107599144012469862\", \"participantMetadata\": [{\"participantId\": 6, \"esportsPlayerId\": \"107582136899127281\", \"summonerName\": \"MAZ Wamu\", \"championId\": \"Rumble\", \"role\": \"top\"}, {\"participantId\": 7, \"esportsPlayerId\": \"116097026163860566\", \"summonerName\": \"MAZ Neo7\", \"championId\": \"Naafiri\", \"role\": \"jungle\"}, {\"participantId\": 8, \"esportsPlayerId\": \"108472068627054702\", \"summonerName\": \"MAZ Hitsu\", \"championId\": \"Akali\", \"role\": \"mid\"}, {\"participantId\": 9, \"esportsPlayerId\": \"107598798680054528\", \"summonerName\": \"MAZ Viciun\", \"championId\": \"Jhin\", \"role\": \"bottom\"}, {\"participantId\": 10, \"esportsPlay"
+    "getCompletedEvents": "[{\"startTime\": \"2026-07-11T08:00:00Z\", \"blockName\": \"Knockouts\", \"league\": {\"name\": \"MSI\"}, \"match\": {\"id\": \"115570934355614599\", \"type\": \"normal\", \"teams\": [{\"name\": \"LYON\", \"code\": \"LYON\", \"image\": \"http://static.lolesports.com/teams/1743717443673_isotypelyon-03.png\", \"result\": {\"gameWins\": 2}}, {\"name\": \"Hanwha Life Esports\", \"code\": \"HLE\", \"image\": \"http://static.lolesports.com/teams/1631819564399_hle-2021-worlds.png\", \"result\": {\"gameWins\": 3}}], \"strategy\": {\"type\": \"bestOf\", \"count\": 5}}, \"games\": [{\"id\": \"115570934355614600\", \"vods\": [{\"parameter\": \"2817283776\"}, {\"parameter\": \"TezLixj2MAY\"}, {\"parameter\": \"2817292662\"}, {\"parameter\": \"VqKkKFsw_5E\"}, {\"parameter\": \"GfosFhCcLIA\"}, {\"parameter\": \"2817281667\"}, {\"parameter\": \"2817291990\"}, {\"parameter\": \"201191501\"}, {\"parameter\": \"2817292019\"}, {\"parameter\": \"_8rBDBefEmY\"}, {\"parameter\": \"N83cjLDTbmE\"}, {\"parameter\": \"2817295945\"}, {\"parameter\": \"pOPYD60l-oM\"}, {\"parameter\": \"2817290463\"}]}, {\"id\": \"115570934355614601\", \"vods\": [{\"parameter\": \"2817283776\"}, {\"parameter\": \"AvCAwfMQTFM\"}, {\"parameter\": \"2817292662\"}, {\"parameter\": \"B9x39mCRBj0\"}, {\"parameter\": \"GfosFhCcLIA\"}, {\"parameter\": \"2817281667\"}, {\"parameter\": \"2817291990\"}, {\"parameter\": \"201191501\"}, {\"parameter\": \"2817292019\"}, {\"parameter\": \"_8rBDBefEmY\"}, {\"parameter\": \"N83cjLDTbmE\"}, {\"parameter\": \"2817295945\"}, {\"parameter\": \"pOPYD60l-oM\"}, {\"parameter\": \"2817290463\"}]}, {\"id\": \"115570934355614602\", \"vods\": [{\"parameter\": \"2817283776\"}, {\"parameter\": \"FS9AD",
+    "window": "{\"esportsGameId\": \"115570934355614600\", \"gameMetadata\": {\"patchVersion\": \"16.13.790.6961\", \"blueTeamMetadata\": {\"esportsTeamId\": \"99566405941863385\", \"participantMetadata\": [{\"participantId\": 1, \"esportsPlayerId\": \"99322408701435122\", \"summonerName\": \"LYON Dhokla\", \"championId\": \"Ambessa\", \"role\": \"top\"}, {\"participantId\": 2, \"esportsPlayerId\": \"101389713966873995\", \"summonerName\": \"LYON Inspired\", \"championId\": \"Qiyana\", \"role\": \"jungle\"}, {\"participantId\": 3, \"esportsPlayerId\": \"107492059066783320\", \"summonerName\": \"LYON Saint\", \"championId\": \"Ryze\", \"role\": \"mid\"}, {\"participantId\": 4, \"esportsPlayerId\": \"105388936922706146\", \"summonerName\": \"LYON Berserker\", \"championId\": \"Jhin\", \"role\": \"bottom\"}, {\"participantId\": 5, \"esportsPlayerId\": \"103103578076943629\", \"summonerName\": \"LYON Isles\", \"championId\": \"Poppy\", \"role\": \"support\"}]}, \"redTeamMetadata\": {\"esportsTeamId\": \"100205573496804586\", \"participantMetadata\": [{\"participantId\": 6, \"esportsPlayerId\": \"105320680474347057\", \"summonerName\": \"HLE Zeus\", \"championId\": \"Sion\", \"role\": \"top\"}, {\"participantId\": 7, \"esportsPlayerId\": \"101671284628761661\", \"summonerName\": \"HLE Kanavi\", \"championId\": \"JarvanIV\", \"role\": \"jungle\"}, {\"participantId\": 8, \"esportsPlayerId\": \"103478281361900912\", \"summonerName\": \"HLE Zeka\", \"championId\": \"Syndra\", \"role\": \"mid\"}, {\"participantId\": 9, \"esportsPlayerId\": \"103495716775975785\", \"summonerName\": \"HLE Gumayusi\", \"championId\": \"Ziggs\", \"role\": \"bottom\"}, {\"participantId\": 10, \"esportsPlayerI"
   },
   "since": "2026-06-02",
   "league_renames": {
@@ -56,7 +56,7 @@
     "Esports Balkan League": "EBL"
   },
   "event_date_range": [
-    "2026-07-10",
+    "2026-07-11",
     "2026-08-01"
   ],
   "games_found": 558,
@@ -100,15 +100,15 @@
         290
       ],
       [
+        "LCP",
+        230
+      ],
+      [
         "HLL",
         220
       ],
       [
         "LJL",
-        210
-      ],
-      [
-        "LCP",
         210
       ],
       [
@@ -124,10 +124,10 @@
         200
       ],
       [
-        "LRS",
-        190
+        "LCK",
+        180
       ]
     ]
   },
-  "finished": "2026-08-01T15:55:55Z"
+  "finished": "2026-08-01T16:38:02Z"
 }
