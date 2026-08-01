@@ -1,0 +1,8 @@
+{
+  "name": "mc-ai-data-mriz16",
+  "version": "1.0.0",
+  "description": "LoL esports match feed for MC AI — published so it can be served from cdn.jsdelivr.net/npm/, the only route the app sandbox permits.",
+  "files": ["data/"],
+  "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/mriz16/mc-ai-data" }
+}
