@@ -147,8 +147,78 @@ def completed_events(since_dt):
     return events
 
 
-def window(game_id):
-    return get(FEED + "window/" + str(game_id))
+def _iso10(dt):
+    """Riot requires startingTime on a 10-second boundary, ISO-8601 with Z."""
+    dt = dt.replace(microsecond=0)
+    dt = dt.replace(second=(dt.second // 10) * 10)
+    return dt.strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def window(game_id, starting=None):
+    url = FEED + "window/" + str(game_id)
+    if starting:
+        url += "?startingTime=" + starting
+    return get(url)
+
+
+def final_window(game_id, event_start_iso):
+    """Fetch the OPENING frames, then the CLOSING frames.
+
+    Calling window/ with no startingTime returns the frames from the beginning of
+    the game — where every player still has 0 kills. That was the bug behind an
+    entire feed of zeroes. To get final stats we ask for a time past the end of the
+    game; Riot then serves the last available window. The opening call is still
+    useful: its first frame timestamp is the true game start, which gives real
+    game length when subtracted from the final frame.
+
+    Returns (metadata, final_frame, duration_seconds) or (None, None, 0).
+    """
+    try:
+        head = window(game_id)
+    except RuntimeError:
+        return None, None, 0
+    meta = head.get("gameMetadata") or {}
+    hframes = head.get("frames") or []
+    if not hframes:
+        return None, None, 0
+
+    t0_raw = hframes[0].get("rfc460Timestamp", "")
+    try:
+        t0 = datetime.strptime(t0_raw[:19], "%Y-%m-%dT%H:%M:%S")
+    except Exception:                                            # noqa: BLE001
+        t0 = None
+
+    best, best_kills, best_ts = None, -1, None
+    # Walk back from a generous offset; the first response with real kills wins.
+    for mins in (110, 75, 50, 38, 30, 24):
+        if t0 is None:
+            break
+        try:
+            w = window(game_id, _iso10(t0 + timedelta(minutes=mins)))
+        except RuntimeError:
+            continue
+        frames = w.get("frames") or []
+        if not frames:
+            continue
+        f = frames[-1]
+        tk = ((f.get("blueTeam") or {}).get("totalKills") or 0) + \
+             ((f.get("redTeam") or {}).get("totalKills") or 0)
+        if tk > best_kills:
+            best, best_kills, best_ts = f, tk, f.get("rfc460Timestamp", "")
+        if tk > 0 and mins <= 75:
+            break
+
+    if best is None:
+        best = hframes[-1]
+        best_ts = best.get("rfc460Timestamp", "")
+
+    dur = 0
+    if t0 and best_ts:
+        try:
+            dur = int((datetime.strptime(best_ts[:19], "%Y-%m-%dT%H:%M:%S") - t0).total_seconds())
+        except Exception:                                        # noqa: BLE001
+            dur = 0
+    return meta, best, max(0, dur)
 
 
 def build_rows(since):
@@ -199,21 +269,19 @@ def build_rows(since):
     rows, ok_games, failed = [], 0, 0
     for i, t in enumerate(targets):
         try:
-            w = window(t["gameId"])
+            meta, last, dur = final_window(t["gameId"], t.get("startTime"))
         except RuntimeError as e:
             failed += 1
             if failed <= 3:
                 note("window failed for game %s" % t["gameId"], False, e)
             continue
-        if i == 0:
-            sample("window", {k: w.get(k) for k in ("esportsGameId", "gameMetadata")})
-
-        meta = w.get("gameMetadata") or {}
-        frames = w.get("frames") or []
-        if not frames:
+        if not meta or not last:
             failed += 1
             continue
-        last = frames[-1]
+        if i == 0:
+            sample("final_frame", {"blueKills": (last.get("blueTeam") or {}).get("totalKills"),
+                                   "redKills": (last.get("redTeam") or {}).get("totalKills"),
+                                   "ts": last.get("rfc460Timestamp"), "duration_s": dur})
         patch = meta.get("patchVersion") or ""
         try:
             patch_f = float(".".join(patch.split(".")[:2])) if patch else 0
@@ -239,15 +307,7 @@ def build_rows(since):
         win_of = {"blue": 1 if kills_of["blue"] >= kills_of["red"] else 0,
                   "red": 1 if kills_of["red"] > kills_of["blue"] else 0}
         # participants live on each side's object
-        glen = 0
-        try:
-            t0 = frames[0].get("rfc460Timestamp", "")
-            t1 = last.get("rfc460Timestamp", "")
-            if t0 and t1:
-                f = "%Y-%m-%dT%H:%M:%S"
-                glen = int((datetime.strptime(t1[:19], f) - datetime.strptime(t0[:19], f)).total_seconds())
-        except Exception:                                        # noqa: BLE001
-            glen = 0
+        glen = dur
 
         for side_key, side_obj in (("blue", blue), ("red", red)):
             for p in (side_obj.get("participants") or []):
