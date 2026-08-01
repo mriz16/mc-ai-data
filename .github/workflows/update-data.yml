@@ -34,6 +34,9 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Install dependencies
+        run: pip install --quiet gdown
+
       - name: Fetch match data
         env:
           # Manual runs use the dropdown; scheduled runs use the full window.
