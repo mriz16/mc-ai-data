@@ -9,11 +9,11 @@ on:
   workflow_dispatch:        # lets you trigger it by hand from the Actions tab
     inputs:
       days:
-        description: "How many days of history to pull (45 is fast, 120 is full)"
+        description: "How many days of history to keep in the feed"
         required: false
-        default: "120"
+        default: "30"
         type: choice
-        options: ["30", "45", "60", "90", "120"]
+        options: ["7", "14", "30", "60", "90"]
 
 permissions:
   contents: write           # required so the job can commit the refreshed feed
@@ -34,13 +34,13 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Fetch Leaguepedia data
+      - name: Fetch match data
         env:
           # Manual runs use the dropdown; scheduled runs use the full window.
-          DAYS: ${{ github.event.inputs.days || '120' }}
+          DAYS: ${{ github.event.inputs.days || '30' }}
           LP_USERNAME: ${{ secrets.LP_USERNAME }}
           LP_PASSWORD: ${{ secrets.LP_PASSWORD }}
-        run: python fetch_data.py
+        run: python fetch_riot.py
 
       - name: Commit if changed
         id: commit
