@@ -177,6 +177,32 @@ def oe_download(fid):
     return data
 
 
+HISTORY_FILE = os.environ.get("HISTORY_FILE", "history/oracles_elixir.json")
+
+
+def history_rows(since):
+    """Read the committed history file — the depth half of the feed.
+
+    Google Drive refuses these downloads from CI: runs #16-#18 all came back with a
+    quota/interstitial HTML page (2,009 bytes) through gdown AND through a correctly
+    submitted confirmation form. Rather than keep fighting it, the history is committed
+    to the repo once. It never goes stale in a way that matters — history is history —
+    and Riot keeps the recent tail current on every run.
+    """
+    if not os.path.exists(HISTORY_FILE):
+        raise RuntimeError("no history file at " + HISTORY_FILE)
+    with open(HISTORY_FILE, "r", encoding="utf-8") as f:
+        payload = json.load(f)
+    fields = payload.get("fields") or []
+    if fields != OUT_FIELDS:
+        idx = {f: i for i, f in enumerate(fields)}
+        rows = [[r[idx[c]] if c in idx else 0 for c in OUT_FIELDS] for r in payload.get("rows", [])]
+    else:
+        rows = payload.get("rows", [])
+    DIAG["history_file_rows"] = len(rows)
+    return [r for r in rows if r[12] >= since]
+
+
 def oe_rows(since):
     fid = oe_file_id()
     DIAG["oe_file_id"] = fid
@@ -383,10 +409,15 @@ def run():
 
     hist = []
     try:
-        hist = oe_rows(since)
-        note("Oracle's Elixir history: %d rows (%.1f MB)" % (len(hist), DIAG.get("oe_mb", 0)))
+        hist = history_rows(since)
+        note("history file: %d rows in window (of %d)" % (len(hist), DIAG.get("history_file_rows", 0)))
     except Exception as e:                                       # noqa: BLE001
-        note("Oracle's Elixir unavailable — continuing with Riot only", False, e)
+        note("no committed history file — trying Drive", False, e)
+        try:
+            hist = oe_rows(since)
+            note("Oracle's Elixir via Drive: %d rows (%.1f MB)" % (len(hist), DIAG.get("oe_mb", 0)))
+        except Exception as e2:                                  # noqa: BLE001
+            note("Drive unavailable too — continuing with Riot only", False, e2)
     DIAG["oe_rows"] = len(hist)
     oe_max = max((r[12] for r in hist), default="")
     DIAG["oe_newest"] = oe_max
