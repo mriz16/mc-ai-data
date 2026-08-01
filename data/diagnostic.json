@@ -1,7 +1,7 @@
 {
   "version": 7,
   "source": "riot_esports",
-  "started": "2026-08-01T15:22:37Z",
+  "started": "2026-08-01T15:25:48Z",
   "steps": [
     {
       "step": "league catalogue: 44 entries",
@@ -14,18 +14,107 @@
       "detail": ""
     },
     {
-      "step": "completed games in window: 0",
+      "step": "completed games in window: 558",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "step": "window failed for game 115548147900553475",
       "ok": false,
+      "detail": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "step": "processed 557 games (1 failed) -> 5570 player rows",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "step": "wrote data/latest.json — 5570 rows, newest 2026-08-01",
+      "ok": true,
       "detail": ""
     }
   ],
-  "outcome": "no_rows",
-  "requests": 2,
+  "outcome": "ok",
+  "requests": 563,
   "samples": {
     "getLeagues": "[{\"id\": \"98767975604431411\", \"slug\": \"worlds\", \"name\": \"Worlds\", \"region\": \"INTERNATIONAL\", \"image\": \"http://static.lolesports.com/leagues/1592594612171_WorldsDarkBG.png\", \"priority\": 1, \"displayPriority\": {\"position\": 0, \"status\": \"force_selected\"}}, {\"id\": \"98767991325878492\", \"slug\": \"msi\", \"name\": \"MSI\", \"region\": \"INTERNATIONAL\", \"image\": \"http://static.lolesports.com/leagues/1592594634248_MSIDarkBG.png\", \"priority\": 1, \"displayPriority\": {\"position\": 1, \"status\": \"force_selected\"}}]",
-    "getCompletedEvents": "[{\"startTime\": \"2026-07-10T23:00:00Z\", \"blockName\": \"Week 4\", \"league\": {\"name\": \"LRS\"}, \"match\": {\"id\": \"116520721101367182\", \"type\": \"normal\", \"teams\": [{\"name\": \"ZEN\", \"code\": \"Z3N\", \"image\": \"http://static.lolesports.com/teams/1782197670211_FULL_COLOR_FOR_LIGHT_BG.png\", \"result\": {\"gameWins\": 0}}, {\"name\": \"9z Globant\", \"code\": \"9ZG\", \"image\": \"http://static.lolesports.com/teams/1771234194177_FULL_COLOR_FOR_DARK_BG-2.png\", \"result\": {\"gameWins\": 2}}], \"strategy\": {\"type\": \"bestOf\", \"count\": 3}}, \"games\": [{\"id\": \"116520721101367183\", \"vods\": [{\"parameter\": \"ppu13ayy4Z0\"}]}, {\"id\": \"116520721101367184\", \"vods\": [{\"parameter\": \"ppu13ayy4Z0\"}]}, {\"id\": \"116520721101367185\", \"vods\": []}]}]"
+    "getCompletedEvents": "[{\"startTime\": \"2026-07-10T23:00:00Z\", \"blockName\": \"Week 4\", \"league\": {\"name\": \"LRS\"}, \"match\": {\"id\": \"116520721101367182\", \"type\": \"normal\", \"teams\": [{\"name\": \"ZEN\", \"code\": \"Z3N\", \"image\": \"http://static.lolesports.com/teams/1782197670211_FULL_COLOR_FOR_LIGHT_BG.png\", \"result\": {\"gameWins\": 0}}, {\"name\": \"9z Globant\", \"code\": \"9ZG\", \"image\": \"http://static.lolesports.com/teams/1771234194177_FULL_COLOR_FOR_DARK_BG-2.png\", \"result\": {\"gameWins\": 2}}], \"strategy\": {\"type\": \"bestOf\", \"count\": 3}}, \"games\": [{\"id\": \"116520721101367183\", \"vods\": [{\"parameter\": \"ppu13ayy4Z0\"}]}, {\"id\": \"116520721101367184\", \"vods\": [{\"parameter\": \"ppu13ayy4Z0\"}]}, {\"id\": \"116520721101367185\", \"vods\": []}]}]",
+    "window": "{\"esportsGameId\": \"116520721101367183\", \"gameMetadata\": {\"patchVersion\": \"16.13.790.6961\", \"blueTeamMetadata\": {\"esportsTeamId\": \"116783232785317266\", \"participantMetadata\": [{\"participantId\": 1, \"esportsPlayerId\": \"114923640011121092\", \"summonerName\": \"Z3N Respeta\", \"championId\": \"Jayce\", \"role\": \"top\"}, {\"participantId\": 2, \"esportsPlayerId\": \"107583616575754570\", \"summonerName\": \"Z3N QQMore\", \"championId\": \"Trundle\", \"role\": \"jungle\"}, {\"participantId\": 3, \"esportsPlayerId\": \"108288698913324255\", \"summonerName\": \"Z3N Doni\", \"championId\": \"Taliyah\", \"role\": \"mid\"}, {\"participantId\": 4, \"esportsPlayerId\": \"99566408346501165\", \"summonerName\": \"Z3N Tomnam\", \"championId\": \"Sivir\", \"role\": \"bottom\"}, {\"participantId\": 5, \"esportsPlayerId\": \"116831105068027004\", \"summonerName\": \"Z3N Viico\", \"championId\": \"Nautilus\", \"role\": \"support\"}]}, \"redTeamMetadata\": {\"esportsTeamId\": \"107598651997213225\", \"participantMetadata\": [{\"participantId\": 6, \"esportsPlayerId\": \"99566408342799240\", \"summonerName\": \"9ZG Nate\", \"championId\": \"Ornn\", \"role\": \"top\"}, {\"participantId\": 7, \"esportsPlayerId\": \"116097049540831021\", \"summonerName\": \"9ZG Warsor\", \"championId\": \"MonkeyKing\", \"role\": \"jungle\"}, {\"participantId\": 8, \"esportsPlayerId\": \"100118511917058602\", \"summonerName\": \"9ZG Aloned\", \"championId\": \"Ryze\", \"role\": \"mid\"}, {\"participantId\": 9, \"esportsPlayerId\": \"98767975936723214\", \"summonerName\": \"9ZG FIX\", \"championId\": \"Ziggs\", \"role\": \"bottom\"}, {\"participantId\": 10, \"esportsPlayerId\": \"116"
   },
   "since": "2026-07-02",
-  "games_found": 0,
-  "finished": "2026-08-01T15:22:39Z"
+  "event_date_range": [
+    "2026-07-10",
+    "2026-08-01"
+  ],
+  "games_found": 558,
+  "games_ok": 557,
+  "games_failed": 1,
+  "written": {
+    "rows": 5570,
+    "newest": "2026-08-01",
+    "mb": 0.61,
+    "leagues": [
+      [
+        "Esports World Cup",
+        510
+      ],
+      [
+        "Prime League",
+        410
+      ],
+      [
+        "Arabian League",
+        400
+      ],
+      [
+        "LES",
+        390
+      ],
+      [
+        "LRN",
+        360
+      ],
+      [
+        "NACL",
+        350
+      ],
+      [
+        "La Ligue Française",
+        300
+      ],
+      [
+        "Circuito Desafiante",
+        290
+      ],
+      [
+        "Hellenic Legends League",
+        220
+      ],
+      [
+        "LRS",
+        210
+      ],
+      [
+        "LJL",
+        210
+      ],
+      [
+        "LoL Italian Tournament",
+        200
+      ],
+      [
+        "LEC",
+        200
+      ],
+      [
+        "LCK Challengers",
+        200
+      ],
+      [
+        "LCP",
+        190
+      ]
+    ]
+  },
+  "finished": "2026-08-01T15:31:22Z"
 }
