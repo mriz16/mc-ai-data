@@ -112,10 +112,14 @@ def completed_events(since_dt):
         if not batch:
             break
         events.extend(batch)
-        oldest = min((e.get("startTime") or "9999") for e in batch)
+        newest_in_batch = max((e.get("startTime") or "") for e in batch)[:10]
+        oldest_in_batch = min((e.get("startTime") or "9999") for e in batch)[:10]
         token = (data.get("pages") or {}).get("older")
         pages += 1
-        if oldest[:10] < since_dt or not token:
+        # keep paging while any part of the batch still touches the window
+        if not token or newest_in_batch < since_dt:
+            break
+        if oldest_in_batch < since_dt and pages >= 3:
             break
     return events
 
@@ -131,22 +135,35 @@ def build_rows(since):
     evs = completed_events(since)
     note("completed events pulled: %d" % len(evs), bool(evs))
 
-    # collect (gameId, league, date, teams) for finished games inside the window
+    # Real response shape (confirmed from a live sample):
+    #   event.games[]            <- games live on the EVENT, not on event.match
+    #   event.league.name        <- name only, no slug ("LEC", "LRS")
+    #   no per-game "state" field; unplayed games of a Bo3/Bo5 are still listed,
+    #   so cap by games actually won: sum(teams[].result.gameWins)
     targets = []
+    dates_seen = []
     for e in evs:
         date = (e.get("startTime") or "")[:10]
+        dates_seen.append(date)
         if date < since:
             continue
-        league = ((e.get("league") or {}).get("slug")
-                  or (e.get("league") or {}).get("name") or "")
+        lg = e.get("league") or {}
+        league = lg.get("name") or lg.get("slug") or ""
         match = e.get("match") or {}
         teams = match.get("teams") or []
         tnames = [t.get("name") or t.get("code") or "" for t in teams]
-        for g in (match.get("games") or []):
-            if str(g.get("state", "")).lower() not in ("completed", "finished"):
+        played = sum(int(((t.get("result") or {}).get("gameWins") or 0)) for t in teams)
+        games = e.get("games") or match.get("games") or []
+        if played:
+            games = games[:played]          # drop games that never happened
+        for g in games:
+            gid = g.get("id")
+            if not gid:
                 continue
-            targets.append({"gameId": str(g.get("id")), "league": league,
+            targets.append({"gameId": str(gid), "league": league,
                             "date": date, "teams": tnames})
+    if dates_seen:
+        DIAG["event_date_range"] = [min(dates_seen), max(dates_seen)]
     note("completed games in window: %d" % len(targets), bool(targets))
     DIAG["games_found"] = len(targets)
     if not targets:
