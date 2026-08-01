@@ -59,9 +59,28 @@ jobs:
 
       # jsDelivr caches branch URLs for ~12h. Purging makes the new file live
       # immediately, so the app sees fresh data on the next pull.
+      - name: Set up Node
+        if: steps.commit.outputs.changed == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          registry-url: "https://registry.npmjs.org"
+
+      # The app sandbox only permits cdn.jsdelivr.net/npm/ — measured, /gh/ is blocked.
+      # Publishing makes the feed reachable at that path. Version is derived from the run
+      # number so every refresh is a new immutable release.
+      - name: Publish feed to npm
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          npm version "1.0.${{ github.run_number }}" --no-git-tag-version --allow-same-version
+          npm publish --access public
+
       - name: Purge jsDelivr cache
         if: steps.commit.outputs.changed == 'true'
         run: |
-          curl -sS "https://purge.jsdelivr.net/gh/${GITHUB_REPOSITORY}@main/data/latest.json" || true
+          PKG=$(node -p "require('./package.json').name")
+          curl -sS "https://purge.jsdelivr.net/npm/$PKG@latest/data/latest.json" || true
           echo
-          echo "Feed URL: https://cdn.jsdelivr.net/gh/${GITHUB_REPOSITORY}@main/data/latest.json"
+          echo "Feed URL: https://cdn.jsdelivr.net/npm/$PKG@latest/data/latest.json"
