@@ -1,7 +1,7 @@
 {
   "version": 7,
   "source": "riot_esports",
-  "started": "2026-08-01T17:06:17Z",
+  "started": "2026-08-01T17:35:41Z",
   "steps": [
     {
       "step": "league catalogue: 44 entries",
@@ -19,11 +19,6 @@
       "detail": ""
     },
     {
-      "step": "window failed for game 115548147900553475",
-      "ok": false,
-      "detail": "Expecting value: line 1 column 1 (char 0)"
-    },
-    {
       "step": "processed 557 games (1 failed) -> 5570 player rows",
       "ok": true,
       "detail": ""
@@ -35,11 +30,11 @@
     }
   ],
   "outcome": "ok",
-  "requests": 563,
+  "requests": 1680,
   "samples": {
     "getLeagues": "[{\"id\": \"98767975604431411\", \"slug\": \"worlds\", \"name\": \"Worlds\", \"region\": \"INTERNATIONAL\", \"image\": \"http://static.lolesports.com/leagues/1592594612171_WorldsDarkBG.png\", \"priority\": 1, \"displayPriority\": {\"position\": 0, \"status\": \"force_selected\"}}, {\"id\": \"98767991325878492\", \"slug\": \"msi\", \"name\": \"MSI\", \"region\": \"INTERNATIONAL\", \"image\": \"http://static.lolesports.com/leagues/1592594634248_MSIDarkBG.png\", \"priority\": 1, \"displayPriority\": {\"position\": 1, \"status\": \"force_selected\"}}]",
     "getCompletedEvents": "[{\"startTime\": \"2026-07-11T08:00:00Z\", \"blockName\": \"Knockouts\", \"league\": {\"name\": \"MSI\"}, \"match\": {\"id\": \"115570934355614599\", \"type\": \"normal\", \"teams\": [{\"name\": \"LYON\", \"code\": \"LYON\", \"image\": \"http://static.lolesports.com/teams/1743717443673_isotypelyon-03.png\", \"result\": {\"gameWins\": 2}}, {\"name\": \"Hanwha Life Esports\", \"code\": \"HLE\", \"image\": \"http://static.lolesports.com/teams/1631819564399_hle-2021-worlds.png\", \"result\": {\"gameWins\": 3}}], \"strategy\": {\"type\": \"bestOf\", \"count\": 5}}, \"games\": [{\"id\": \"115570934355614600\", \"vods\": [{\"parameter\": \"2817283776\"}, {\"parameter\": \"TezLixj2MAY\"}, {\"parameter\": \"2817292662\"}, {\"parameter\": \"VqKkKFsw_5E\"}, {\"parameter\": \"GfosFhCcLIA\"}, {\"parameter\": \"2817281667\"}, {\"parameter\": \"2817291990\"}, {\"parameter\": \"201191501\"}, {\"parameter\": \"2817292019\"}, {\"parameter\": \"_8rBDBefEmY\"}, {\"parameter\": \"N83cjLDTbmE\"}, {\"parameter\": \"2817295945\"}, {\"parameter\": \"pOPYD60l-oM\"}, {\"parameter\": \"2817290463\"}]}, {\"id\": \"115570934355614601\", \"vods\": [{\"parameter\": \"2817283776\"}, {\"parameter\": \"AvCAwfMQTFM\"}, {\"parameter\": \"2817292662\"}, {\"parameter\": \"B9x39mCRBj0\"}, {\"parameter\": \"GfosFhCcLIA\"}, {\"parameter\": \"2817281667\"}, {\"parameter\": \"2817291990\"}, {\"parameter\": \"201191501\"}, {\"parameter\": \"2817292019\"}, {\"parameter\": \"_8rBDBefEmY\"}, {\"parameter\": \"N83cjLDTbmE\"}, {\"parameter\": \"2817295945\"}, {\"parameter\": \"pOPYD60l-oM\"}, {\"parameter\": \"2817290463\"}]}, {\"id\": \"115570934355614602\", \"vods\": [{\"parameter\": \"2817283776\"}, {\"parameter\": \"FS9AD",
-    "window": "{\"esportsGameId\": \"115570934355614600\", \"gameMetadata\": {\"patchVersion\": \"16.13.790.6961\", \"blueTeamMetadata\": {\"esportsTeamId\": \"99566405941863385\", \"participantMetadata\": [{\"participantId\": 1, \"esportsPlayerId\": \"99322408701435122\", \"summonerName\": \"LYON Dhokla\", \"championId\": \"Ambessa\", \"role\": \"top\"}, {\"participantId\": 2, \"esportsPlayerId\": \"101389713966873995\", \"summonerName\": \"LYON Inspired\", \"championId\": \"Qiyana\", \"role\": \"jungle\"}, {\"participantId\": 3, \"esportsPlayerId\": \"107492059066783320\", \"summonerName\": \"LYON Saint\", \"championId\": \"Ryze\", \"role\": \"mid\"}, {\"participantId\": 4, \"esportsPlayerId\": \"105388936922706146\", \"summonerName\": \"LYON Berserker\", \"championId\": \"Jhin\", \"role\": \"bottom\"}, {\"participantId\": 5, \"esportsPlayerId\": \"103103578076943629\", \"summonerName\": \"LYON Isles\", \"championId\": \"Poppy\", \"role\": \"support\"}]}, \"redTeamMetadata\": {\"esportsTeamId\": \"100205573496804586\", \"participantMetadata\": [{\"participantId\": 6, \"esportsPlayerId\": \"105320680474347057\", \"summonerName\": \"HLE Zeus\", \"championId\": \"Sion\", \"role\": \"top\"}, {\"participantId\": 7, \"esportsPlayerId\": \"101671284628761661\", \"summonerName\": \"HLE Kanavi\", \"championId\": \"JarvanIV\", \"role\": \"jungle\"}, {\"participantId\": 8, \"esportsPlayerId\": \"103478281361900912\", \"summonerName\": \"HLE Zeka\", \"championId\": \"Syndra\", \"role\": \"mid\"}, {\"participantId\": 9, \"esportsPlayerId\": \"103495716775975785\", \"summonerName\": \"HLE Gumayusi\", \"championId\": \"Ziggs\", \"role\": \"bottom\"}, {\"participantId\": 10, \"esportsPlayerI"
+    "final_frame": "{\"blueKills\": 16, \"redKills\": 26, \"ts\": \"2026-07-11T08:50:59.950Z\", \"duration_s\": 2342}"
   },
   "since": "2026-05-03",
   "league_renames": {
@@ -65,7 +60,7 @@
   "written": {
     "rows": 5570,
     "newest": "2026-08-01",
-    "mb": 0.57,
+    "mb": 0.6,
     "leagues": [
       [
         "EWC",
@@ -129,5 +124,5 @@
       ]
     ]
   },
-  "finished": "2026-08-01T17:11:58Z"
+  "finished": "2026-08-01T17:53:15Z"
 }
