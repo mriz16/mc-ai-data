@@ -60,22 +60,54 @@ jobs:
       # jsDelivr caches branch URLs for ~12h. Purging makes the new file live
       # immediately, so the app sees fresh data on the next pull.
       - name: Set up Node
-        if: steps.commit.outputs.changed == 'true'
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
           registry-url: "https://registry.npmjs.org"
 
       # The app sandbox only permits cdn.jsdelivr.net/npm/ — measured, /gh/ is blocked.
       # Publishing makes the feed reachable at that path. Version is derived from the run
       # number so every refresh is a new immutable release.
+      # Publish must never take the job down, and its error must be readable from the
+      # repo rather than only in CI logs — that is how the last three failures were solved.
       - name: Publish feed to npm
-        if: steps.commit.outputs.changed == 'true'
+        id: publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
-          npm version "1.0.${{ github.run_number }}" --no-git-tag-version --allow-same-version
-          npm publish --access public
+          mkdir -p data
+          {
+            echo "=== npm publish attempt $(date -u +'%Y-%m-%d %H:%M UTC') ==="
+            if [ -z "${NODE_AUTH_TOKEN}" ]; then
+              echo "RESULT: NPM_TOKEN secret is EMPTY or not set."
+              echo "Fix: repo Settings > Secrets and variables > Actions > New repository secret,"
+              echo "     named exactly NPM_TOKEN, value = an npm Automation token."
+            else
+              echo "token present: yes (length ${#NODE_AUTH_TOKEN})"
+              echo "--- npm whoami ---"
+              npm whoami 2>&1 || echo "(whoami failed - token invalid, expired, or wrong type)"
+              echo "--- npm version ---"
+              npm version "1.0.${{ github.run_number }}" --no-git-tag-version --allow-same-version 2>&1
+              echo "--- npm publish ---"
+              npm publish --access public 2>&1
+              echo "exit code: $?"
+            fi
+          } > data/npm-publish.log 2>&1 || true
+          echo "----- publish log -----"
+          cat data/npm-publish.log
+
+      - name: Commit publish log
+        run: |
+          git config user.name  "mc-ai-bot"
+          git config user.email "actions@github.com"
+          git add data/npm-publish.log || true
+          if git diff --staged --quiet; then
+            echo "no log change"
+          else
+            git commit -m "ci: npm publish log $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git pull --rebase --autostash || true
+            git push || true
+          fi
 
       - name: Purge jsDelivr cache
         if: steps.commit.outputs.changed == 'true'
