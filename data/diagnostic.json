@@ -1,7 +1,7 @@
 {
   "version": 7,
   "source": "riot_esports",
-  "started": "2026-08-01T18:16:03Z",
+  "started": "2026-08-01T18:50:18Z",
   "steps": [
     {
       "step": "league catalogue: 44 entries",
@@ -14,7 +14,7 @@
       "detail": ""
     },
     {
-      "step": "completed events pulled: 2659",
+      "step": "completed events pulled: 2260",
       "ok": true,
       "detail": ""
     },
@@ -35,13 +35,13 @@
     }
   ],
   "outcome": "ok",
-  "requests": 1720,
+  "requests": 1715,
   "samples": {
     "getLeagues": "[{\"id\": \"98767975604431411\", \"slug\": \"worlds\", \"name\": \"Worlds\", \"region\": \"INTERNATIONAL\", \"image\": \"http://static.lolesports.com/leagues/1592594612171_WorldsDarkBG.png\", \"priority\": 1, \"displayPriority\": {\"position\": 0, \"status\": \"force_selected\"}}, {\"id\": \"98767991325878492\", \"slug\": \"msi\", \"name\": \"MSI\", \"region\": \"INTERNATIONAL\", \"image\": \"http://static.lolesports.com/leagues/1592594634248_MSIDarkBG.png\", \"priority\": 1, \"displayPriority\": {\"position\": 1, \"status\": \"force_selected\"}}]",
     "getCompletedEvents": "[{\"startTime\": \"2026-07-11T19:00:00Z\", \"blockName\": \"Week 3\", \"league\": {\"name\": \"LRN\"}, \"match\": {\"id\": \"116520885021783312\", \"type\": \"normal\", \"teams\": [{\"name\": \"3V TEAM\", \"code\": \"3V\", \"image\": \"http://static.lolesports.com/teams/1781969964341_3v_w.png\", \"result\": {\"gameWins\": 2}}, {\"name\": \"SDM Tigres\", \"code\": \"SDM\", \"image\": \"http://static.lolesports.com/teams/1742463079753_FULL_COLOR_FOR_DARK_BG6.png\", \"result\": {\"gameWins\": 0}}], \"strategy\": {\"type\": \"bestOf\", \"count\": 3}}, \"games\": [{\"id\": \"116520885021783313\", \"vods\": [{\"parameter\": \"Tacv3SyEHgw\"}]}, {\"id\": \"116520885021783314\", \"vods\": [{\"parameter\": \"Tacv3SyEHgw\"}]}, {\"id\": \"116520885021783315\", \"vods\": []}]}]",
     "final_frame": "{\"blueKills\": 27, \"redKills\": 10, \"ts\": \"2026-07-11T19:45:09.452Z\", \"duration_s\": 1997}"
   },
-  "since": "2026-05-03",
+  "since": "2026-07-02",
   "league_renames": {
     "Prime League": "PRM",
     "Road of Legends": "ROL",
@@ -129,5 +129,5 @@
       ]
     ]
   },
-  "finished": "2026-08-01T18:31:00Z"
+  "finished": "2026-08-01T19:05:07Z"
 }
