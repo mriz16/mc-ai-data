@@ -122,10 +122,32 @@ def leagues():
     return out
 
 
-def completed_events(since_dt):
-    """Page backwards through completed events until we pass the window."""
-    events, token, pages = [], None, 0
-    while pages < 40:
+def completed_events(since_dt, lg_ids=None):
+    """Collect finished events back to `since_dt`.
+
+    getCompletedEvents is a GLOBAL feed and stops at roughly 300 events no matter
+    what window you ask for — that produced a feed only ~3 weeks deep, leaving teams
+    with 9-15 games in their pools and every projection collapsing toward position
+    priors. getSchedule accepts a leagueId and pages much further back, so history is
+    gathered per league and merged.
+    """
+    events, seen = [], set()
+
+    def add(batch):
+        added = 0
+        for e in batch:
+            m = e.get("match") or {}
+            key = str(m.get("id") or "") + "|" + str(e.get("startTime") or "")
+            if key in seen:
+                continue
+            seen.add(key)
+            events.append(e)
+            added += 1
+        return added
+
+    # 1) global sweep — cheap, catches anything not tied to a league id
+    token, pages = None, 0
+    while pages < 12:
         url = ESPORTS + "getCompletedEvents?hl=en-US" + (("&pageToken=" + urllib.parse.quote(token)) if token else "")
         d = get(url)
         data = d.get("data", {}).get("schedule", {})
@@ -134,16 +156,37 @@ def completed_events(since_dt):
             sample("getCompletedEvents", batch[:1])
         if not batch:
             break
-        events.extend(batch)
-        newest_in_batch = max((e.get("startTime") or "") for e in batch)[:10]
-        oldest_in_batch = min((e.get("startTime") or "9999") for e in batch)[:10]
+        add(batch)
         token = (data.get("pages") or {}).get("older")
         pages += 1
-        # keep paging while any part of the batch still touches the window
-        if not token or newest_in_batch < since_dt:
+        if not token:
             break
-        if oldest_in_batch < since_dt and pages >= 3:
-            break
+    note("global sweep: %d events" % len(events))
+
+    # 2) per-league paging — the part that actually reaches back
+    for lid in (lg_ids or []):
+        token, pages, got = None, 0, 0
+        while pages < 25:
+            url = (ESPORTS + "getSchedule?hl=en-US&leagueId=" + str(lid)
+                   + (("&pageToken=" + urllib.parse.quote(token)) if token else ""))
+            try:
+                d = get(url)
+            except RuntimeError:
+                break
+            data = d.get("data", {}).get("schedule", {})
+            batch = [e for e in (data.get("events", []) or [])
+                     if str(e.get("state", "")).lower() in ("completed", "unstarted", "inprogress")]
+            done = [e for e in batch if str(e.get("state", "")).lower() == "completed"]
+            if not batch:
+                break
+            got += add(done)
+            oldest = min((e.get("startTime") or "9999") for e in batch)[:10]
+            token = (data.get("pages") or {}).get("older")
+            pages += 1
+            if not token or oldest < since_dt:
+                break
+        if got:
+            print("    league %s -> +%d events" % (lid, got), flush=True)
     return events
 
 
@@ -225,7 +268,7 @@ def build_rows(since):
     lg_map = leagues()
     note("league catalogue: %d entries" % len(lg_map), bool(lg_map))
 
-    evs = completed_events(since)
+    evs = completed_events(since, list(lg_map.keys()))
     note("completed events pulled: %d" % len(evs), bool(evs))
 
     # Real response shape (confirmed from a live sample):
