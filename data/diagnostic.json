@@ -1,7 +1,7 @@
 {
   "version": 7,
   "source": "riot_esports",
-  "started": "2026-08-01T16:32:20Z",
+  "started": "2026-08-01T16:41:53Z",
   "steps": [
     {
       "step": "league catalogue: 44 entries",
@@ -129,5 +129,5 @@
       ]
     ]
   },
-  "finished": "2026-08-01T16:38:02Z"
+  "finished": "2026-08-01T16:47:39Z"
 }
