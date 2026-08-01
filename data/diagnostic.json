@@ -1,17 +1,17 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-08-01T21:59:06Z",
+  "started": "2026-08-01T22:19:25Z",
   "steps": [
     {
-      "step": "gdown produced no usable file — using manual download",
-      "ok": false,
+      "step": "history file: 26170 rows in window (of 48970)",
+      "ok": true,
       "detail": ""
     },
     {
-      "step": "Oracle's Elixir unavailable — continuing with Riot only",
-      "ok": false,
-      "detail": "Drive returned 2009 bytes of HTML, not the CSV"
+      "step": "history covers 2026-05-03 .. 2026-07-28",
+      "ok": true,
+      "detail": ""
     },
     {
       "step": "Riot live rows: 5550",
@@ -19,12 +19,12 @@
       "detail": ""
     },
     {
-      "step": "using 5550 Riot rows after n/a (dropped 0 overlapping)",
+      "step": "using 1560 Riot rows after 2026-07-28 (dropped 3990 overlapping)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "wrote 5550 rows spanning 2026-07-11 .. 2026-08-01",
+      "step": "wrote 27730 rows spanning 2026-05-03 .. 2026-08-01",
       "ok": true,
       "detail": ""
     }
@@ -32,84 +32,83 @@
   "outcome": "ok",
   "requests": 1723,
   "since": "2026-05-03",
-  "oe_file_id": "1hnpbrUpBMS1TZI7IovfpKeZfWJH1Aptm",
-  "oe_confirm_url": "https://drive.usercontent.google.com/download?id=1hnpbrUpBMS1TZI7IovfpKeZfWJH1Aptm&export=download&confirm=t",
-  "oe_rows": 0,
-  "oe_newest": "",
+  "history_file_rows": 48970,
+  "oe_rows": 26170,
+  "oe_newest": "2026-07-28",
   "riot_events": 2662,
   "riot_games_found": 556,
   "riot_games_ok": 555,
   "riot_games_failed": 1,
   "riot_rows_all": 5550,
-  "riot_rows_used": 5550,
+  "riot_rows_used": 1560,
   "written": {
-    "rows": 5550,
+    "rows": 27730,
     "newest": "2026-08-01",
-    "oldest": "2026-07-11",
-    "history_through": "",
-    "mb": 0.6,
+    "oldest": "2026-05-03",
+    "history_through": "2026-07-28",
+    "mb": 2.95,
     "leagues": [
       [
         "EWC",
-        510
-      ],
-      [
-        "PRM",
-        410
-      ],
-      [
-        "AL",
-        400
-      ],
-      [
-        "LES",
-        390
-      ],
-      [
-        "NACL",
-        350
-      ],
-      [
-        "LRN",
-        300
-      ],
-      [
-        "LFL",
-        300
-      ],
-      [
-        "CD",
-        290
-      ],
-      [
-        "LEC",
-        250
-      ],
-      [
-        "LCP",
-        230
-      ],
-      [
-        "HLL",
-        220
-      ],
-      [
-        "LJL",
-        210
-      ],
-      [
-        "LIT",
-        200
-      ],
-      [
-        "LCKC",
-        200
+        1720
       ],
       [
         "LCK",
-        180
+        1360
+      ],
+      [
+        "LPL",
+        1310
+      ],
+      [
+        "CD",
+        1250
+      ],
+      [
+        "NACL",
+        1220
+      ],
+      [
+        "PRM",
+        1170
+      ],
+      [
+        "LCKC",
+        1150
+      ],
+      [
+        "EM",
+        1100
+      ],
+      [
+        "LRS",
+        900
+      ],
+      [
+        "AL",
+        870
+      ],
+      [
+        "LJL",
+        840
+      ],
+      [
+        "HLL",
+        840
+      ],
+      [
+        "LCP",
+        810
+      ],
+      [
+        "LES",
+        810
+      ],
+      [
+        "LEC",
+        790
       ]
     ]
   },
-  "finished": "2026-08-01T22:15:08Z"
+  "finished": "2026-08-01T22:31:33Z"
 }
