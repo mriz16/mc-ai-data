@@ -1,48 +1,49 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-08-01T21:33:14Z",
+  "started": "2026-08-01T21:59:06Z",
   "steps": [
     {
-      "step": "gdown failed — falling back to direct download",
+      "step": "gdown produced no usable file — using manual download",
       "ok": false,
-      "detail": "download() got an unexpected keyword argument 'fuzzy'"
+      "detail": ""
     },
     {
       "step": "Oracle's Elixir unavailable — continuing with Riot only",
       "ok": false,
-      "detail": "Drive still returned HTML — file may be rate limited or moved"
+      "detail": "Drive returned 2009 bytes of HTML, not the CSV"
     },
     {
-      "step": "Riot live rows: 5540",
+      "step": "Riot live rows: 5550",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "using 5540 Riot rows after n/a (dropped 0 overlapping)",
+      "step": "using 5550 Riot rows after n/a (dropped 0 overlapping)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "wrote 5540 rows spanning 2026-07-11 .. 2026-08-01",
+      "step": "wrote 5550 rows spanning 2026-07-11 .. 2026-08-01",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 1720,
+  "requests": 1723,
   "since": "2026-05-03",
   "oe_file_id": "1hnpbrUpBMS1TZI7IovfpKeZfWJH1Aptm",
+  "oe_confirm_url": "https://drive.usercontent.google.com/download?id=1hnpbrUpBMS1TZI7IovfpKeZfWJH1Aptm&export=download&confirm=t",
   "oe_rows": 0,
   "oe_newest": "",
   "riot_events": 2662,
-  "riot_games_found": 555,
-  "riot_games_ok": 554,
+  "riot_games_found": 556,
+  "riot_games_ok": 555,
   "riot_games_failed": 1,
-  "riot_rows_all": 5540,
-  "riot_rows_used": 5540,
+  "riot_rows_all": 5550,
+  "riot_rows_used": 5550,
   "written": {
-    "rows": 5540,
+    "rows": 5550,
     "newest": "2026-08-01",
     "oldest": "2026-07-11",
     "history_through": "",
@@ -65,12 +66,12 @@
         390
       ],
       [
-        "LRN",
-        360
-      ],
-      [
         "NACL",
         350
+      ],
+      [
+        "LRN",
+        300
       ],
       [
         "LFL",
@@ -79,6 +80,10 @@
       [
         "CD",
         290
+      ],
+      [
+        "LEC",
+        250
       ],
       [
         "LCP",
@@ -97,10 +102,6 @@
         200
       ],
       [
-        "LEC",
-        200
-      ],
-      [
         "LCKC",
         200
       ],
@@ -110,5 +111,5 @@
       ]
     ]
   },
-  "finished": "2026-08-01T21:46:41Z"
+  "finished": "2026-08-01T22:15:08Z"
 }
