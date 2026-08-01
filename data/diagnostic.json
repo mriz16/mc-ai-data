@@ -1,7 +1,7 @@
 {
   "version": 7,
   "source": "riot_esports",
-  "started": "2026-08-01T17:35:41Z",
+  "started": "2026-08-01T18:16:03Z",
   "steps": [
     {
       "step": "league catalogue: 44 entries",
@@ -9,32 +9,37 @@
       "detail": ""
     },
     {
-      "step": "completed events pulled: 300",
+      "step": "global sweep: 300 events",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "completed games in window: 558",
+      "step": "completed events pulled: 2659",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "processed 557 games (1 failed) -> 5570 player rows",
+      "step": "completed games in window: 555",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "wrote data/latest.json — 5570 rows, newest 2026-08-01",
+      "step": "processed 554 games (1 failed) -> 5540 player rows",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "step": "wrote data/latest.json — 5540 rows, newest 2026-08-01",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 1680,
+  "requests": 1720,
   "samples": {
     "getLeagues": "[{\"id\": \"98767975604431411\", \"slug\": \"worlds\", \"name\": \"Worlds\", \"region\": \"INTERNATIONAL\", \"image\": \"http://static.lolesports.com/leagues/1592594612171_WorldsDarkBG.png\", \"priority\": 1, \"displayPriority\": {\"position\": 0, \"status\": \"force_selected\"}}, {\"id\": \"98767991325878492\", \"slug\": \"msi\", \"name\": \"MSI\", \"region\": \"INTERNATIONAL\", \"image\": \"http://static.lolesports.com/leagues/1592594634248_MSIDarkBG.png\", \"priority\": 1, \"displayPriority\": {\"position\": 1, \"status\": \"force_selected\"}}]",
-    "getCompletedEvents": "[{\"startTime\": \"2026-07-11T08:00:00Z\", \"blockName\": \"Knockouts\", \"league\": {\"name\": \"MSI\"}, \"match\": {\"id\": \"115570934355614599\", \"type\": \"normal\", \"teams\": [{\"name\": \"LYON\", \"code\": \"LYON\", \"image\": \"http://static.lolesports.com/teams/1743717443673_isotypelyon-03.png\", \"result\": {\"gameWins\": 2}}, {\"name\": \"Hanwha Life Esports\", \"code\": \"HLE\", \"image\": \"http://static.lolesports.com/teams/1631819564399_hle-2021-worlds.png\", \"result\": {\"gameWins\": 3}}], \"strategy\": {\"type\": \"bestOf\", \"count\": 5}}, \"games\": [{\"id\": \"115570934355614600\", \"vods\": [{\"parameter\": \"2817283776\"}, {\"parameter\": \"TezLixj2MAY\"}, {\"parameter\": \"2817292662\"}, {\"parameter\": \"VqKkKFsw_5E\"}, {\"parameter\": \"GfosFhCcLIA\"}, {\"parameter\": \"2817281667\"}, {\"parameter\": \"2817291990\"}, {\"parameter\": \"201191501\"}, {\"parameter\": \"2817292019\"}, {\"parameter\": \"_8rBDBefEmY\"}, {\"parameter\": \"N83cjLDTbmE\"}, {\"parameter\": \"2817295945\"}, {\"parameter\": \"pOPYD60l-oM\"}, {\"parameter\": \"2817290463\"}]}, {\"id\": \"115570934355614601\", \"vods\": [{\"parameter\": \"2817283776\"}, {\"parameter\": \"AvCAwfMQTFM\"}, {\"parameter\": \"2817292662\"}, {\"parameter\": \"B9x39mCRBj0\"}, {\"parameter\": \"GfosFhCcLIA\"}, {\"parameter\": \"2817281667\"}, {\"parameter\": \"2817291990\"}, {\"parameter\": \"201191501\"}, {\"parameter\": \"2817292019\"}, {\"parameter\": \"_8rBDBefEmY\"}, {\"parameter\": \"N83cjLDTbmE\"}, {\"parameter\": \"2817295945\"}, {\"parameter\": \"pOPYD60l-oM\"}, {\"parameter\": \"2817290463\"}]}, {\"id\": \"115570934355614602\", \"vods\": [{\"parameter\": \"2817283776\"}, {\"parameter\": \"FS9AD",
-    "final_frame": "{\"blueKills\": 16, \"redKills\": 26, \"ts\": \"2026-07-11T08:50:59.950Z\", \"duration_s\": 2342}"
+    "getCompletedEvents": "[{\"startTime\": \"2026-07-11T19:00:00Z\", \"blockName\": \"Week 3\", \"league\": {\"name\": \"LRN\"}, \"match\": {\"id\": \"116520885021783312\", \"type\": \"normal\", \"teams\": [{\"name\": \"3V TEAM\", \"code\": \"3V\", \"image\": \"http://static.lolesports.com/teams/1781969964341_3v_w.png\", \"result\": {\"gameWins\": 2}}, {\"name\": \"SDM Tigres\", \"code\": \"SDM\", \"image\": \"http://static.lolesports.com/teams/1742463079753_FULL_COLOR_FOR_DARK_BG6.png\", \"result\": {\"gameWins\": 0}}], \"strategy\": {\"type\": \"bestOf\", \"count\": 3}}, \"games\": [{\"id\": \"116520885021783313\", \"vods\": [{\"parameter\": \"Tacv3SyEHgw\"}]}, {\"id\": \"116520885021783314\", \"vods\": [{\"parameter\": \"Tacv3SyEHgw\"}]}, {\"id\": \"116520885021783315\", \"vods\": []}]}]",
+    "final_frame": "{\"blueKills\": 27, \"redKills\": 10, \"ts\": \"2026-07-11T19:45:09.452Z\", \"duration_s\": 1997}"
   },
   "since": "2026-05-03",
   "league_renames": {
@@ -51,14 +56,14 @@
     "Esports Balkan League": "EBL"
   },
   "event_date_range": [
-    "2026-07-11",
+    "2023-07-30",
     "2026-08-01"
   ],
-  "games_found": 558,
-  "games_ok": 557,
+  "games_found": 555,
+  "games_ok": 554,
   "games_failed": 1,
   "written": {
-    "rows": 5570,
+    "rows": 5540,
     "newest": "2026-08-01",
     "mb": 0.6,
     "leagues": [
@@ -124,5 +129,5 @@
       ]
     ]
   },
-  "finished": "2026-08-01T17:53:15Z"
+  "finished": "2026-08-01T18:31:00Z"
 }
