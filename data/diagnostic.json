@@ -1,114 +1,114 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-08-01T22:19:25Z",
+  "started": "2026-08-02T01:27:47Z",
   "steps": [
     {
-      "step": "history file: 26170 rows in window (of 48970)",
+      "step": "history file: 6080 rows in window (of 48970)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "history covers 2026-05-03 .. 2026-07-28",
+      "step": "history covers 2026-07-03 .. 2026-07-28",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "Riot live rows: 5550",
+      "step": "Riot live rows: 5520",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "using 1560 Riot rows after 2026-07-28 (dropped 3990 overlapping)",
+      "step": "using 1610 Riot rows after 2026-07-28 (dropped 3910 overlapping)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "wrote 27730 rows spanning 2026-05-03 .. 2026-08-01",
+      "step": "wrote 7690 rows spanning 2026-07-03 .. 2026-08-01",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 1723,
-  "since": "2026-05-03",
+  "requests": 1709,
+  "since": "2026-07-03",
   "history_file_rows": 48970,
-  "oe_rows": 26170,
+  "oe_rows": 6080,
   "oe_newest": "2026-07-28",
-  "riot_events": 2662,
-  "riot_games_found": 556,
-  "riot_games_ok": 555,
+  "riot_events": 2264,
+  "riot_games_found": 553,
+  "riot_games_ok": 552,
   "riot_games_failed": 1,
-  "riot_rows_all": 5550,
-  "riot_rows_used": 1560,
+  "riot_rows_all": 5520,
+  "riot_rows_used": 1610,
   "written": {
-    "rows": 27730,
+    "rows": 7690,
     "newest": "2026-08-01",
-    "oldest": "2026-05-03",
+    "oldest": "2026-07-03",
     "history_through": "2026-07-28",
-    "mb": 2.95,
+    "mb": 0.82,
     "leagues": [
       [
-        "EWC",
-        1720
-      ],
-      [
-        "LCK",
-        1360
-      ],
-      [
-        "LPL",
-        1310
-      ],
-      [
-        "CD",
-        1250
-      ],
-      [
-        "NACL",
-        1220
+        "LRN",
+        560
       ],
       [
         "PRM",
-        1170
+        560
       ],
       [
-        "LCKC",
-        1150
-      ],
-      [
-        "EM",
-        1100
+        "MSI",
+        530
       ],
       [
         "LRS",
-        900
+        520
+      ],
+      [
+        "EWC",
+        510
       ],
       [
         "AL",
-        870
-      ],
-      [
-        "LJL",
-        840
-      ],
-      [
-        "HLL",
-        840
-      ],
-      [
-        "LCP",
-        810
+        400
       ],
       [
         "LES",
-        810
+        390
+      ],
+      [
+        "HLL",
+        340
+      ],
+      [
+        "NACL",
+        340
+      ],
+      [
+        "CD",
+        300
+      ],
+      [
+        "LFL",
+        300
+      ],
+      [
+        "NLC",
+        290
+      ],
+      [
+        "KeSPA Cup",
+        280
+      ],
+      [
+        "ROL",
+        270
       ],
       [
         "LEC",
-        790
+        240
       ]
     ]
   },
-  "finished": "2026-08-01T22:31:33Z"
+  "finished": "2026-08-02T01:39:52Z"
 }
