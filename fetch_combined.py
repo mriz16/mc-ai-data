@@ -347,13 +347,15 @@ def riot_rows(since):
         match = e.get("match") or {}
         teams = match.get("teams") or []
         tn = [t.get("name") or t.get("code") or "" for t in teams]
+        tc = [t.get("code") or "" for t in teams]
         played = sum(int(((t.get("result") or {}).get("gameWins") or 0)) for t in teams)
         games = e.get("games") or match.get("games") or []
         if played:
             games = games[:played]
         for g in games:
             if g.get("id"):
-                targets.append({"gameId": str(g["id"]), "league": league, "date": date, "teams": tn})
+                targets.append({"gameId": str(g["id"]), "league": league, "date": date,
+                            "teams": tn, "codes": tc})
     DIAG["riot_games_found"] = len(targets)
 
     rows, ok, bad = [], 0, 0
@@ -376,8 +378,42 @@ def riot_rows(since):
         blue, red = last.get("blueTeam") or {}, last.get("redTeam") or {}
         tk = {"blue": blue.get("totalKills", 0) or 0, "red": red.get("totalKills", 0) or 0}
         win = {"blue": 1 if tk["blue"] >= tk["red"] else 0, "red": 1 if tk["red"] > tk["blue"] else 0}
+        # Sides SWAP between games of a series, so match.teams order says nothing about who
+        # is blue in this game. Assuming it did mislabelled 59% of fresh rows — T1's five
+        # showing up as KT Rolster — and because pools key on player+team, every mislabelled
+        # player lost their history and fell back to position priors. Resolve the side from
+        # the players' own summoner prefixes ("T1 Faker" -> T1), which cannot swap.
         tm = {"blue": t["teams"][0] if len(t["teams"]) > 0 else "",
               "red": t["teams"][1] if len(t["teams"]) > 1 else ""}
+        codes = {}
+        for nm, cd in zip(t.get("teams") or [], t.get("codes") or []):
+            if cd:
+                codes[re.sub(r"[^a-z0-9]", "", str(cd).lower())] = nm
+            if nm:
+                codes[re.sub(r"[^a-z0-9]", "", str(nm).lower())] = nm
+
+        def side_from_prefix(side_key):
+            votes = {}
+            for x in ((meta.get(side_key) or {}).get("participantMetadata") or []):
+                sn = str(x.get("summonerName") or "")
+                if " " not in sn:
+                    continue
+                pre = re.sub(r"[^a-z0-9]", "", sn.split(" ")[0].lower())
+                if pre in codes:
+                    votes[codes[pre]] = votes.get(codes[pre], 0) + 1
+            return max(votes.items(), key=lambda kv: kv[1])[0] if votes else None
+
+        b_name, r_name = side_from_prefix("blueTeamMetadata"), side_from_prefix("redTeamMetadata")
+        if b_name and r_name and b_name != r_name:
+            tm = {"blue": b_name, "red": r_name}
+            DIAG["side_resolved"] = DIAG.get("side_resolved", 0) + 1
+        elif b_name or r_name:
+            known = b_name or r_name
+            other = next((x for x in (t.get("teams") or []) if x != known), "")
+            tm = {"blue": known, "red": other} if b_name else {"blue": other, "red": known}
+            DIAG["side_resolved"] = DIAG.get("side_resolved", 0) + 1
+        else:
+            DIAG["side_fallback"] = DIAG.get("side_fallback", 0) + 1
         for side, obj in (("blue", blue), ("red", red)):
             for p in (obj.get("participants") or []):
                 m = pm.get(p.get("participantId"), {})
@@ -443,6 +479,90 @@ def run():
         DIAG["outcome"] = "no_rows"
         note("no data from either source — refusing to overwrite", False)
         return
+
+    # ── reconcile Riot team names onto the historical naming ──
+    # Riot writes "DNS Challengers" where history says "DN SOOPers Challengers", and
+    # "RED Kalunga Academy" vs "RED Academy". Case-folding cannot catch that. Instead,
+    # look at WHO plays for a Riot-named team: if most of its players historically
+    # belong to one team, the two names are the same club and are merged. Purely
+    # evidence-driven, so it keeps working as rosters and branding change.
+    if hist and tail:
+        hist_team = {}
+        for r in hist:
+            hist_team.setdefault(r[0], {}).setdefault(r[1], 0)
+            hist_team[r[0]][r[1]] += 1
+        hist_names = {r[1] for r in hist}
+        by_new = {}
+        for r in tail:
+            by_new.setdefault(r[1], []).append(r[0])
+        alias, merged_rows = {}, 0
+        for new_name, players in by_new.items():
+            if new_name in hist_names:
+                continue                                   # already matches history
+            votes = {}
+            for p in set(players):
+                known = hist_team.get(p)
+                if not known:
+                    continue
+                best = max(known.items(), key=lambda kv: kv[1])[0]
+                votes[best] = votes.get(best, 0) + 1
+            if not votes:
+                continue
+            best, n = max(votes.items(), key=lambda kv: kv[1])
+            # Guards against a wrong merge, which would be worse than no merge:
+            #  * near-unanimous roster agreement (4 of 5), not a bare majority
+            #  * the target must not itself be playing in the fresh slice under its own
+            #    name — if both are active they are different clubs
+            #  * some textual kinship, so "DK Challengers" cannot absorb "T1 Academy"
+            if n < 4 or best in by_new:
+                continue
+            a_tok = set(re.sub(r"[^a-z0-9 ]", "", new_name.lower()).split())
+            b_tok = set(re.sub(r"[^a-z0-9 ]", "", best.lower()).split())
+            a_flat = re.sub(r"[^a-z0-9]", "", new_name.lower())
+            b_flat = re.sub(r"[^a-z0-9]", "", best.lower())
+            related = bool(a_tok & b_tok) or a_flat in b_flat or b_flat in a_flat
+            if related:
+                alias[new_name] = best
+            else:
+                DIAG.setdefault("alias_rejected", {})[new_name] = best + " (no name kinship)"
+        if alias:
+            for r in rows:
+                if r[1] in alias:
+                    r[1] = alias[r[1]]; merged_rows += 1
+            DIAG["team_aliases"] = alias
+            note("reconciled %d Riot team names to history (%d rows): %s"
+                 % (len(alias), merged_rows,
+                    ", ".join("%s->%s" % (k, v) for k, v in list(alias.items())[:6])))
+
+    # ── canonicalise names across sources ──
+    # Oracle's Elixir and Riot capitalise differently ("Dplus Kia" vs "Dplus KIA",
+    # "Kiwoom DRX" vs "KIWOOM DRX", "GiantX" vs "GIANTX"). Left alone this splits a
+    # team's pool in two and strands the FRESH Riot games away from the history —
+    # measured at 12 teams / 1,690 rows. Collapse each variant onto the spelling that
+    # appears most often, so history and new games land in the same pool.
+    def canon_key(s):
+        return "".join(c for c in s.lower() if c.isalnum())
+
+    for col in (1, 0):                      # 1 = team, 0 = player
+        counts = {}
+        for r in rows:
+            counts.setdefault(canon_key(r[col]), {}).setdefault(r[col], 0)
+            counts[canon_key(r[col])][r[col]] += 1
+        canon, fixed = {}, 0
+        for key, variants in counts.items():
+            if len(variants) < 2:
+                continue
+            best = max(variants.items(), key=lambda kv: kv[1])[0]
+            for v in variants:
+                if v != best:
+                    canon[v] = best
+        if canon:
+            for r in rows:
+                if r[col] in canon:
+                    r[col] = canon[r[col]]; fixed += 1
+            label = "team" if col == 1 else "player"
+            DIAG["canonicalised_" + label] = {"names": len(canon), "rows": fixed}
+            note("merged %d %s name variants (%d rows)" % (len(canon), label, fixed))
 
     seen, dedup = set(), []
     for r in rows:
