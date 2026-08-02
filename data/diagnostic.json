@@ -1,15 +1,15 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-08-02T12:52:54Z",
+  "started": "2026-08-02T13:15:03Z",
   "steps": [
     {
-      "step": "history file: 6080 rows in window (of 48970)",
+      "step": "history file: 25720 rows in window (of 48970)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "history covers 2026-07-03 .. 2026-07-28",
+      "step": "history covers 2026-05-04 .. 2026-07-28",
       "ok": true,
       "detail": ""
     },
@@ -24,91 +24,142 @@
       "detail": ""
     },
     {
-      "step": "wrote 7690 rows spanning 2026-07-03 .. 2026-08-01",
+      "step": "reconciled 22 Riot team names to history (325 rows): RED Kalunga Academy->RED Academy, DNS Challengers->DN SOOPers Challengers, KRX Challengers->Kiwoom DRX Challengers, KIWOOM DRX->Kiwoom DRX, NONGSHIM RED FORCE->Nongshim RedForce, kt Rolster->KT Rolster",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "step": "merged 4 team name variants (55 rows)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "step": "merged 30 player name variants (98 rows)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "step": "wrote 27330 rows spanning 2026-05-04 .. 2026-08-01",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 1709,
-  "since": "2026-07-03",
+  "requests": 1714,
+  "since": "2026-05-04",
   "history_file_rows": 48970,
-  "oe_rows": 6080,
+  "oe_rows": 25720,
   "oe_newest": "2026-07-28",
-  "riot_events": 2264,
+  "riot_events": 2664,
   "riot_games_found": 553,
+  "side_resolved": 552,
   "riot_games_ok": 552,
   "riot_games_failed": 1,
   "riot_rows_all": 5520,
   "riot_rows_used": 1610,
+  "alias_rejected": {
+    "NS Challengers": "Nongshim Esports Academy (no name kinship)"
+  },
+  "team_aliases": {
+    "RED Kalunga Academy": "RED Academy",
+    "DNS Challengers": "DN SOOPers Challengers",
+    "KRX Challengers": "Kiwoom DRX Challengers",
+    "KIWOOM DRX": "Kiwoom DRX",
+    "NONGSHIM RED FORCE": "Nongshim RedForce",
+    "kt Rolster": "KT Rolster",
+    "WLGaming": "WLGaming Esports",
+    "TheParadOx Invaders": "The ParadOx Invaders",
+    "Heretics Academy": "Team Heretics Academy",
+    "VfB Stuttgart": "VfB eSports",
+    "Ici Japon Corp": "Ici Japon Corp. Esport",
+    "FALKE ESPORTS": "Falke Esports",
+    "KaBuM! Eports": "KaBuM! Ilha das Lendas",
+    "DK Challengers": "Dplus Kia Challengers",
+    "HLE Challengers": "Hanwha Life Esports Challengers",
+    "Dplus KIA": "Dplus Kia",
+    "Relove Deep Cross Gaming": "Deep Cross Gaming",
+    "Barça Esports": "Barça eSports",
+    "Rossmann Centaurs": "ROSSMANN Centaurs",
+    "Croatian Flair": "Croatian Flair x RLX",
+    "Gen.G Esports": "Gen.G",
+    "Cloud9 Kia": "Cloud9"
+  },
+  "canonicalised_team": {
+    "names": 4,
+    "rows": 55
+  },
+  "canonicalised_player": {
+    "names": 30,
+    "rows": 98
+  },
   "written": {
-    "rows": 7690,
+    "rows": 27330,
     "newest": "2026-08-01",
-    "oldest": "2026-07-03",
+    "oldest": "2026-05-04",
     "history_through": "2026-07-28",
-    "mb": 0.82,
+    "mb": 2.9,
     "leagues": [
       [
-        "LRN",
-        560
-      ],
-      [
-        "PRM",
-        560
-      ],
-      [
-        "MSI",
-        530
-      ],
-      [
-        "LRS",
-        520
-      ],
-      [
         "EWC",
-        510
+        1720
       ],
       [
-        "AL",
-        400
-      ],
-      [
-        "LES",
-        390
-      ],
-      [
-        "HLL",
-        340
-      ],
-      [
-        "NACL",
-        340
+        "LCK",
+        1320
       ],
       [
         "CD",
-        300
+        1250
       ],
       [
-        "LFL",
-        300
+        "LPL",
+        1250
+      ],
+      [
+        "NACL",
+        1220
+      ],
+      [
+        "PRM",
+        1170
+      ],
+      [
+        "LCKC",
+        1150
+      ],
+      [
+        "EM",
+        1100
+      ],
+      [
+        "LRS",
+        900
+      ],
+      [
+        "AL",
+        870
+      ],
+      [
+        "LJL",
+        840
+      ],
+      [
+        "HLL",
+        840
+      ],
+      [
+        "LES",
+        810
+      ],
+      [
+        "LRN",
+        780
       ],
       [
         "NLC",
-        290
-      ],
-      [
-        "KeSPA Cup",
-        280
-      ],
-      [
-        "ROL",
-        270
-      ],
-      [
-        "LEC",
-        240
+        760
       ]
     ]
   },
-  "finished": "2026-08-02T13:08:08Z"
+  "finished": "2026-08-02T13:27:16Z"
 }
