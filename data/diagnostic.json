@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-08-03T14:10:57Z",
+  "started": "2026-08-03T19:15:21Z",
   "steps": [
     {
       "step": "history file: 5900 rows in window (of 48970)",
@@ -19,7 +19,7 @@
       "detail": ""
     },
     {
-      "step": "using 1970 Riot rows after 2026-07-28 (dropped 3640 overlapping)",
+      "step": "using 1990 Riot rows after 2026-07-28 (dropped 3620 overlapping)",
       "ok": true,
       "detail": ""
     },
@@ -39,7 +39,7 @@
       "detail": ""
     },
     {
-      "step": "wrote 7870 rows spanning 2026-07-04 .. 2026-08-03",
+      "step": "wrote 7890 rows spanning 2026-07-04 .. 2026-08-03",
       "ok": true,
       "detail": ""
     }
@@ -50,13 +50,13 @@
   "history_file_rows": 48970,
   "oe_rows": 5900,
   "oe_newest": "2026-07-28",
-  "riot_events": 2271,
+  "riot_events": 2275,
   "riot_games_found": 562,
   "side_resolved": 561,
   "riot_games_ok": 561,
   "riot_games_failed": 1,
   "riot_rows_all": 5610,
-  "riot_rows_used": 1970,
+  "riot_rows_used": 1990,
   "alias_rejected": {
     "NS Challengers": "Nongshim Esports Academy (no name kinship)",
     "Ole Miss Esports": "University of Mississippi (no name kinship)",
@@ -98,7 +98,7 @@
     "rows": 61
   },
   "written": {
-    "rows": 7870,
+    "rows": 7890,
     "newest": "2026-08-03",
     "oldest": "2026-07-04",
     "history_through": "2026-07-28",
@@ -141,6 +141,10 @@
         340
       ],
       [
+        "LEC",
+        310
+      ],
+      [
         "CD",
         300
       ],
@@ -157,14 +161,10 @@
         290
       ],
       [
-        "LEC",
-        290
-      ],
-      [
         "KeSPA Cup",
         280
       ]
     ]
   },
-  "finished": "2026-08-03T14:27:24Z"
+  "finished": "2026-08-03T19:27:41Z"
 }
