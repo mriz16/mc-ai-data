@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-08-03T01:28:23Z",
+  "started": "2026-08-03T08:58:03Z",
   "steps": [
     {
       "step": "history file: 5900 rows in window (of 48970)",
@@ -14,17 +14,17 @@
       "detail": ""
     },
     {
-      "step": "Riot live rows: 5600",
+      "step": "Riot live rows: 5610",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "using 1830 Riot rows after 2026-07-28 (dropped 3770 overlapping)",
+      "step": "using 1880 Riot rows after 2026-07-28 (dropped 3730 overlapping)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "reconciled 22 Riot team names to history (325 rows): RED Kalunga Academy->RED Academy, KIWOOM DRX->Kiwoom DRX, NONGSHIM RED FORCE->Nongshim RedForce, WLGaming->WLGaming Esports, TheParadOx Invaders->The ParadOx Invaders, Heretics Academy->Team Heretics Academy",
+      "step": "reconciled 23 Riot team names to history (335 rows): RED Kalunga Academy->RED Academy, KIWOOM DRX->Kiwoom DRX, NONGSHIM RED FORCE->Nongshim RedForce, WLGaming->WLGaming Esports, TheParadOx Invaders->The ParadOx Invaders, Heretics Academy->Team Heretics Academy",
       "ok": true,
       "detail": ""
     },
@@ -39,24 +39,24 @@
       "detail": ""
     },
     {
-      "step": "wrote 7730 rows spanning 2026-07-04 .. 2026-08-02",
+      "step": "wrote 7780 rows spanning 2026-07-04 .. 2026-08-02",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 1733,
+  "requests": 1736,
   "since": "2026-07-04",
   "history_file_rows": 48970,
   "oe_rows": 5900,
   "oe_newest": "2026-07-28",
-  "riot_events": 2270,
-  "riot_games_found": 561,
-  "side_resolved": 560,
-  "riot_games_ok": 560,
+  "riot_events": 2279,
+  "riot_games_found": 562,
+  "side_resolved": 561,
+  "riot_games_ok": 561,
   "riot_games_failed": 1,
-  "riot_rows_all": 5600,
-  "riot_rows_used": 1830,
+  "riot_rows_all": 5610,
+  "riot_rows_used": 1880,
   "alias_rejected": {
     "NS Challengers": "Nongshim Esports Academy (no name kinship)",
     "Ole Miss Esports": "University of Mississippi (no name kinship)",
@@ -83,6 +83,7 @@
     "Rossmann Centaurs": "ROSSMANN Centaurs",
     "Croatian Flair": "Croatian Flair x RLX",
     "JSK Gamefy": "JSK Esports",
+    "BRO Challengers": "HANJIN BRION Challengers",
     "Gen.G Esports": "Gen.G",
     "Cloud9 Kia": "Cloud9",
     "RED Kalunga": "RED Canids",
@@ -97,11 +98,11 @@
     "rows": 61
   },
   "written": {
-    "rows": 7730,
+    "rows": 7780,
     "newest": "2026-08-02",
     "oldest": "2026-07-04",
     "history_through": "2026-07-28",
-    "mb": 0.82,
+    "mb": 0.83,
     "leagues": [
       [
         "LRN",
@@ -165,5 +166,5 @@
       ]
     ]
   },
-  "finished": "2026-08-03T01:43:29Z"
+  "finished": "2026-08-03T09:14:06Z"
 }
