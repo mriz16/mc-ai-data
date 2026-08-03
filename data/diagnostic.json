@@ -1,30 +1,30 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-08-02T18:51:28Z",
+  "started": "2026-08-03T01:28:23Z",
   "steps": [
     {
-      "step": "history file: 6080 rows in window (of 48970)",
+      "step": "history file: 5900 rows in window (of 48970)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "history covers 2026-07-03 .. 2026-07-28",
+      "step": "history covers 2026-07-04 .. 2026-07-28",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "Riot live rows: 5550",
+      "step": "Riot live rows: 5600",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "using 1740 Riot rows after 2026-07-28 (dropped 3810 overlapping)",
+      "step": "using 1830 Riot rows after 2026-07-28 (dropped 3770 overlapping)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "reconciled 20 Riot team names to history (305 rows): RED Kalunga Academy->RED Academy, KIWOOM DRX->Kiwoom DRX, NONGSHIM RED FORCE->Nongshim RedForce, WLGaming->WLGaming Esports, TheParadOx Invaders->The ParadOx Invaders, Heretics Academy->Team Heretics Academy",
+      "step": "reconciled 22 Riot team names to history (325 rows): RED Kalunga Academy->RED Academy, KIWOOM DRX->Kiwoom DRX, NONGSHIM RED FORCE->Nongshim RedForce, WLGaming->WLGaming Esports, TheParadOx Invaders->The ParadOx Invaders, Heretics Academy->Team Heretics Academy",
       "ok": true,
       "detail": ""
     },
@@ -39,29 +39,30 @@
       "detail": ""
     },
     {
-      "step": "wrote 7820 rows spanning 2026-07-03 .. 2026-08-02",
+      "step": "wrote 7730 rows spanning 2026-07-04 .. 2026-08-02",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 1718,
-  "since": "2026-07-03",
+  "requests": 1733,
+  "since": "2026-07-04",
   "history_file_rows": 48970,
-  "oe_rows": 6080,
+  "oe_rows": 5900,
   "oe_newest": "2026-07-28",
-  "riot_events": 2266,
-  "riot_games_found": 556,
-  "side_resolved": 555,
-  "riot_games_ok": 555,
+  "riot_events": 2270,
+  "riot_games_found": 561,
+  "side_resolved": 560,
+  "riot_games_ok": 560,
   "riot_games_failed": 1,
-  "riot_rows_all": 5550,
-  "riot_rows_used": 1740,
+  "riot_rows_all": 5600,
+  "riot_rows_used": 1830,
   "alias_rejected": {
     "NS Challengers": "Nongshim Esports Academy (no name kinship)",
     "Ole Miss Esports": "University of Mississippi (no name kinship)",
     "DK Challengers": "Dplus Kia (no name kinship)",
-    "LEVIATÁN": "Leviatan (no name kinship)"
+    "LEVIATÁN": "Leviatan (no name kinship)",
+    "LOS": "LØS (no name kinship)"
   },
   "team_aliases": {
     "RED Kalunga Academy": "RED Academy",
@@ -83,7 +84,9 @@
     "Croatian Flair": "Croatian Flair x RLX",
     "JSK Gamefy": "JSK Esports",
     "Gen.G Esports": "Gen.G",
-    "Cloud9 Kia": "Cloud9"
+    "Cloud9 Kia": "Cloud9",
+    "RED Kalunga": "RED Canids",
+    "Team Liquid Alienware": "Team Liquid"
   },
   "canonicalised_team": {
     "names": 4,
@@ -94,11 +97,11 @@
     "rows": 61
   },
   "written": {
-    "rows": 7820,
+    "rows": 7730,
     "newest": "2026-08-02",
-    "oldest": "2026-07-03",
+    "oldest": "2026-07-04",
     "history_through": "2026-07-28",
-    "mb": 0.83,
+    "mb": 0.82,
     "leagues": [
       [
         "LRN",
@@ -109,16 +112,16 @@
         560
       ],
       [
+        "EWC",
+        510
+      ],
+      [
         "MSI",
-        530
+        450
       ],
       [
         "LRS",
-        520
-      ],
-      [
-        "EWC",
-        510
+        420
       ],
       [
         "AL",
@@ -149,18 +152,18 @@
         290
       ],
       [
+        "LEC",
+        290
+      ],
+      [
         "KeSPA Cup",
         280
       ],
       [
         "ROL",
         270
-      ],
-      [
-        "LEC",
-        260
       ]
     ]
   },
-  "finished": "2026-08-02T19:05:21Z"
+  "finished": "2026-08-03T01:43:29Z"
 }
