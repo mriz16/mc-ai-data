@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-08-04T01:17:51Z",
+  "started": "2026-08-04T08:14:17Z",
   "steps": [
     {
       "step": "history file: 5710 rows in window (of 48970)",
@@ -14,49 +14,49 @@
       "detail": ""
     },
     {
-      "step": "Riot live rows: 5600",
+      "step": "Riot live rows: 5640",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "using 2010 Riot rows after 2026-07-28 (dropped 3590 overlapping)",
+      "step": "using 2160 Riot rows after 2026-07-28 (dropped 3480 overlapping)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "reconciled 23 Riot team names to history (350 rows): RED Kalunga Academy->RED Academy, KIWOOM DRX->Kiwoom DRX, NONGSHIM RED FORCE->Nongshim RedForce, WLGaming->WLGaming Esports, TheParadOx Invaders->The ParadOx Invaders, Heretics Academy->Team Heretics Academy",
+      "step": "reconciled 23 Riot team names to history (360 rows): RED Kalunga Academy->RED Academy, KIWOOM DRX->Kiwoom DRX, NONGSHIM RED FORCE->Nongshim RedForce, WLGaming->WLGaming Esports, TheParadOx Invaders->The ParadOx Invaders, Heretics Academy->Team Heretics Academy",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 4 team name variants (65 rows)",
+      "step": "merged 5 team name variants (75 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 27 player name variants (61 rows)",
+      "step": "merged 33 player name variants (82 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "wrote 7720 rows spanning 2026-07-05 .. 2026-08-03",
+      "step": "wrote 7870 rows spanning 2026-07-05 .. 2026-08-04",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 1733,
+  "requests": 1745,
   "since": "2026-07-05",
   "history_file_rows": 48970,
   "oe_rows": 5710,
   "oe_newest": "2026-07-28",
-  "riot_events": 2285,
-  "riot_games_found": 561,
-  "side_resolved": 560,
-  "riot_games_ok": 560,
+  "riot_events": 2287,
+  "riot_games_found": 565,
+  "side_resolved": 564,
+  "riot_games_ok": 564,
   "riot_games_failed": 1,
-  "riot_rows_all": 5600,
-  "riot_rows_used": 2010,
+  "riot_rows_all": 5640,
+  "riot_rows_used": 2160,
   "alias_rejected": {
     "NS Challengers": "Nongshim Esports Academy (no name kinship)",
     "Ole Miss Esports": "University of Mississippi (no name kinship)",
@@ -90,19 +90,19 @@
     "Team Liquid Alienware": "Team Liquid"
   },
   "canonicalised_team": {
-    "names": 4,
-    "rows": 65
+    "names": 5,
+    "rows": 75
   },
   "canonicalised_player": {
-    "names": 27,
-    "rows": 61
+    "names": 33,
+    "rows": 82
   },
   "written": {
-    "rows": 7720,
-    "newest": "2026-08-03",
+    "rows": 7870,
+    "newest": "2026-08-04",
     "oldest": "2026-07-05",
     "history_through": "2026-07-28",
-    "mb": 0.82,
+    "mb": 0.84,
     "leagues": [
       [
         "PRM",
@@ -118,7 +118,7 @@
       ],
       [
         "LRS",
-        400
+        440
       ],
       [
         "AL",
@@ -133,7 +133,15 @@
         370
       ],
       [
+        "CD",
+        360
+      ],
+      [
         "HLL",
+        340
+      ],
+      [
+        "NLC",
         340
       ],
       [
@@ -145,10 +153,6 @@
         330
       ],
       [
-        "CD",
-        300
-      ],
-      [
         "LFL",
         300
       ],
@@ -157,14 +161,10 @@
         300
       ],
       [
-        "NLC",
-        290
-      ],
-      [
         "KeSPA Cup",
         280
       ]
     ]
   },
-  "finished": "2026-08-04T01:35:37Z"
+  "finished": "2026-08-04T08:30:38Z"
 }
