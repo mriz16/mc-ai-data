@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-08-04T11:39:05Z",
+  "started": "2026-08-04T13:41:48Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -19,12 +19,12 @@
       "detail": ""
     },
     {
-      "step": "using 2160 Riot rows after 2026-07-28 (dropped 3480 overlapping)",
+      "step": "using 2250 Riot rows after 2026-07-28 (dropped 3390 overlapping)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "reconciled 17 Riot team names to history (330 rows): DNS Challengers->DN SOOPers Challengers, KIWOOM DRX->Kiwoom DRX, NONGSHIM RED FORCE->Nongshim RedForce, kt Rolster->KT Rolster, Heretics Academy->Team Heretics Academy, VfB Stuttgart->VfB eSports",
+      "step": "reconciled 17 Riot team names to history (355 rows): DNS Challengers->DN SOOPers Challengers, KIWOOM DRX->Kiwoom DRX, NONGSHIM RED FORCE->Nongshim RedForce, kt Rolster->KT Rolster, Heretics Academy->Team Heretics Academy, VfB Stuttgart->VfB eSports",
       "ok": true,
       "detail": ""
     },
@@ -39,7 +39,7 @@
       "detail": ""
     },
     {
-      "step": "wrote 68230 rows spanning 2026-01-08 .. 2026-08-04",
+      "step": "wrote 68320 rows spanning 2026-01-08 .. 2026-08-04",
       "ok": true,
       "detail": ""
     }
@@ -51,13 +51,13 @@
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3009,
+  "riot_events": 3011,
   "riot_games_found": 565,
   "side_resolved": 564,
   "riot_games_ok": 564,
   "riot_games_failed": 1,
   "riot_rows_all": 5640,
-  "riot_rows_used": 2160,
+  "riot_rows_used": 2250,
   "alias_rejected": {
     "NS Challengers": "Nongshim Esports Academy (no name kinship)",
     "LOS": "LØS (no name kinship)"
@@ -90,23 +90,23 @@
     "rows": 136
   },
   "written": {
-    "rows": 68230,
+    "rows": 68320,
     "newest": "2026-08-04",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
-    "mb": 7.25,
+    "mb": 7.26,
     "leagues": [
       [
         "LPL",
         4530
       ],
       [
-        "LCK",
+        "LCKC",
         3730
       ],
       [
-        "LCKC",
-        3680
+        "LCK",
+        3730
       ],
       [
         "LJL",
@@ -158,5 +158,5 @@
       ]
     ]
   },
-  "finished": "2026-08-04T11:51:30Z"
+  "finished": "2026-08-04T13:55:31Z"
 }
