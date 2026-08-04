@@ -11,9 +11,9 @@ on:
       days:
         description: "How many days of history to keep in the feed"
         required: false
-        default: "30"
+        default: "120"
         type: choice
-        options: ["7", "14", "30", "60", "90"]
+        options: ["30", "60", "90", "120", "180"]
 
 permissions:
   contents: write           # required so the job can commit the refreshed feed
@@ -40,7 +40,7 @@ jobs:
       - name: Fetch match data
         env:
           # Manual runs use the dropdown; scheduled runs use the full window.
-          DAYS: ${{ github.event.inputs.days || '30' }}
+          DAYS: ${{ github.event.inputs.days || '120' }}
           LP_USERNAME: ${{ secrets.LP_USERNAME }}
           LP_PASSWORD: ${{ secrets.LP_PASSWORD }}
         run: python fetch_combined.py
