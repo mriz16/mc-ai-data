@@ -181,6 +181,11 @@ HISTORY_FILE = os.environ.get("HISTORY_FILE", "history/oracles_elixir.json")
 
 
 def history_rows(since):
+    """Reads history/oracles_elixir.json.gz if present, else the plain .json.
+
+    The uncompressed file is ~7 MB, which exceeds what GitHub's in-browser editor will
+    accept as a paste. The gzipped copy is ~1 MB and uploads without trouble.
+    """
     """Read the committed history file — the depth half of the feed.
 
     Google Drive refuses these downloads from CI: runs #16-#18 all came back with a
@@ -189,10 +194,41 @@ def history_rows(since):
     to the repo once. It never goes stale in a way that matters — history is history —
     and Riot keeps the recent tail current on every run.
     """
-    if not os.path.exists(HISTORY_FILE):
-        raise RuntimeError("no history file at " + HISTORY_FILE)
-    with open(HISTORY_FILE, "r", encoding="utf-8") as f:
-        payload = json.load(f)
+    # Look everywhere the file might reasonably be. GitHub's upload page gives no way to
+    # choose a folder, so the file usually lands in the repo root — searching instead of
+    # demanding one exact path removes that whole problem.
+    names = ["oracles_elixir.json.gz", "oracles_elixir.json",
+             "history.json.gz", "history.json"]
+    dirs = ["history", ".", "data"]
+    candidates = [HISTORY_FILE, HISTORY_FILE + ".gz"]
+    for dpath in dirs:
+        for nm in names:
+            candidates.append(os.path.join(dpath, nm))
+    # anything that looks like a history file, wherever it sits
+    for dpath in dirs:
+        if os.path.isdir(dpath):
+            for f in sorted(os.listdir(dpath)):
+                if "oracles" in f.lower() or "history" in f.lower():
+                    if f.endswith(".json") or f.endswith(".json.gz"):
+                        candidates.append(os.path.join(dpath, f))
+
+    found = None
+    for c in candidates:
+        if c and os.path.exists(c) and os.path.getsize(c) > 100_000:
+            found = c
+            break
+    if not found:
+        raise RuntimeError("no history file found. Looked in: " + ", ".join(dirs)
+                           + " for oracles_elixir.json(.gz). Upload it anywhere in the repo.")
+
+    if found.endswith(".gz"):
+        import gzip                                            # noqa: PLC0415
+        with gzip.open(found, "rt", encoding="utf-8") as f:
+            payload = json.load(f)
+    else:
+        with open(found, "r", encoding="utf-8") as f:
+            payload = json.load(f)
+    DIAG["history_source"] = found
     fields = payload.get("fields") or []
     if fields != OUT_FIELDS:
         idx = {f: i for i, f in enumerate(fields)}
