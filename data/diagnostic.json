@@ -1,25 +1,25 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-08-03T19:15:21Z",
+  "started": "2026-08-04T01:17:51Z",
   "steps": [
     {
-      "step": "history file: 5900 rows in window (of 48970)",
+      "step": "history file: 5710 rows in window (of 48970)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "history covers 2026-07-04 .. 2026-07-28",
+      "step": "history covers 2026-07-05 .. 2026-07-28",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "Riot live rows: 5610",
+      "step": "Riot live rows: 5600",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "using 1990 Riot rows after 2026-07-28 (dropped 3620 overlapping)",
+      "step": "using 2010 Riot rows after 2026-07-28 (dropped 3590 overlapping)",
       "ok": true,
       "detail": ""
     },
@@ -39,24 +39,24 @@
       "detail": ""
     },
     {
-      "step": "wrote 7890 rows spanning 2026-07-04 .. 2026-08-03",
+      "step": "wrote 7720 rows spanning 2026-07-05 .. 2026-08-03",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 1736,
-  "since": "2026-07-04",
+  "requests": 1733,
+  "since": "2026-07-05",
   "history_file_rows": 48970,
-  "oe_rows": 5900,
+  "oe_rows": 5710,
   "oe_newest": "2026-07-28",
-  "riot_events": 2275,
-  "riot_games_found": 562,
-  "side_resolved": 561,
-  "riot_games_ok": 561,
+  "riot_events": 2285,
+  "riot_games_found": 561,
+  "side_resolved": 560,
+  "riot_games_ok": 560,
   "riot_games_failed": 1,
-  "riot_rows_all": 5610,
-  "riot_rows_used": 1990,
+  "riot_rows_all": 5600,
+  "riot_rows_used": 2010,
   "alias_rejected": {
     "NS Challengers": "Nongshim Esports Academy (no name kinship)",
     "Ole Miss Esports": "University of Mississippi (no name kinship)",
@@ -98,16 +98,12 @@
     "rows": 61
   },
   "written": {
-    "rows": 7890,
+    "rows": 7720,
     "newest": "2026-08-03",
-    "oldest": "2026-07-04",
+    "oldest": "2026-07-05",
     "history_through": "2026-07-28",
-    "mb": 0.84,
+    "mb": 0.82,
     "leagues": [
-      [
-        "LRN",
-        560
-      ],
       [
         "PRM",
         560
@@ -117,12 +113,12 @@
         510
       ],
       [
-        "MSI",
-        450
+        "LRN",
+        470
       ],
       [
         "LRS",
-        420
+        400
       ],
       [
         "AL",
@@ -131,6 +127,10 @@
       [
         "LES",
         390
+      ],
+      [
+        "MSI",
+        370
       ],
       [
         "HLL",
@@ -142,7 +142,7 @@
       ],
       [
         "LEC",
-        310
+        330
       ],
       [
         "CD",
@@ -166,5 +166,5 @@
       ]
     ]
   },
-  "finished": "2026-08-03T19:27:41Z"
+  "finished": "2026-08-04T01:35:37Z"
 }
