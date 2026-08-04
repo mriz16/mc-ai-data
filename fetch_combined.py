@@ -200,7 +200,11 @@ def history_rows(since):
     else:
         rows = payload.get("rows", [])
     DIAG["history_file_rows"] = len(rows)
-    return [r for r in rows if r[12] >= since]
+    # Deliberately NOT filtered by the DAYS window. History is already a curated file and
+    # trimming it only ever destroys pool depth. A scheduled run using a short default
+    # silently cut the feed to 30 days and reset every player's pool — that must not be
+    # possible. DAYS now bounds only the live Riot fetch.
+    return rows
 
 
 def oe_rows(since):
@@ -446,7 +450,7 @@ def run():
     hist = []
     try:
         hist = history_rows(since)
-        note("history file: %d rows in window (of %d)" % (len(hist), DIAG.get("history_file_rows", 0)))
+        note("history file: %d rows (full file, not windowed)" % len(hist))
     except Exception as e:                                       # noqa: BLE001
         note("no committed history file — trying Drive", False, e)
         try:
