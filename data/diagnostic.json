@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-08-04T19:16:12Z",
+  "started": "2026-08-05T01:22:02Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -14,87 +14,45 @@
       "detail": ""
     },
     {
-      "step": "Riot live rows: 5640",
+      "step": "Riot fetch failed",
+      "ok": false,
+      "detail": "HTTP 403"
+    },
+    {
+      "step": "using 0 Riot rows after 2026-07-28 (dropped 0 overlapping)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "using 2250 Riot rows after 2026-07-28 (dropped 3390 overlapping)",
+      "step": "merged 3 player name variants (42 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "reconciled 17 Riot team names to history (355 rows): DNS Challengers->DN SOOPers Challengers, KIWOOM DRX->Kiwoom DRX, NONGSHIM RED FORCE->Nongshim RedForce, kt Rolster->KT Rolster, Heretics Academy->Team Heretics Academy, VfB Stuttgart->VfB eSports",
-      "ok": true,
-      "detail": ""
-    },
-    {
-      "step": "merged 8 team name variants (110 rows)",
-      "ok": true,
-      "detail": ""
-    },
-    {
-      "step": "merged 39 player name variants (136 rows)",
-      "ok": true,
-      "detail": ""
-    },
-    {
-      "step": "wrote 68320 rows spanning 2026-01-08 .. 2026-08-04",
+      "step": "wrote 66070 rows spanning 2026-01-08 .. 2026-07-28",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 1754,
-  "since": "2026-04-06",
+  "requests": 1,
+  "since": "2026-04-07",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3023,
-  "riot_games_found": 565,
-  "side_resolved": 564,
-  "riot_games_ok": 564,
-  "riot_games_failed": 1,
-  "riot_rows_all": 5640,
-  "riot_rows_used": 2250,
-  "alias_rejected": {
-    "NS Challengers": "Nongshim Esports Academy (no name kinship)",
-    "LOS": "LØS (no name kinship)"
-  },
-  "team_aliases": {
-    "DNS Challengers": "DN SOOPers Challengers",
-    "KIWOOM DRX": "Kiwoom DRX",
-    "NONGSHIM RED FORCE": "Nongshim RedForce",
-    "kt Rolster": "KT Rolster",
-    "Heretics Academy": "Team Heretics Academy",
-    "VfB Stuttgart": "VfB eSports",
-    "Ici Japon Corp": "Ici Japon Corp. Esport",
-    "KaBuM! Eports": "KaBuM! Ilha das Lendas",
-    "DK Challengers": "Dplus Kia Challengers",
-    "HLE Challengers": "Hanwha Life Esports Challengers",
-    "Dplus KIA": "Dplus Kia",
-    "Relove Deep Cross Gaming": "Deep Cross Gaming",
-    "Barça Esports": "Barça eSports",
-    "kt Challengers": "KT Rolster Challengers",
-    "BRO Challengers": "HANJIN BRION Challengers",
-    "Gen.G Esports": "Gen.G",
-    "Team Liquid Alienware": "Team Liquid"
-  },
-  "canonicalised_team": {
-    "names": 8,
-    "rows": 110
-  },
+  "riot_rows_all": 0,
+  "riot_rows_used": 0,
   "canonicalised_player": {
-    "names": 39,
-    "rows": 136
+    "names": 3,
+    "rows": 42
   },
   "written": {
-    "rows": 68320,
-    "newest": "2026-08-04",
+    "rows": 66070,
+    "newest": "2026-07-28",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
-    "mb": 7.26,
+    "mb": 7.02,
     "leagues": [
       [
         "LPL",
@@ -102,19 +60,19 @@
       ],
       [
         "LCKC",
-        3730
+        3490
       ],
       [
         "LCK",
-        3730
+        3490
       ],
       [
         "LJL",
-        3470
+        3420
       ],
       [
         "AL",
-        2920
+        2840
       ],
       [
         "EM",
@@ -122,41 +80,41 @@
       ],
       [
         "LEC",
-        2790
-      ],
-      [
-        "PRM",
-        2360
+        2600
       ],
       [
         "EWC",
         2320
       ],
       [
-        "LCP",
-        2290
-      ],
-      [
         "LAS",
         2290
       ],
       [
+        "PRM",
+        2250
+      ],
+      [
+        "LCP",
+        2110
+      ],
+      [
         "LIT",
-        2090
-      ],
-      [
-        "LFL",
-        2090
-      ],
-      [
-        "NACL",
         2010
       ],
       [
-        "CD",
-        2000
+        "LFL",
+        1990
+      ],
+      [
+        "HLL",
+        1950
+      ],
+      [
+        "ROL",
+        1890
       ]
     ]
   },
-  "finished": "2026-08-04T19:31:50Z"
+  "finished": "2026-08-05T01:22:03Z"
 }
