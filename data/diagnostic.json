@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-08-06T23:47:40Z",
+  "started": "2026-08-07T01:59:59Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -14,12 +14,12 @@
       "detail": ""
     },
     {
-      "step": "Riot live rows: 5700",
+      "step": "Riot live rows: 5720",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "using 3810 Riot rows after 2026-07-28 (dropped 1890 overlapping)",
+      "step": "using 3890 Riot rows after 2026-07-28 (dropped 1830 overlapping)",
       "ok": true,
       "detail": ""
     },
@@ -34,30 +34,30 @@
       "detail": ""
     },
     {
-      "step": "merged 48 player name variants (222 rows)",
+      "step": "merged 48 player name variants (225 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "wrote 69880 rows spanning 2026-01-08 .. 2026-08-06",
+      "step": "wrote 69960 rows spanning 2026-01-08 .. 2026-08-07",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 1779,
-  "since": "2026-04-08",
+  "requests": 1785,
+  "since": "2026-04-09",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3105,
-  "riot_games_found": 572,
-  "side_resolved": 570,
-  "riot_games_ok": 570,
+  "riot_events": 3107,
+  "riot_games_found": 574,
+  "side_resolved": 572,
+  "riot_games_ok": 572,
   "riot_games_failed": 2,
-  "riot_rows_all": 5700,
-  "riot_rows_used": 3810,
+  "riot_rows_all": 5720,
+  "riot_rows_used": 3890,
   "alias_rejected": {
     "NS Challengers": "Nongshim Esports Academy (no name kinship)",
     "LOS": "LØS (no name kinship)"
@@ -91,14 +91,14 @@
   },
   "canonicalised_player": {
     "names": 48,
-    "rows": 222
+    "rows": 225
   },
   "written": {
-    "rows": 69880,
-    "newest": "2026-08-06",
+    "rows": 69960,
+    "newest": "2026-08-07",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
-    "mb": 7.43,
+    "mb": 7.44,
     "leagues": [
       [
         "LPL",
@@ -153,14 +153,14 @@
         2130
       ],
       [
-        "CD",
-        2100
+        "NACL",
+        2110
       ],
       [
-        "HLL",
-        2070
+        "CD",
+        2100
       ]
     ]
   },
-  "finished": "2026-08-07T00:04:58Z"
+  "finished": "2026-08-07T02:17:14Z"
 }
