@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-08-10T18:39:40Z",
+  "started": "2026-08-11T00:47:54Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -14,12 +14,12 @@
       "detail": ""
     },
     {
-      "step": "Riot live rows: 6040",
+      "step": "Riot live rows: 6050",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "using 4840 Riot rows after 2026-07-28 (dropped 1200 overlapping)",
+      "step": "using 4860 Riot rows after 2026-07-28 (dropped 1190 overlapping)",
       "ok": true,
       "detail": ""
     },
@@ -39,25 +39,25 @@
       "detail": ""
     },
     {
-      "step": "wrote 70910 rows spanning 2026-01-08 .. 2026-08-10",
+      "step": "wrote 70930 rows spanning 2026-01-08 .. 2026-08-10",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 1879,
-  "since": "2026-04-12",
+  "requests": 1881,
+  "since": "2026-04-13",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3048,
-  "riot_games_found": 606,
-  "side_resolved": 604,
-  "riot_games_ok": 604,
+  "riot_events": 2972,
+  "riot_games_found": 607,
+  "side_resolved": 605,
+  "riot_games_ok": 605,
   "riot_games_failed": 2,
-  "riot_rows_all": 6040,
-  "riot_rows_used": 4840,
+  "riot_rows_all": 6050,
+  "riot_rows_used": 4860,
   "alias_rejected": {
     "NS Challengers": "Nongshim Esports Academy (no name kinship)",
     "LOS": "LØS (no name kinship)"
@@ -94,7 +94,7 @@
     "rows": 242
   },
   "written": {
-    "rows": 70910,
+    "rows": 70930,
     "newest": "2026-08-10",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
@@ -122,7 +122,7 @@
       ],
       [
         "LEC",
-        2960
+        2980
       ],
       [
         "EM",
@@ -162,5 +162,5 @@
       ]
     ]
   },
-  "finished": "2026-08-10T18:57:30Z"
+  "finished": "2026-08-11T01:04:53Z"
 }
