@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-08-12T00:55:13Z",
+  "started": "2026-08-12T07:04:05Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -14,12 +14,12 @@
       "detail": ""
     },
     {
-      "step": "Riot live rows: 6160",
+      "step": "Riot live rows: 6170",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "using 5390 Riot rows after 2026-07-28 (dropped 770 overlapping)",
+      "step": "using 5480 Riot rows after 2026-07-28 (dropped 690 overlapping)",
       "ok": true,
       "detail": ""
     },
@@ -29,35 +29,35 @@
       "detail": ""
     },
     {
-      "step": "merged 12 team name variants (300 rows)",
+      "step": "merged 12 team name variants (310 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 54 player name variants (267 rows)",
+      "step": "merged 55 player name variants (282 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "wrote 71460 rows spanning 2026-01-08 .. 2026-08-11",
+      "step": "wrote 71550 rows spanning 2026-01-08 .. 2026-08-11",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 1916,
+  "requests": 1919,
   "since": "2026-04-14",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 2988,
-  "riot_games_found": 618,
-  "side_resolved": 616,
-  "riot_games_ok": 616,
+  "riot_events": 2989,
+  "riot_games_found": 619,
+  "side_resolved": 617,
+  "riot_games_ok": 617,
   "riot_games_failed": 2,
-  "riot_rows_all": 6160,
-  "riot_rows_used": 5390,
+  "riot_rows_all": 6170,
+  "riot_rows_used": 5480,
   "alias_rejected": {
     "NS Challengers": "Nongshim Esports Academy (no name kinship)",
     "LOS": "LØS (no name kinship)"
@@ -88,18 +88,18 @@
   },
   "canonicalised_team": {
     "names": 12,
-    "rows": 300
+    "rows": 310
   },
   "canonicalised_player": {
-    "names": 54,
-    "rows": 267
+    "names": 55,
+    "rows": 282
   },
   "written": {
-    "rows": 71460,
+    "rows": 71550,
     "newest": "2026-08-11",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
-    "mb": 7.6,
+    "mb": 7.61,
     "leagues": [
       [
         "LPL",
@@ -159,9 +159,9 @@
       ],
       [
         "CD",
-        2100
+        2140
       ]
     ]
   },
-  "finished": "2026-08-12T01:12:41Z"
+  "finished": "2026-08-12T07:22:53Z"
 }
