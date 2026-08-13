@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-08-13T00:56:38Z",
+  "started": "2026-08-13T07:08:03Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -14,12 +14,12 @@
       "detail": ""
     },
     {
-      "step": "Riot live rows: 6210",
+      "step": "Riot live rows: 6220",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "using 5890 Riot rows after 2026-07-28 (dropped 320 overlapping)",
+      "step": "using 5930 Riot rows after 2026-07-28 (dropped 290 overlapping)",
       "ok": true,
       "detail": ""
     },
@@ -39,25 +39,25 @@
       "detail": ""
     },
     {
-      "step": "wrote 71960 rows spanning 2026-01-08 .. 2026-08-12",
+      "step": "wrote 72000 rows spanning 2026-01-08 .. 2026-08-13",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 1942,
+  "requests": 1945,
   "since": "2026-04-15",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3015,
-  "riot_games_found": 625,
-  "side_resolved": 621,
-  "riot_games_ok": 621,
+  "riot_events": 3016,
+  "riot_games_found": 626,
+  "side_resolved": 622,
+  "riot_games_ok": 622,
   "riot_games_failed": 4,
-  "riot_rows_all": 6210,
-  "riot_rows_used": 5890,
+  "riot_rows_all": 6220,
+  "riot_rows_used": 5930,
   "alias_rejected": {
     "NS Challengers": "Nongshim Esports Academy (no name kinship)",
     "LOS": "LØS (no name kinship)"
@@ -95,8 +95,8 @@
     "rows": 303
   },
   "written": {
-    "rows": 71960,
-    "newest": "2026-08-12",
+    "rows": 72000,
+    "newest": "2026-08-13",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
     "mb": 7.66,
@@ -150,12 +150,12 @@
         2240
       ],
       [
-        "LIT",
-        2170
+        "NACL",
+        2190
       ],
       [
-        "NACL",
-        2150
+        "LIT",
+        2170
       ],
       [
         "CD",
@@ -163,5 +163,5 @@
       ]
     ]
   },
-  "finished": "2026-08-13T01:14:27Z"
+  "finished": "2026-08-13T07:23:25Z"
 }
