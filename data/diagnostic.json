@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-08-14T18:38:00Z",
+  "started": "2026-08-15T00:32:02Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -14,57 +14,55 @@
       "detail": ""
     },
     {
-      "step": "Riot live rows: 6400",
+      "step": "Riot live rows: 6420",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "using 6400 Riot rows after 2026-07-28 (dropped 0 overlapping)",
+      "step": "using 6420 Riot rows after 2026-07-28 (dropped 0 overlapping)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "reconciled 22 Riot team names to history (875 rows): Heretics Academy->Team Heretics Academy, VfB Stuttgart->VfB eSports, Ici Japon Corp->Ici Japon Corp. Esport, KaBuM! Eports->KaBuM! Ilha das Lendas, DK Challengers->Dplus Kia Challengers, HLE Challengers->Hanwha Life Esports Challengers",
+      "step": "reconciled 22 Riot team names to history (855 rows): Ici Japon Corp->Ici Japon Corp. Esport, KaBuM! Eports->KaBuM! Ilha das Lendas, DK Challengers->Dplus Kia Challengers, HLE Challengers->Hanwha Life Esports Challengers, Dplus KIA->Dplus Kia, Relove Deep Cross Gaming->Deep Cross Gaming",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 13 team name variants (410 rows)",
+      "step": "merged 13 team name variants (425 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 57 player name variants (324 rows)",
+      "step": "merged 57 player name variants (320 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "wrote 72470 rows spanning 2026-01-08 .. 2026-08-14",
+      "step": "wrote 72490 rows spanning 2026-01-08 .. 2026-08-14",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 2003,
-  "since": "2026-04-16",
+  "requests": 2009,
+  "since": "2026-04-17",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3036,
-  "riot_games_found": 645,
-  "side_resolved": 640,
-  "riot_games_ok": 640,
+  "riot_events": 3038,
+  "riot_games_found": 647,
+  "side_resolved": 642,
+  "riot_games_ok": 642,
   "riot_games_failed": 5,
-  "riot_rows_all": 6400,
-  "riot_rows_used": 6400,
+  "riot_rows_all": 6420,
+  "riot_rows_used": 6420,
   "alias_rejected": {
     "LOS": "LØS (no name kinship)",
     "NS Challengers": "Nongshim Esports Academy (no name kinship)"
   },
   "team_aliases": {
-    "Heretics Academy": "Team Heretics Academy",
-    "VfB Stuttgart": "VfB eSports",
     "Ici Japon Corp": "Ici Japon Corp. Esport",
     "KaBuM! Eports": "KaBuM! Ilha das Lendas",
     "DK Challengers": "Dplus Kia Challengers",
@@ -73,6 +71,8 @@
     "Relove Deep Cross Gaming": "Deep Cross Gaming",
     "Barça Esports": "Barça eSports",
     "Once Upon a Team": "Once Upon A Team",
+    "VfB Stuttgart": "VfB eSports",
+    "Heretics Academy": "Team Heretics Academy",
     "kt Challengers": "KT Rolster Challengers",
     "DNS Challengers": "DN SOOPers Challengers",
     "BRO Challengers": "HANJIN BRION Challengers",
@@ -88,14 +88,14 @@
   },
   "canonicalised_team": {
     "names": 13,
-    "rows": 410
+    "rows": 425
   },
   "canonicalised_player": {
     "names": 57,
-    "rows": 324
+    "rows": 320
   },
   "written": {
-    "rows": 72470,
+    "rows": 72490,
     "newest": "2026-08-14",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
@@ -123,7 +123,7 @@
       ],
       [
         "LEC",
-        3000
+        3030
       ],
       [
         "EM",
@@ -131,7 +131,7 @@
       ],
       [
         "PRM",
-        2640
+        2620
       ],
       [
         "LCP",
@@ -146,12 +146,12 @@
         2320
       ],
       [
-        "LAS",
-        2290
+        "NACL",
+        2300
       ],
       [
-        "NACL",
-        2270
+        "LAS",
+        2290
       ],
       [
         "LIT",
@@ -163,5 +163,5 @@
       ]
     ]
   },
-  "finished": "2026-08-14T18:56:44Z"
+  "finished": "2026-08-15T00:51:20Z"
 }
