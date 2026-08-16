@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-08-16T12:14:32Z",
+  "started": "2026-08-16T18:11:16Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -14,56 +14,55 @@
       "detail": ""
     },
     {
-      "step": "Riot live rows: 6490",
+      "step": "Riot live rows: 6560",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "using 6490 Riot rows after 2026-07-28 (dropped 0 overlapping)",
+      "step": "using 6560 Riot rows after 2026-07-28 (dropped 0 overlapping)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "reconciled 22 Riot team names to history (885 rows): KaBuM! Eports->KaBuM! Ilha das Lendas, DK Challengers->Dplus Kia Challengers, HLE Challengers->Hanwha Life Esports Challengers, Dplus KIA->Dplus Kia, Relove Deep Cross Gaming->Deep Cross Gaming, Barça Esports->Barça eSports",
+      "step": "reconciled 22 Riot team names to history (900 rows): DK Challengers->Dplus Kia Challengers, HLE Challengers->Hanwha Life Esports Challengers, Dplus KIA->Dplus Kia, Relove Deep Cross Gaming->Deep Cross Gaming, Barça Esports->Barça eSports, Ici Japon Corp->Ici Japon Corp. Esport",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 13 team name variants (415 rows)",
+      "step": "merged 13 team name variants (430 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 57 player name variants (312 rows)",
+      "step": "merged 57 player name variants (313 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "wrote 72560 rows spanning 2026-01-08 .. 2026-08-15",
+      "step": "wrote 72630 rows spanning 2026-01-08 .. 2026-08-16",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 2030,
+  "requests": 2059,
   "since": "2026-04-18",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3055,
-  "riot_games_found": 654,
-  "side_resolved": 649,
-  "riot_games_ok": 649,
-  "riot_games_failed": 5,
-  "riot_rows_all": 6490,
-  "riot_rows_used": 6490,
+  "riot_events": 3050,
+  "riot_games_found": 663,
+  "side_resolved": 656,
+  "riot_games_ok": 656,
+  "riot_games_failed": 7,
+  "riot_rows_all": 6560,
+  "riot_rows_used": 6560,
   "alias_rejected": {
     "LOS": "LØS (no name kinship)",
     "NS Challengers": "Nongshim Esports Academy (no name kinship)"
   },
   "team_aliases": {
-    "KaBuM! Eports": "KaBuM! Ilha das Lendas",
     "DK Challengers": "Dplus Kia Challengers",
     "HLE Challengers": "Hanwha Life Esports Challengers",
     "Dplus KIA": "Dplus Kia",
@@ -80,6 +79,7 @@
     "NONGSHIM RED FORCE": "Nongshim RedForce",
     "kt Rolster": "KT Rolster",
     "Team Liquid Alienware": "Team Liquid",
+    "KaBuM! Eports": "KaBuM! Ilha das Lendas",
     "UCAM Esports Club": "UCAM Esports",
     "E Wie Einfach E-Sports": "E WIE EINFACH E-SPORTS",
     "BOMBA Team": "Bomba Team",
@@ -88,18 +88,18 @@
   },
   "canonicalised_team": {
     "names": 13,
-    "rows": 415
+    "rows": 430
   },
   "canonicalised_player": {
     "names": 57,
-    "rows": 312
+    "rows": 313
   },
   "written": {
-    "rows": 72560,
-    "newest": "2026-08-15",
+    "rows": 72630,
+    "newest": "2026-08-16",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
-    "mb": 7.72,
+    "mb": 7.73,
     "leagues": [
       [
         "LPL",
@@ -107,11 +107,11 @@
       ],
       [
         "LCK",
-        4120
+        4170
       ],
       [
         "LCKC",
-        3900
+        3920
       ],
       [
         "LJL",
@@ -123,30 +123,26 @@
       ],
       [
         "LEC",
-        3070
+        3090
       ],
       [
         "EM",
         2840
       ],
       [
+        "LCP",
+        2610
+      ],
+      [
         "PRM",
         2590
-      ],
-      [
-        "LCP",
-        2560
-      ],
-      [
-        "NACL",
-        2330
       ],
       [
         "EWC",
         2320
       ],
       [
-        "LFL",
+        "NACL",
         2300
       ],
       [
@@ -154,14 +150,18 @@
         2290
       ],
       [
+        "LFL",
+        2280
+      ],
+      [
         "LIT",
         2170
       ],
       [
-        "CD",
-        2160
+        "CBLOL",
+        2150
       ]
     ]
   },
-  "finished": "2026-08-16T12:29:50Z"
+  "finished": "2026-08-16T18:41:49Z"
 }
