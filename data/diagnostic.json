@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-08-16T18:11:16Z",
+  "started": "2026-08-17T00:32:00Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -14,12 +14,12 @@
       "detail": ""
     },
     {
-      "step": "Riot live rows: 6560",
+      "step": "Riot live rows: 6570",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "using 6560 Riot rows after 2026-07-28 (dropped 0 overlapping)",
+      "step": "using 6570 Riot rows after 2026-07-28 (dropped 0 overlapping)",
       "ok": true,
       "detail": ""
     },
@@ -34,30 +34,30 @@
       "detail": ""
     },
     {
-      "step": "merged 57 player name variants (313 rows)",
+      "step": "merged 57 player name variants (310 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "wrote 72630 rows spanning 2026-01-08 .. 2026-08-16",
+      "step": "wrote 72640 rows spanning 2026-01-08 .. 2026-08-16",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 2059,
-  "since": "2026-04-18",
+  "requests": 2062,
+  "since": "2026-04-19",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3050,
-  "riot_games_found": 663,
-  "side_resolved": 656,
-  "riot_games_ok": 656,
+  "riot_events": 3053,
+  "riot_games_found": 664,
+  "side_resolved": 657,
+  "riot_games_ok": 657,
   "riot_games_failed": 7,
-  "riot_rows_all": 6560,
-  "riot_rows_used": 6560,
+  "riot_rows_all": 6570,
+  "riot_rows_used": 6570,
   "alias_rejected": {
     "LOS": "LØS (no name kinship)",
     "NS Challengers": "Nongshim Esports Academy (no name kinship)"
@@ -92,10 +92,10 @@
   },
   "canonicalised_player": {
     "names": 57,
-    "rows": 313
+    "rows": 310
   },
   "written": {
-    "rows": 72630,
+    "rows": 72640,
     "newest": "2026-08-16",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
@@ -123,7 +123,7 @@
       ],
       [
         "LEC",
-        3090
+        3110
       ],
       [
         "EM",
@@ -142,10 +142,6 @@
         2320
       ],
       [
-        "NACL",
-        2300
-      ],
-      [
         "LAS",
         2290
       ],
@@ -154,14 +150,18 @@
         2280
       ],
       [
+        "NACL",
+        2270
+      ],
+      [
         "LIT",
         2170
       ],
       [
         "CBLOL",
-        2150
+        2170
       ]
     ]
   },
-  "finished": "2026-08-16T18:41:49Z"
+  "finished": "2026-08-17T00:53:29Z"
 }
