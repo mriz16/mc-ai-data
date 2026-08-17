@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-08-17T06:29:15Z",
+  "started": "2026-08-17T12:17:56Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -24,7 +24,7 @@
       "detail": ""
     },
     {
-      "step": "reconciled 22 Riot team names to history (885 rows): HLE Challengers->Hanwha Life Esports Challengers, Dplus KIA->Dplus Kia, Relove Deep Cross Gaming->Deep Cross Gaming, Barça Esports->Barça eSports, Ici Japon Corp->Ici Japon Corp. Esport, Once Upon a Team->Once Upon A Team",
+      "step": "reconciled 22 Riot team names to history (905 rows): Dplus KIA->Dplus Kia, Relove Deep Cross Gaming->Deep Cross Gaming, Barça Esports->Barça eSports, Ici Japon Corp->Ici Japon Corp. Esport, Once Upon a Team->Once Upon A Team, VfB Stuttgart->VfB eSports",
       "ok": true,
       "detail": ""
     },
@@ -39,7 +39,7 @@
       "detail": ""
     },
     {
-      "step": "wrote 72640 rows spanning 2026-01-08 .. 2026-08-16",
+      "step": "wrote 72640 rows spanning 2026-01-08 .. 2026-08-17",
       "ok": true,
       "detail": ""
     }
@@ -51,7 +51,7 @@
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3054,
+  "riot_events": 3058,
   "riot_games_found": 664,
   "side_resolved": 657,
   "riot_games_ok": 657,
@@ -63,7 +63,6 @@
     "NS Challengers": "Nongshim Esports Academy (no name kinship)"
   },
   "team_aliases": {
-    "HLE Challengers": "Hanwha Life Esports Challengers",
     "Dplus KIA": "Dplus Kia",
     "Relove Deep Cross Gaming": "Deep Cross Gaming",
     "Barça Esports": "Barça eSports",
@@ -80,6 +79,7 @@
     "Team Liquid Alienware": "Team Liquid",
     "DK Challengers": "Dplus Kia Challengers",
     "KaBuM! Eports": "KaBuM! Ilha das Lendas",
+    "HLE Challengers": "Hanwha Life Esports Challengers",
     "UCAM Esports Club": "UCAM Esports",
     "E Wie Einfach E-Sports": "E WIE EINFACH E-SPORTS",
     "BOMBA Team": "Bomba Team",
@@ -96,7 +96,7 @@
   },
   "written": {
     "rows": 72640,
-    "newest": "2026-08-16",
+    "newest": "2026-08-17",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
     "mb": 7.73,
@@ -107,11 +107,11 @@
       ],
       [
         "LCK",
-        4170
+        4150
       ],
       [
         "LCKC",
-        3890
+        3910
       ],
       [
         "LJL",
@@ -163,5 +163,5 @@
       ]
     ]
   },
-  "finished": "2026-08-17T06:45:32Z"
+  "finished": "2026-08-17T12:39:10Z"
 }
