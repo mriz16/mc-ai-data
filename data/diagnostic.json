@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-08-17T00:32:00Z",
+  "started": "2026-08-17T06:29:15Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -24,7 +24,7 @@
       "detail": ""
     },
     {
-      "step": "reconciled 22 Riot team names to history (900 rows): DK Challengers->Dplus Kia Challengers, HLE Challengers->Hanwha Life Esports Challengers, Dplus KIA->Dplus Kia, Relove Deep Cross Gaming->Deep Cross Gaming, Barça Esports->Barça eSports, Ici Japon Corp->Ici Japon Corp. Esport",
+      "step": "reconciled 22 Riot team names to history (885 rows): HLE Challengers->Hanwha Life Esports Challengers, Dplus KIA->Dplus Kia, Relove Deep Cross Gaming->Deep Cross Gaming, Barça Esports->Barça eSports, Ici Japon Corp->Ici Japon Corp. Esport, Once Upon a Team->Once Upon A Team",
       "ok": true,
       "detail": ""
     },
@@ -51,7 +51,7 @@
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3053,
+  "riot_events": 3054,
   "riot_games_found": 664,
   "side_resolved": 657,
   "riot_games_ok": 657,
@@ -63,7 +63,6 @@
     "NS Challengers": "Nongshim Esports Academy (no name kinship)"
   },
   "team_aliases": {
-    "DK Challengers": "Dplus Kia Challengers",
     "HLE Challengers": "Hanwha Life Esports Challengers",
     "Dplus KIA": "Dplus Kia",
     "Relove Deep Cross Gaming": "Deep Cross Gaming",
@@ -79,6 +78,7 @@
     "NONGSHIM RED FORCE": "Nongshim RedForce",
     "kt Rolster": "KT Rolster",
     "Team Liquid Alienware": "Team Liquid",
+    "DK Challengers": "Dplus Kia Challengers",
     "KaBuM! Eports": "KaBuM! Ilha das Lendas",
     "UCAM Esports Club": "UCAM Esports",
     "E Wie Einfach E-Sports": "E WIE EINFACH E-SPORTS",
@@ -111,7 +111,7 @@
       ],
       [
         "LCKC",
-        3920
+        3890
       ],
       [
         "LJL",
@@ -163,5 +163,5 @@
       ]
     ]
   },
-  "finished": "2026-08-17T00:53:29Z"
+  "finished": "2026-08-17T06:45:32Z"
 }
