@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-08-18T00:31:30Z",
+  "started": "2026-08-18T06:21:33Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -24,17 +24,17 @@
       "detail": ""
     },
     {
-      "step": "reconciled 22 Riot team names to history (880 rows): Ici Japon Corp->Ici Japon Corp. Esport, Once Upon a Team->Once Upon A Team, VfB Stuttgart->VfB eSports, Heretics Academy->Team Heretics Academy, kt Challengers->KT Rolster Challengers, DNS Challengers->DN SOOPers Challengers",
+      "step": "reconciled 22 Riot team names to history (875 rows): Once Upon a Team->Once Upon A Team, VfB Stuttgart->VfB eSports, Heretics Academy->Team Heretics Academy, kt Challengers->KT Rolster Challengers, DNS Challengers->DN SOOPers Challengers, BRO Challengers->HANJIN BRION Challengers",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 13 team name variants (440 rows)",
+      "step": "merged 14 team name variants (440 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 57 player name variants (306 rows)",
+      "step": "merged 58 player name variants (308 rows)",
       "ok": true,
       "detail": ""
     },
@@ -51,7 +51,7 @@
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3066,
+  "riot_events": 3067,
   "riot_games_found": 663,
   "side_resolved": 656,
   "riot_games_ok": 656,
@@ -63,7 +63,6 @@
     "NS Challengers": "Nongshim Esports Academy (no name kinship)"
   },
   "team_aliases": {
-    "Ici Japon Corp": "Ici Japon Corp. Esport",
     "Once Upon a Team": "Once Upon A Team",
     "VfB Stuttgart": "VfB eSports",
     "Heretics Academy": "Team Heretics Academy",
@@ -79,6 +78,7 @@
     "DK Challengers": "Dplus Kia Challengers",
     "KaBuM! Eports": "KaBuM! Ilha das Lendas",
     "HLE Challengers": "Hanwha Life Esports Challengers",
+    "Ici Japon Corp": "Ici Japon Corp. Esport",
     "UCAM Esports Club": "UCAM Esports",
     "E Wie Einfach E-Sports": "E WIE EINFACH E-SPORTS",
     "BOMBA Team": "Bomba Team",
@@ -87,12 +87,12 @@
     "NightBirds": "Nightbirds"
   },
   "canonicalised_team": {
-    "names": 13,
+    "names": 14,
     "rows": 440
   },
   "canonicalised_player": {
-    "names": 57,
-    "rows": 306
+    "names": 58,
+    "rows": 308
   },
   "written": {
     "rows": 72630,
@@ -123,7 +123,7 @@
       ],
       [
         "AL",
-        3120
+        3090
       ],
       [
         "EM",
@@ -131,7 +131,7 @@
       ],
       [
         "PRM",
-        2590
+        2560
       ],
       [
         "LCP",
@@ -147,7 +147,7 @@
       ],
       [
         "LFL",
-        2280
+        2270
       ],
       [
         "NACL",
@@ -163,5 +163,5 @@
       ]
     ]
   },
-  "finished": "2026-08-18T00:54:29Z"
+  "finished": "2026-08-18T06:38:15Z"
 }
