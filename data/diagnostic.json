@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-08-17T18:20:31Z",
+  "started": "2026-08-18T00:31:30Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -24,17 +24,17 @@
       "detail": ""
     },
     {
-      "step": "reconciled 22 Riot team names to history (890 rows): Barça Esports->Barça eSports, Ici Japon Corp->Ici Japon Corp. Esport, Once Upon a Team->Once Upon A Team, VfB Stuttgart->VfB eSports, Heretics Academy->Team Heretics Academy, kt Challengers->KT Rolster Challengers",
+      "step": "reconciled 22 Riot team names to history (880 rows): Ici Japon Corp->Ici Japon Corp. Esport, Once Upon a Team->Once Upon A Team, VfB Stuttgart->VfB eSports, Heretics Academy->Team Heretics Academy, kt Challengers->KT Rolster Challengers, DNS Challengers->DN SOOPers Challengers",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 13 team name variants (430 rows)",
+      "step": "merged 13 team name variants (440 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 57 player name variants (308 rows)",
+      "step": "merged 57 player name variants (306 rows)",
       "ok": true,
       "detail": ""
     },
@@ -46,12 +46,12 @@
   ],
   "outcome": "ok",
   "requests": 2059,
-  "since": "2026-04-19",
+  "since": "2026-04-20",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3062,
+  "riot_events": 3066,
   "riot_games_found": 663,
   "side_resolved": 656,
   "riot_games_ok": 656,
@@ -63,7 +63,6 @@
     "NS Challengers": "Nongshim Esports Academy (no name kinship)"
   },
   "team_aliases": {
-    "Barça Esports": "Barça eSports",
     "Ici Japon Corp": "Ici Japon Corp. Esport",
     "Once Upon a Team": "Once Upon A Team",
     "VfB Stuttgart": "VfB eSports",
@@ -84,15 +83,16 @@
     "E Wie Einfach E-Sports": "E WIE EINFACH E-SPORTS",
     "BOMBA Team": "Bomba Team",
     "Brod & Friends": "Brod n Friends",
+    "Barça Esports": "Barça eSports",
     "NightBirds": "Nightbirds"
   },
   "canonicalised_team": {
     "names": 13,
-    "rows": 430
+    "rows": 440
   },
   "canonicalised_player": {
     "names": 57,
-    "rows": 308
+    "rows": 306
   },
   "written": {
     "rows": 72630,
@@ -119,7 +119,7 @@
       ],
       [
         "LEC",
-        3130
+        3150
       ],
       [
         "AL",
@@ -163,5 +163,5 @@
       ]
     ]
   },
-  "finished": "2026-08-17T18:41:42Z"
+  "finished": "2026-08-18T00:54:29Z"
 }
