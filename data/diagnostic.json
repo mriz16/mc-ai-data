@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-08-19T12:20:04Z",
+  "started": "2026-08-19T18:16:14Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -14,17 +14,17 @@
       "detail": ""
     },
     {
-      "step": "Riot live rows: 6690",
+      "step": "Riot live rows: 6700",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "using 6690 Riot rows after 2026-07-28 (dropped 0 overlapping)",
+      "step": "using 6700 Riot rows after 2026-07-28 (dropped 0 overlapping)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "reconciled 22 Riot team names to history (905 rows): BRO Challengers->HANJIN BRION Challengers, Gen.G Esports->Gen.G, NONGSHIM RED FORCE->Nongshim RedForce, Relove Deep Cross Gaming->Deep Cross Gaming, Dplus KIA->Dplus Kia, kt Rolster->KT Rolster",
+      "step": "reconciled 22 Riot team names to history (915 rows): NONGSHIM RED FORCE->Nongshim RedForce, Relove Deep Cross Gaming->Deep Cross Gaming, Gen.G Esports->Gen.G, Dplus KIA->Dplus Kia, kt Rolster->KT Rolster, Team Liquid Alienware->Team Liquid",
       "ok": true,
       "detail": ""
     },
@@ -39,37 +39,37 @@
       "detail": ""
     },
     {
-      "step": "wrote 72760 rows spanning 2026-01-08 .. 2026-08-18",
+      "step": "wrote 72770 rows spanning 2026-01-08 .. 2026-08-19",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 2101,
+  "requests": 2104,
   "since": "2026-04-21",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3087,
-  "riot_games_found": 676,
-  "side_resolved": 669,
-  "riot_games_ok": 669,
+  "riot_events": 3094,
+  "riot_games_found": 677,
+  "side_resolved": 670,
+  "riot_games_ok": 670,
   "riot_games_failed": 7,
-  "riot_rows_all": 6690,
-  "riot_rows_used": 6690,
+  "riot_rows_all": 6700,
+  "riot_rows_used": 6700,
   "alias_rejected": {
     "LOS": "LØS (no name kinship)",
     "NS Challengers": "Nongshim Esports Academy (no name kinship)"
   },
   "team_aliases": {
-    "BRO Challengers": "HANJIN BRION Challengers",
-    "Gen.G Esports": "Gen.G",
     "NONGSHIM RED FORCE": "Nongshim RedForce",
     "Relove Deep Cross Gaming": "Deep Cross Gaming",
+    "Gen.G Esports": "Gen.G",
     "Dplus KIA": "Dplus Kia",
     "kt Rolster": "KT Rolster",
     "Team Liquid Alienware": "Team Liquid",
+    "BRO Challengers": "HANJIN BRION Challengers",
     "DNS Challengers": "DN SOOPers Challengers",
     "DK Challengers": "Dplus Kia Challengers",
     "KaBuM! Eports": "KaBuM! Ilha das Lendas",
@@ -95,8 +95,8 @@
     "rows": 320
   },
   "written": {
-    "rows": 72760,
-    "newest": "2026-08-18",
+    "rows": 72770,
+    "newest": "2026-08-19",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
     "mb": 7.74,
@@ -107,11 +107,11 @@
       ],
       [
         "LCK",
-        4120
+        4150
       ],
       [
         "LCKC",
-        3970
+        3950
       ],
       [
         "LJL",
@@ -163,5 +163,5 @@
       ]
     ]
   },
-  "finished": "2026-08-19T12:40:25Z"
+  "finished": "2026-08-19T18:36:20Z"
 }
