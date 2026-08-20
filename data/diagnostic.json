@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-08-20T00:32:16Z",
+  "started": "2026-08-20T06:23:09Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -14,12 +14,12 @@
       "detail": ""
     },
     {
-      "step": "Riot live rows: 6800",
+      "step": "Riot live rows: 6810",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "using 6800 Riot rows after 2026-07-28 (dropped 0 overlapping)",
+      "step": "using 6810 Riot rows after 2026-07-28 (dropped 0 overlapping)",
       "ok": true,
       "detail": ""
     },
@@ -34,30 +34,30 @@
       "detail": ""
     },
     {
-      "step": "merged 58 player name variants (335 rows)",
+      "step": "merged 58 player name variants (338 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "wrote 72870 rows spanning 2026-01-08 .. 2026-08-19",
+      "step": "wrote 72880 rows spanning 2026-01-08 .. 2026-08-19",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 2132,
+  "requests": 2135,
   "since": "2026-04-22",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
   "riot_events": 3107,
-  "riot_games_found": 686,
-  "side_resolved": 680,
-  "riot_games_ok": 680,
+  "riot_games_found": 687,
+  "side_resolved": 681,
+  "riot_games_ok": 681,
   "riot_games_failed": 6,
-  "riot_rows_all": 6800,
-  "riot_rows_used": 6800,
+  "riot_rows_all": 6810,
+  "riot_rows_used": 6810,
   "alias_rejected": {
     "LOS": "LØS (no name kinship)",
     "NS Challengers": "Nongshim Esports Academy (no name kinship)"
@@ -92,10 +92,10 @@
   },
   "canonicalised_player": {
     "names": 58,
-    "rows": 335
+    "rows": 338
   },
   "written": {
-    "rows": 72870,
+    "rows": 72880,
     "newest": "2026-08-19",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
@@ -154,14 +154,14 @@
         2210
       ],
       [
-        "CBLOL",
+        "NACL",
         2170
       ],
       [
-        "NACL",
-        2170
+        "CBLOL",
+        2150
       ]
     ]
   },
-  "finished": "2026-08-20T00:53:26Z"
+  "finished": "2026-08-20T06:39:45Z"
 }
