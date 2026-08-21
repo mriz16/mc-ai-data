@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-08-21T12:21:32Z",
+  "started": "2026-08-21T18:19:37Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -14,17 +14,17 @@
       "detail": ""
     },
     {
-      "step": "Riot live rows: 6950",
+      "step": "Riot live rows: 7000",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "using 6950 Riot rows after 2026-07-28 (dropped 0 overlapping)",
+      "step": "using 7000 Riot rows after 2026-07-28 (dropped 0 overlapping)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "reconciled 22 Riot team names to history (985 rows): KaBuM! Eports->KaBuM! Ilha das Lendas, HLE Challengers->Hanwha Life Esports Challengers, kt Challengers->KT Rolster Challengers, Ici Japon Corp->Ici Japon Corp. Esport, VfB Stuttgart->VfB eSports, UCAM Esports Club->UCAM Esports",
+      "step": "reconciled 22 Riot team names to history (990 rows): Ici Japon Corp->Ici Japon Corp. Esport, VfB Stuttgart->VfB eSports, UCAM Esports Club->UCAM Esports, KaBuM! Eports->KaBuM! Ilha das Lendas, NONGSHIM RED FORCE->Nongshim RedForce, Gen.G Esports->Gen.G",
       "ok": true,
       "detail": ""
     },
@@ -34,41 +34,39 @@
       "detail": ""
     },
     {
-      "step": "merged 58 player name variants (346 rows)",
+      "step": "merged 58 player name variants (342 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "wrote 73020 rows spanning 2026-01-08 .. 2026-08-21",
+      "step": "wrote 73070 rows spanning 2026-01-08 .. 2026-08-21",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 2180,
+  "requests": 2196,
   "since": "2026-04-23",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3058,
-  "riot_games_found": 701,
-  "side_resolved": 695,
-  "riot_games_ok": 695,
+  "riot_events": 3061,
+  "riot_games_found": 706,
+  "side_resolved": 700,
+  "riot_games_ok": 700,
   "riot_games_failed": 6,
-  "riot_rows_all": 6950,
-  "riot_rows_used": 6950,
+  "riot_rows_all": 7000,
+  "riot_rows_used": 7000,
   "alias_rejected": {
     "LOS": "LØS (no name kinship)",
     "NS Challengers": "Nongshim Esports Academy (no name kinship)"
   },
   "team_aliases": {
-    "KaBuM! Eports": "KaBuM! Ilha das Lendas",
-    "HLE Challengers": "Hanwha Life Esports Challengers",
-    "kt Challengers": "KT Rolster Challengers",
     "Ici Japon Corp": "Ici Japon Corp. Esport",
     "VfB Stuttgart": "VfB eSports",
     "UCAM Esports Club": "UCAM Esports",
+    "KaBuM! Eports": "KaBuM! Ilha das Lendas",
     "NONGSHIM RED FORCE": "Nongshim RedForce",
     "Gen.G Esports": "Gen.G",
     "E Wie Einfach E-Sports": "E WIE EINFACH E-SPORTS",
@@ -82,6 +80,8 @@
     "kt Rolster": "KT Rolster",
     "Relove Deep Cross Gaming": "Deep Cross Gaming",
     "Team Liquid Alienware": "Team Liquid",
+    "kt Challengers": "KT Rolster Challengers",
+    "HLE Challengers": "Hanwha Life Esports Challengers",
     "DK Challengers": "Dplus Kia Challengers",
     "NightBirds": "Nightbirds",
     "Once Upon a Team": "Once Upon A Team"
@@ -92,14 +92,14 @@
   },
   "canonicalised_player": {
     "names": 58,
-    "rows": 346
+    "rows": 342
   },
   "written": {
-    "rows": 73020,
+    "rows": 73070,
     "newest": "2026-08-21",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
-    "mb": 7.77,
+    "mb": 7.78,
     "leagues": [
       [
         "LPL",
@@ -107,11 +107,11 @@
       ],
       [
         "LCK",
-        4060
+        4120
       ],
       [
         "LCKC",
-        3930
+        3900
       ],
       [
         "LJL",
@@ -123,7 +123,7 @@
       ],
       [
         "LEC",
-        2960
+        2980
       ],
       [
         "EM",
@@ -135,7 +135,7 @@
       ],
       [
         "LCP",
-        2460
+        2500
       ],
       [
         "LFL",
@@ -154,14 +154,14 @@
         2210
       ],
       [
-        "CD",
-        2170
+        "LIT",
+        2150
       ],
       [
-        "LIT",
+        "CD",
         2150
       ]
     ]
   },
-  "finished": "2026-08-21T12:38:20Z"
+  "finished": "2026-08-21T18:36:59Z"
 }
