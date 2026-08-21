@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-08-21T00:34:04Z",
+  "started": "2026-08-21T06:24:13Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -14,12 +14,12 @@
       "detail": ""
     },
     {
-      "step": "Riot live rows: 6910",
+      "step": "Riot live rows: 6900",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "using 6910 Riot rows after 2026-07-28 (dropped 0 overlapping)",
+      "step": "using 6900 Riot rows after 2026-07-28 (dropped 0 overlapping)",
       "ok": true,
       "detail": ""
     },
@@ -29,35 +29,35 @@
       "detail": ""
     },
     {
-      "step": "merged 14 team name variants (460 rows)",
+      "step": "merged 14 team name variants (455 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 59 player name variants (353 rows)",
+      "step": "merged 58 player name variants (344 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "wrote 72980 rows spanning 2026-01-08 .. 2026-08-20",
+      "step": "wrote 72970 rows spanning 2026-01-08 .. 2026-08-21",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 2168,
+  "requests": 2165,
   "since": "2026-04-23",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3049,
-  "riot_games_found": 697,
-  "side_resolved": 691,
-  "riot_games_ok": 691,
+  "riot_events": 3053,
+  "riot_games_found": 696,
+  "side_resolved": 690,
+  "riot_games_ok": 690,
   "riot_games_failed": 6,
-  "riot_rows_all": 6910,
-  "riot_rows_used": 6910,
+  "riot_rows_all": 6900,
+  "riot_rows_used": 6900,
   "alias_rejected": {
     "LOS": "LØS (no name kinship)",
     "NS Challengers": "Nongshim Esports Academy (no name kinship)"
@@ -88,15 +88,15 @@
   },
   "canonicalised_team": {
     "names": 14,
-    "rows": 460
+    "rows": 455
   },
   "canonicalised_player": {
-    "names": 59,
-    "rows": 353
+    "names": 58,
+    "rows": 344
   },
   "written": {
-    "rows": 72980,
-    "newest": "2026-08-20",
+    "rows": 72970,
+    "newest": "2026-08-21",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
     "mb": 7.77,
@@ -150,12 +150,12 @@
         2290
       ],
       [
-        "CD",
+        "NACL",
         2210
       ],
       [
-        "NACL",
-        2170
+        "CD",
+        2200
       ],
       [
         "LIT",
@@ -163,5 +163,5 @@
       ]
     ]
   },
-  "finished": "2026-08-21T00:52:17Z"
+  "finished": "2026-08-21T06:42:33Z"
 }
