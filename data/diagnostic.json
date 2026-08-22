@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-08-22T12:14:42Z",
+  "started": "2026-08-22T18:12:00Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -14,56 +14,55 @@
       "detail": ""
     },
     {
-      "step": "Riot live rows: 7010",
+      "step": "Riot live rows: 7050",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "using 7010 Riot rows after 2026-07-28 (dropped 0 overlapping)",
+      "step": "using 7050 Riot rows after 2026-07-28 (dropped 0 overlapping)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "reconciled 22 Riot team names to history (990 rows): Ici Japon Corp->Ici Japon Corp. Esport, VfB Stuttgart->VfB eSports, UCAM Esports Club->UCAM Esports, KaBuM! Eports->KaBuM! Ilha das Lendas, NONGSHIM RED FORCE->Nongshim RedForce, Gen.G Esports->Gen.G",
+      "step": "reconciled 22 Riot team names to history (1015 rows): VfB Stuttgart->VfB eSports, UCAM Esports Club->UCAM Esports, KaBuM! Eports->KaBuM! Ilha das Lendas, NONGSHIM RED FORCE->Nongshim RedForce, Gen.G Esports->Gen.G, E Wie Einfach E-Sports->E WIE EINFACH E-SPORTS",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 13 team name variants (440 rows)",
+      "step": "merged 13 team name variants (450 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 58 player name variants (344 rows)",
+      "step": "merged 58 player name variants (337 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "wrote 73080 rows spanning 2026-01-08 .. 2026-08-22",
+      "step": "wrote 73120 rows spanning 2026-01-08 .. 2026-08-22",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 2198,
+  "requests": 2208,
   "since": "2026-04-24",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 2988,
-  "riot_games_found": 707,
-  "side_resolved": 701,
-  "riot_games_ok": 701,
+  "riot_events": 2992,
+  "riot_games_found": 711,
+  "side_resolved": 705,
+  "riot_games_ok": 705,
   "riot_games_failed": 6,
-  "riot_rows_all": 7010,
-  "riot_rows_used": 7010,
+  "riot_rows_all": 7050,
+  "riot_rows_used": 7050,
   "alias_rejected": {
     "LOS": "LØS (no name kinship)",
     "NS Challengers": "Nongshim Esports Academy (no name kinship)"
   },
   "team_aliases": {
-    "Ici Japon Corp": "Ici Japon Corp. Esport",
     "VfB Stuttgart": "VfB eSports",
     "UCAM Esports Club": "UCAM Esports",
     "KaBuM! Eports": "KaBuM! Ilha das Lendas",
@@ -72,6 +71,7 @@
     "E Wie Einfach E-Sports": "E WIE EINFACH E-SPORTS",
     "BOMBA Team": "Bomba Team",
     "Brod & Friends": "Brod n Friends",
+    "Ici Japon Corp": "Ici Japon Corp. Esport",
     "DNS Challengers": "DN SOOPers Challengers",
     "BRO Challengers": "HANJIN BRION Challengers",
     "Dplus KIA": "Dplus Kia",
@@ -88,14 +88,14 @@
   },
   "canonicalised_team": {
     "names": 13,
-    "rows": 440
+    "rows": 450
   },
   "canonicalised_player": {
     "names": 58,
-    "rows": 344
+    "rows": 337
   },
   "written": {
-    "rows": 73080,
+    "rows": 73120,
     "newest": "2026-08-22",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
@@ -107,7 +107,7 @@
       ],
       [
         "LCK",
-        4120
+        4170
       ],
       [
         "LCKC",
@@ -119,11 +119,11 @@
       ],
       [
         "AL",
-        3140
+        3120
       ],
       [
         "LEC",
-        3010
+        3030
       ],
       [
         "EM",
@@ -131,15 +131,15 @@
       ],
       [
         "PRM",
-        2620
+        2590
       ],
       [
         "LCP",
-        2500
+        2550
       ],
       [
         "LFL",
-        2360
+        2350
       ],
       [
         "EWC",
@@ -163,5 +163,5 @@
       ]
     ]
   },
-  "finished": "2026-08-22T12:35:32Z"
+  "finished": "2026-08-22T18:33:26Z"
 }
