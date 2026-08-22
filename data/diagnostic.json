@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-08-22T00:31:30Z",
+  "started": "2026-08-22T06:18:54Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -29,17 +29,17 @@
       "detail": ""
     },
     {
-      "step": "merged 14 team name variants (450 rows)",
+      "step": "merged 13 team name variants (440 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 58 player name variants (342 rows)",
+      "step": "merged 58 player name variants (344 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "wrote 73080 rows spanning 2026-01-08 .. 2026-08-21",
+      "step": "wrote 73080 rows spanning 2026-01-08 .. 2026-08-22",
       "ok": true,
       "detail": ""
     }
@@ -87,16 +87,16 @@
     "Once Upon a Team": "Once Upon A Team"
   },
   "canonicalised_team": {
-    "names": 14,
-    "rows": 450
+    "names": 13,
+    "rows": 440
   },
   "canonicalised_player": {
     "names": 58,
-    "rows": 342
+    "rows": 344
   },
   "written": {
     "rows": 73080,
-    "newest": "2026-08-21",
+    "newest": "2026-08-22",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
     "mb": 7.78,
@@ -151,7 +151,7 @@
       ],
       [
         "NACL",
-        2210
+        2250
       ],
       [
         "LIT",
@@ -163,5 +163,5 @@
       ]
     ]
   },
-  "finished": "2026-08-22T00:48:35Z"
+  "finished": "2026-08-22T06:41:04Z"
 }
