@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-08-23T12:15:37Z",
+  "started": "2026-08-23T18:12:20Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -14,17 +14,17 @@
       "detail": ""
     },
     {
-      "step": "Riot live rows: 7050",
+      "step": "Riot live rows: 7080",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "using 7050 Riot rows after 2026-07-28 (dropped 0 overlapping)",
+      "step": "using 7080 Riot rows after 2026-07-28 (dropped 0 overlapping)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "reconciled 22 Riot team names to history (1005 rows): UCAM Esports Club->UCAM Esports, KaBuM! Eports->KaBuM! Ilha das Lendas, NONGSHIM RED FORCE->Nongshim RedForce, Gen.G Esports->Gen.G, E Wie Einfach E-Sports->E WIE EINFACH E-SPORTS, BOMBA Team->Bomba Team",
+      "step": "reconciled 22 Riot team names to history (995 rows): KaBuM! Eports->KaBuM! Ilha das Lendas, NONGSHIM RED FORCE->Nongshim RedForce, Gen.G Esports->Gen.G, E Wie Einfach E-Sports->E WIE EINFACH E-SPORTS, BOMBA Team->Bomba Team, UCAM Esports Club->UCAM Esports",
       "ok": true,
       "detail": ""
     },
@@ -39,36 +39,36 @@
       "detail": ""
     },
     {
-      "step": "wrote 73120 rows spanning 2026-01-08 .. 2026-08-22",
+      "step": "wrote 73150 rows spanning 2026-01-08 .. 2026-08-23",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 2208,
+  "requests": 2217,
   "since": "2026-04-25",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3001,
-  "riot_games_found": 711,
-  "side_resolved": 705,
-  "riot_games_ok": 705,
+  "riot_events": 3004,
+  "riot_games_found": 714,
+  "side_resolved": 708,
+  "riot_games_ok": 708,
   "riot_games_failed": 6,
-  "riot_rows_all": 7050,
-  "riot_rows_used": 7050,
+  "riot_rows_all": 7080,
+  "riot_rows_used": 7080,
   "alias_rejected": {
     "LOS": "LØS (no name kinship)",
     "NS Challengers": "Nongshim Esports Academy (no name kinship)"
   },
   "team_aliases": {
-    "UCAM Esports Club": "UCAM Esports",
     "KaBuM! Eports": "KaBuM! Ilha das Lendas",
     "NONGSHIM RED FORCE": "Nongshim RedForce",
     "Gen.G Esports": "Gen.G",
     "E Wie Einfach E-Sports": "E WIE EINFACH E-SPORTS",
     "BOMBA Team": "Bomba Team",
+    "UCAM Esports Club": "UCAM Esports",
     "Brod & Friends": "Brod n Friends",
     "Ici Japon Corp": "Ici Japon Corp. Esport",
     "DNS Challengers": "DN SOOPers Challengers",
@@ -95,11 +95,11 @@
     "rows": 334
   },
   "written": {
-    "rows": 73120,
-    "newest": "2026-08-22",
+    "rows": 73150,
+    "newest": "2026-08-23",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
-    "mb": 7.78,
+    "mb": 7.79,
     "leagues": [
       [
         "LPL",
@@ -123,23 +123,23 @@
       ],
       [
         "LEC",
-        3050
+        3070
       ],
       [
         "EM",
         2840
       ],
       [
+        "LCP",
+        2580
+      ],
+      [
         "PRM",
         2570
       ],
       [
-        "LCP",
-        2550
-      ],
-      [
         "LFL",
-        2340
+        2330
       ],
       [
         "EWC",
@@ -158,10 +158,10 @@
         2150
       ],
       [
-        "CD",
+        "CBLOL",
         2150
       ]
     ]
   },
-  "finished": "2026-08-23T12:36:12Z"
+  "finished": "2026-08-23T18:33:35Z"
 }
