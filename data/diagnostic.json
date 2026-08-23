@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-08-22T18:12:00Z",
+  "started": "2026-08-23T00:34:36Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -24,17 +24,17 @@
       "detail": ""
     },
     {
-      "step": "reconciled 22 Riot team names to history (1015 rows): VfB Stuttgart->VfB eSports, UCAM Esports Club->UCAM Esports, KaBuM! Eports->KaBuM! Ilha das Lendas, NONGSHIM RED FORCE->Nongshim RedForce, Gen.G Esports->Gen.G, E Wie Einfach E-Sports->E WIE EINFACH E-SPORTS",
+      "step": "reconciled 22 Riot team names to history (1005 rows): UCAM Esports Club->UCAM Esports, KaBuM! Eports->KaBuM! Ilha das Lendas, NONGSHIM RED FORCE->Nongshim RedForce, Gen.G Esports->Gen.G, E Wie Einfach E-Sports->E WIE EINFACH E-SPORTS, BOMBA Team->Bomba Team",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 13 team name variants (450 rows)",
+      "step": "merged 13 team name variants (440 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 58 player name variants (337 rows)",
+      "step": "merged 58 player name variants (334 rows)",
       "ok": true,
       "detail": ""
     },
@@ -46,12 +46,12 @@
   ],
   "outcome": "ok",
   "requests": 2208,
-  "since": "2026-04-24",
+  "since": "2026-04-25",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 2992,
+  "riot_events": 2996,
   "riot_games_found": 711,
   "side_resolved": 705,
   "riot_games_ok": 705,
@@ -63,7 +63,6 @@
     "NS Challengers": "Nongshim Esports Academy (no name kinship)"
   },
   "team_aliases": {
-    "VfB Stuttgart": "VfB eSports",
     "UCAM Esports Club": "UCAM Esports",
     "KaBuM! Eports": "KaBuM! Ilha das Lendas",
     "NONGSHIM RED FORCE": "Nongshim RedForce",
@@ -84,15 +83,16 @@
     "HLE Challengers": "Hanwha Life Esports Challengers",
     "DK Challengers": "Dplus Kia Challengers",
     "NightBirds": "Nightbirds",
+    "VfB Stuttgart": "VfB eSports",
     "Once Upon a Team": "Once Upon A Team"
   },
   "canonicalised_team": {
     "names": 13,
-    "rows": 450
+    "rows": 440
   },
   "canonicalised_player": {
     "names": 58,
-    "rows": 337
+    "rows": 334
   },
   "written": {
     "rows": 73120,
@@ -111,7 +111,7 @@
       ],
       [
         "LCKC",
-        3900
+        3920
       ],
       [
         "LJL",
@@ -123,7 +123,7 @@
       ],
       [
         "LEC",
-        3030
+        3050
       ],
       [
         "EM",
@@ -131,7 +131,7 @@
       ],
       [
         "PRM",
-        2590
+        2570
       ],
       [
         "LCP",
@@ -139,7 +139,7 @@
       ],
       [
         "LFL",
-        2350
+        2340
       ],
       [
         "EWC",
@@ -163,5 +163,5 @@
       ]
     ]
   },
-  "finished": "2026-08-22T18:33:26Z"
+  "finished": "2026-08-23T00:51:46Z"
 }
