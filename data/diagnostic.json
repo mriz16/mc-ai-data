@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-08-23T18:12:20Z",
+  "started": "2026-08-24T00:33:32Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -24,7 +24,7 @@
       "detail": ""
     },
     {
-      "step": "reconciled 22 Riot team names to history (995 rows): KaBuM! Eports->KaBuM! Ilha das Lendas, NONGSHIM RED FORCE->Nongshim RedForce, Gen.G Esports->Gen.G, E Wie Einfach E-Sports->E WIE EINFACH E-SPORTS, BOMBA Team->Bomba Team, UCAM Esports Club->UCAM Esports",
+      "step": "reconciled 22 Riot team names to history (1010 rows): KaBuM! Eports->KaBuM! Ilha das Lendas, NONGSHIM RED FORCE->Nongshim RedForce, Gen.G Esports->Gen.G, E Wie Einfach E-Sports->E WIE EINFACH E-SPORTS, BOMBA Team->Bomba Team, UCAM Esports Club->UCAM Esports",
       "ok": true,
       "detail": ""
     },
@@ -34,7 +34,7 @@
       "detail": ""
     },
     {
-      "step": "merged 58 player name variants (334 rows)",
+      "step": "merged 58 player name variants (337 rows)",
       "ok": true,
       "detail": ""
     },
@@ -45,13 +45,13 @@
     }
   ],
   "outcome": "ok",
-  "requests": 2217,
-  "since": "2026-04-25",
+  "requests": 2216,
+  "since": "2026-04-26",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3004,
+  "riot_events": 3008,
   "riot_games_found": 714,
   "side_resolved": 708,
   "riot_games_ok": 708,
@@ -92,7 +92,7 @@
   },
   "canonicalised_player": {
     "names": 58,
-    "rows": 334
+    "rows": 337
   },
   "written": {
     "rows": 73150,
@@ -107,7 +107,7 @@
       ],
       [
         "LCK",
-        4170
+        4220
       ],
       [
         "LCKC",
@@ -118,12 +118,12 @@
         3500
       ],
       [
-        "AL",
-        3120
+        "LEC",
+        3100
       ],
       [
-        "LEC",
-        3070
+        "AL",
+        3090
       ],
       [
         "EM",
@@ -139,7 +139,7 @@
       ],
       [
         "LFL",
-        2330
+        2320
       ],
       [
         "EWC",
@@ -154,14 +154,14 @@
         2250
       ],
       [
-        "LIT",
-        2150
+        "CBLOL",
+        2170
       ],
       [
-        "CBLOL",
+        "LIT",
         2150
       ]
     ]
   },
-  "finished": "2026-08-23T18:33:35Z"
+  "finished": "2026-08-24T00:54:36Z"
 }
