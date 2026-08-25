@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-08-25T06:23:44Z",
+  "started": "2026-08-25T12:22:25Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -14,17 +14,17 @@
       "detail": ""
     },
     {
-      "step": "Riot live rows: 7200",
+      "step": "Riot live rows: 7210",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "using 7200 Riot rows after 2026-07-28 (dropped 0 overlapping)",
+      "step": "using 7210 Riot rows after 2026-07-28 (dropped 0 overlapping)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "reconciled 23 Riot team names to history (1080 rows): Gen.G Esports->Gen.G, E Wie Einfach E-Sports->E WIE EINFACH E-SPORTS, BOMBA Team->Bomba Team, UCAM Esports Club->UCAM Esports, Brod & Friends->Brod n Friends, Ici Japon Corp->Ici Japon Corp. Esport",
+      "step": "reconciled 23 Riot team names to history (1085 rows): E Wie Einfach E-Sports->E WIE EINFACH E-SPORTS, BOMBA Team->Bomba Team, UCAM Esports Club->UCAM Esports, Brod & Friends->Brod n Friends, Ici Japon Corp->Ici Japon Corp. Esport, KaBuM! Eports->KaBuM! Ilha das Lendas",
       "ok": true,
       "detail": ""
     },
@@ -39,31 +39,30 @@
       "detail": ""
     },
     {
-      "step": "wrote 73270 rows spanning 2026-01-08 .. 2026-08-24",
+      "step": "wrote 73280 rows spanning 2026-01-08 .. 2026-08-25",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 2252,
+  "requests": 2255,
   "since": "2026-04-27",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3012,
-  "riot_games_found": 726,
-  "side_resolved": 720,
-  "riot_games_ok": 720,
+  "riot_events": 3015,
+  "riot_games_found": 727,
+  "side_resolved": 721,
+  "riot_games_ok": 721,
   "riot_games_failed": 6,
-  "riot_rows_all": 7200,
-  "riot_rows_used": 7200,
+  "riot_rows_all": 7210,
+  "riot_rows_used": 7210,
   "alias_rejected": {
     "LOS": "LØS (no name kinship)",
     "NS Challengers": "Nongshim Esports Academy (no name kinship)"
   },
   "team_aliases": {
-    "Gen.G Esports": "Gen.G",
     "E Wie Einfach E-Sports": "E WIE EINFACH E-SPORTS",
     "BOMBA Team": "Bomba Team",
     "UCAM Esports Club": "UCAM Esports",
@@ -75,6 +74,7 @@
     "Dplus KIA": "Dplus Kia",
     "Heretics Academy": "Team Heretics Academy",
     "Barça Esports": "Barça eSports",
+    "Gen.G Esports": "Gen.G",
     "kt Rolster": "KT Rolster",
     "Relove Deep Cross Gaming": "Deep Cross Gaming",
     "NONGSHIM RED FORCE": "Nongshim RedForce",
@@ -96,8 +96,8 @@
     "rows": 338
   },
   "written": {
-    "rows": 73270,
-    "newest": "2026-08-24",
+    "rows": 73280,
+    "newest": "2026-08-25",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
     "mb": 7.8,
@@ -108,11 +108,11 @@
       ],
       [
         "LCK",
-        4190
+        4160
       ],
       [
         "LCKC",
-        3990
+        4030
       ],
       [
         "LJL",
@@ -164,5 +164,5 @@
       ]
     ]
   },
-  "finished": "2026-08-25T06:41:15Z"
+  "finished": "2026-08-25T12:45:00Z"
 }
