@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-08-25T18:21:22Z",
+  "started": "2026-08-26T00:34:04Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -14,56 +14,55 @@
       "detail": ""
     },
     {
-      "step": "Riot live rows: 7210",
+      "step": "Riot live rows: 7300",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "using 7210 Riot rows after 2026-07-28 (dropped 0 overlapping)",
+      "step": "using 7300 Riot rows after 2026-07-28 (dropped 0 overlapping)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "reconciled 23 Riot team names to history (1085 rows): E Wie Einfach E-Sports->E WIE EINFACH E-SPORTS, BOMBA Team->Bomba Team, UCAM Esports Club->UCAM Esports, Brod & Friends->Brod n Friends, Ici Japon Corp->Ici Japon Corp. Esport, KaBuM! Eports->KaBuM! Ilha das Lendas",
+      "step": "reconciled 23 Riot team names to history (1070 rows): BOMBA Team->Bomba Team, UCAM Esports Club->UCAM Esports, Brod & Friends->Brod n Friends, Ici Japon Corp->Ici Japon Corp. Esport, KaBuM! Eports->KaBuM! Ilha das Lendas, DNS Challengers->DN SOOPers Challengers",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 14 team name variants (475 rows)",
+      "step": "merged 15 team name variants (505 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 57 player name variants (338 rows)",
+      "step": "merged 56 player name variants (343 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "wrote 73280 rows spanning 2026-01-08 .. 2026-08-25",
+      "step": "wrote 73370 rows spanning 2026-01-08 .. 2026-08-25",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 2255,
-  "since": "2026-04-27",
+  "requests": 2280,
+  "since": "2026-04-28",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3020,
-  "riot_games_found": 727,
-  "side_resolved": 721,
-  "riot_games_ok": 721,
-  "riot_games_failed": 6,
-  "riot_rows_all": 7210,
-  "riot_rows_used": 7210,
+  "riot_events": 3029,
+  "riot_games_found": 735,
+  "side_resolved": 730,
+  "riot_games_ok": 730,
+  "riot_games_failed": 5,
+  "riot_rows_all": 7300,
+  "riot_rows_used": 7300,
   "alias_rejected": {
     "LOS": "LØS (no name kinship)",
     "NS Challengers": "Nongshim Esports Academy (no name kinship)"
   },
   "team_aliases": {
-    "E Wie Einfach E-Sports": "E WIE EINFACH E-SPORTS",
     "BOMBA Team": "Bomba Team",
     "UCAM Esports Club": "UCAM Esports",
     "Brod & Friends": "Brod n Friends",
@@ -85,22 +84,23 @@
     "DK Challengers": "Dplus Kia Challengers",
     "NightBirds": "Nightbirds",
     "VfB Stuttgart": "VfB eSports",
+    "E Wie Einfach E-Sports": "E WIE EINFACH E-SPORTS",
     "Once Upon a Team": "Once Upon A Team"
   },
   "canonicalised_team": {
-    "names": 14,
-    "rows": 475
+    "names": 15,
+    "rows": 505
   },
   "canonicalised_player": {
-    "names": 57,
-    "rows": 338
+    "names": 56,
+    "rows": 343
   },
   "written": {
-    "rows": 73280,
+    "rows": 73370,
     "newest": "2026-08-25",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
-    "mb": 7.8,
+    "mb": 7.81,
     "leagues": [
       [
         "LPL",
@@ -124,7 +124,7 @@
       ],
       [
         "AL",
-        3090
+        3100
       ],
       [
         "EM",
@@ -136,7 +136,7 @@
       ],
       [
         "PRM",
-        2570
+        2580
       ],
       [
         "EWC",
@@ -144,7 +144,7 @@
       ],
       [
         "LFL",
-        2310
+        2300
       ],
       [
         "LAS",
@@ -164,5 +164,5 @@
       ]
     ]
   },
-  "finished": "2026-08-25T18:40:40Z"
+  "finished": "2026-08-26T00:55:44Z"
 }
