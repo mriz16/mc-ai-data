@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-08-26T19:29:58Z",
+  "started": "2026-08-27T05:26:25Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -14,64 +14,61 @@
       "detail": ""
     },
     {
-      "step": "Riot live rows: 7350",
+      "step": "Riot live rows: 7500",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "using 7350 Riot rows after 2026-07-28 (dropped 0 overlapping)",
+      "step": "using 7500 Riot rows after 2026-07-28 (dropped 0 overlapping)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "reconciled 23 Riot team names to history (1080 rows): UCAM Esports Club->UCAM Esports, Brod & Friends->Brod n Friends, Ici Japon Corp->Ici Japon Corp. Esport, KaBuM! Eports->KaBuM! Ilha das Lendas, DNS Challengers->DN SOOPers Challengers, BRO Challengers->HANJIN BRION Challengers",
+      "step": "reconciled 23 Riot team names to history (1070 rows): DNS Challengers->DN SOOPers Challengers, BRO Challengers->HANJIN BRION Challengers, Dplus KIA->Dplus Kia, Heretics Academy->Team Heretics Academy, Barça Esports->Barça eSports, Ici Japon Corp->Ici Japon Corp. Esport",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 15 team name variants (505 rows)",
+      "step": "merged 15 team name variants (525 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 56 player name variants (343 rows)",
+      "step": "merged 54 player name variants (353 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "wrote 73420 rows spanning 2026-01-08 .. 2026-08-26",
+      "step": "wrote 73570 rows spanning 2026-01-08 .. 2026-08-26",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 2295,
-  "since": "2026-04-28",
+  "requests": 2341,
+  "since": "2026-04-29",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3038,
-  "riot_games_found": 740,
-  "side_resolved": 735,
-  "riot_games_ok": 735,
+  "riot_events": 3035,
+  "riot_games_found": 755,
+  "side_resolved": 750,
+  "riot_games_ok": 750,
   "riot_games_failed": 5,
-  "riot_rows_all": 7350,
-  "riot_rows_used": 7350,
+  "riot_rows_all": 7500,
+  "riot_rows_used": 7500,
   "alias_rejected": {
     "LOS": "LØS (no name kinship)",
     "NS Challengers": "Nongshim Esports Academy (no name kinship)"
   },
   "team_aliases": {
-    "UCAM Esports Club": "UCAM Esports",
-    "Brod & Friends": "Brod n Friends",
-    "Ici Japon Corp": "Ici Japon Corp. Esport",
-    "KaBuM! Eports": "KaBuM! Ilha das Lendas",
     "DNS Challengers": "DN SOOPers Challengers",
     "BRO Challengers": "HANJIN BRION Challengers",
     "Dplus KIA": "Dplus Kia",
     "Heretics Academy": "Team Heretics Academy",
     "Barça Esports": "Barça eSports",
+    "Ici Japon Corp": "Ici Japon Corp. Esport",
     "Gen.G Esports": "Gen.G",
     "kt Rolster": "KT Rolster",
     "Relove Deep Cross Gaming": "Deep Cross Gaming",
@@ -79,28 +76,31 @@
     "Team Liquid Alienware": "Team Liquid",
     "kt Challengers": "KT Rolster Challengers",
     "HLE Challengers": "Hanwha Life Esports Challengers",
+    "Brod & Friends": "Brod n Friends",
     "KRX Challengers": "Kiwoom DRX Challengers",
     "DK Challengers": "Dplus Kia Challengers",
     "NightBirds": "Nightbirds",
     "VfB Stuttgart": "VfB eSports",
     "BOMBA Team": "Bomba Team",
     "E Wie Einfach E-Sports": "E WIE EINFACH E-SPORTS",
-    "Once Upon a Team": "Once Upon A Team"
+    "UCAM Esports Club": "UCAM Esports",
+    "Once Upon a Team": "Once Upon A Team",
+    "KaBuM! Eports": "KaBuM! Ilha das Lendas"
   },
   "canonicalised_team": {
     "names": 15,
-    "rows": 505
+    "rows": 525
   },
   "canonicalised_player": {
-    "names": 56,
-    "rows": 343
+    "names": 54,
+    "rows": 353
   },
   "written": {
-    "rows": 73420,
+    "rows": 73570,
     "newest": "2026-08-26",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
-    "mb": 7.82,
+    "mb": 7.83,
     "leagues": [
       [
         "LPL",
@@ -131,38 +131,38 @@
         2840
       ],
       [
-        "LCP",
-        2580
+        "PRM",
+        2590
       ],
       [
-        "PRM",
-        2550
+        "LCP",
+        2580
       ],
       [
         "EWC",
         2320
       ],
       [
-        "LFL",
+        "LAS",
         2290
       ],
       [
-        "LAS",
-        2290
+        "LFL",
+        2260
       ],
       [
         "NACL",
         2250
       ],
       [
-        "CD",
-        2180
+        "LIT",
+        2190
       ],
       [
-        "CBLOL",
-        2170
+        "CD",
+        2180
       ]
     ]
   },
-  "finished": "2026-08-26T19:47:18Z"
+  "finished": "2026-08-27T05:53:25Z"
 }
