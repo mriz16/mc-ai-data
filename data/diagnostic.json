@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-08-28T01:50:37Z",
+  "started": "2026-08-28T17:48:15Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -14,12 +14,12 @@
       "detail": ""
     },
     {
-      "step": "Riot live rows: 7580",
+      "step": "Riot live rows: 7660",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "using 7580 Riot rows after 2026-07-28 (dropped 0 overlapping)",
+      "step": "using 7660 Riot rows after 2026-07-28 (dropped 0 overlapping)",
       "ok": true,
       "detail": ""
     },
@@ -29,35 +29,35 @@
       "detail": ""
     },
     {
-      "step": "merged 14 team name variants (515 rows)",
+      "step": "merged 14 team name variants (505 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 57 player name variants (354 rows)",
+      "step": "merged 57 player name variants (358 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "wrote 73650 rows spanning 2026-01-08 .. 2026-08-27",
+      "step": "wrote 73730 rows spanning 2026-01-08 .. 2026-08-28",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 2362,
+  "requests": 2386,
   "since": "2026-04-30",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3043,
-  "riot_games_found": 763,
-  "side_resolved": 758,
-  "riot_games_ok": 758,
+  "riot_events": 3049,
+  "riot_games_found": 771,
+  "side_resolved": 766,
+  "riot_games_ok": 766,
   "riot_games_failed": 5,
-  "riot_rows_all": 7580,
-  "riot_rows_used": 7580,
+  "riot_rows_all": 7660,
+  "riot_rows_used": 7660,
   "alias_rejected": {
     "LOS": "LØS (no name kinship)",
     "NS Challengers": "Nongshim Esports Academy (no name kinship)"
@@ -89,18 +89,18 @@
   },
   "canonicalised_team": {
     "names": 14,
-    "rows": 515
+    "rows": 505
   },
   "canonicalised_player": {
     "names": 57,
-    "rows": 354
+    "rows": 358
   },
   "written": {
-    "rows": 73650,
-    "newest": "2026-08-27",
+    "rows": 73730,
+    "newest": "2026-08-28",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
-    "mb": 7.84,
+    "mb": 7.85,
     "leagues": [
       [
         "LPL",
@@ -108,7 +108,7 @@
       ],
       [
         "LCK",
-        4210
+        4260
       ],
       [
         "LCKC",
@@ -120,7 +120,7 @@
       ],
       [
         "LEC",
-        3150
+        3170
       ],
       [
         "AL",
@@ -132,7 +132,7 @@
       ],
       [
         "PRM",
-        2610
+        2590
       ],
       [
         "LCP",
@@ -148,15 +148,15 @@
       ],
       [
         "LFL",
-        2250
+        2270
       ],
       [
         "NACL",
-        2230
+        2270
       ],
       [
         "LIT",
-        2220
+        2210
       ],
       [
         "CBLOL",
@@ -164,5 +164,5 @@
       ]
     ]
   },
-  "finished": "2026-08-28T02:14:13Z"
+  "finished": "2026-08-28T18:07:52Z"
 }
