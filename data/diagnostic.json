@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-08-28T17:48:15Z",
+  "started": "2026-08-29T01:14:29Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -14,12 +14,12 @@
       "detail": ""
     },
     {
-      "step": "Riot live rows: 7660",
+      "step": "Riot live rows: 7710",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "using 7660 Riot rows after 2026-07-28 (dropped 0 overlapping)",
+      "step": "using 7710 Riot rows after 2026-07-28 (dropped 0 overlapping)",
       "ok": true,
       "detail": ""
     },
@@ -34,30 +34,30 @@
       "detail": ""
     },
     {
-      "step": "merged 57 player name variants (358 rows)",
+      "step": "merged 58 player name variants (368 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "wrote 73730 rows spanning 2026-01-08 .. 2026-08-28",
+      "step": "wrote 73780 rows spanning 2026-01-08 .. 2026-08-28",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 2386,
-  "since": "2026-04-30",
+  "requests": 2401,
+  "since": "2026-05-01",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3049,
-  "riot_games_found": 771,
-  "side_resolved": 766,
-  "riot_games_ok": 766,
+  "riot_events": 3051,
+  "riot_games_found": 776,
+  "side_resolved": 771,
+  "riot_games_ok": 771,
   "riot_games_failed": 5,
-  "riot_rows_all": 7660,
-  "riot_rows_used": 7660,
+  "riot_rows_all": 7710,
+  "riot_rows_used": 7710,
   "alias_rejected": {
     "LOS": "LØS (no name kinship)",
     "NS Challengers": "Nongshim Esports Academy (no name kinship)"
@@ -92,11 +92,11 @@
     "rows": 505
   },
   "canonicalised_player": {
-    "names": 57,
-    "rows": 358
+    "names": 58,
+    "rows": 368
   },
   "written": {
-    "rows": 73730,
+    "rows": 73780,
     "newest": "2026-08-28",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
@@ -120,7 +120,7 @@
       ],
       [
         "LEC",
-        3170
+        3200
       ],
       [
         "AL",
@@ -156,7 +156,7 @@
       ],
       [
         "LIT",
-        2210
+        2200
       ],
       [
         "CBLOL",
@@ -164,5 +164,5 @@
       ]
     ]
   },
-  "finished": "2026-08-28T18:07:52Z"
+  "finished": "2026-08-29T01:37:11Z"
 }
