@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-08-29T11:52:43Z",
+  "started": "2026-08-29T15:51:23Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -14,12 +14,12 @@
       "detail": ""
     },
     {
-      "step": "Riot live rows: 7750",
+      "step": "Riot live rows: 7770",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "using 7750 Riot rows after 2026-07-28 (dropped 0 overlapping)",
+      "step": "using 7770 Riot rows after 2026-07-28 (dropped 0 overlapping)",
       "ok": true,
       "detail": ""
     },
@@ -34,30 +34,30 @@
       "detail": ""
     },
     {
-      "step": "merged 57 player name variants (377 rows)",
+      "step": "merged 57 player name variants (374 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "wrote 73820 rows spanning 2026-01-08 .. 2026-08-29",
+      "step": "wrote 73840 rows spanning 2026-01-08 .. 2026-08-29",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 2413,
+  "requests": 2419,
   "since": "2026-05-01",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
   "riot_events": 3054,
-  "riot_games_found": 780,
-  "side_resolved": 775,
-  "riot_games_ok": 775,
+  "riot_games_found": 782,
+  "side_resolved": 777,
+  "riot_games_ok": 777,
   "riot_games_failed": 5,
-  "riot_rows_all": 7750,
-  "riot_rows_used": 7750,
+  "riot_rows_all": 7770,
+  "riot_rows_used": 7770,
   "alias_rejected": {
     "LOS": "LØS (no name kinship)",
     "NS Challengers": "Nongshim Esports Academy (no name kinship)"
@@ -93,10 +93,10 @@
   },
   "canonicalised_player": {
     "names": 57,
-    "rows": 377
+    "rows": 374
   },
   "written": {
-    "rows": 73820,
+    "rows": 73840,
     "newest": "2026-08-29",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
@@ -108,7 +108,7 @@
       ],
       [
         "LCK",
-        4260
+        4310
       ],
       [
         "LCKC",
@@ -164,5 +164,5 @@
       ]
     ]
   },
-  "finished": "2026-08-29T12:12:18Z"
+  "finished": "2026-08-29T16:11:19Z"
 }
