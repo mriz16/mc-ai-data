@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-08-30T10:49:49Z",
+  "started": "2026-08-30T15:37:03Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -14,17 +14,17 @@
       "detail": ""
     },
     {
-      "step": "Riot live rows: 7820",
+      "step": "Riot live rows: 7830",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "using 7820 Riot rows after 2026-07-28 (dropped 0 overlapping)",
+      "step": "using 7830 Riot rows after 2026-07-28 (dropped 0 overlapping)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "reconciled 23 Riot team names to history (1055 rows): Gen.G Esports->Gen.G, kt Rolster->KT Rolster, Relove Deep Cross Gaming->Deep Cross Gaming, NONGSHIM RED FORCE->Nongshim RedForce, Dplus KIA->Dplus Kia, Team Liquid Alienware->Team Liquid",
+      "step": "reconciled 23 Riot team names to history (1065 rows): Relove Deep Cross Gaming->Deep Cross Gaming, NONGSHIM RED FORCE->Nongshim RedForce, kt Rolster->KT Rolster, Dplus KIA->Dplus Kia, Team Liquid Alienware->Team Liquid, DNS Challengers->DN SOOPers Challengers",
       "ok": true,
       "detail": ""
     },
@@ -39,34 +39,33 @@
       "detail": ""
     },
     {
-      "step": "wrote 73890 rows spanning 2026-01-08 .. 2026-08-29",
+      "step": "wrote 73900 rows spanning 2026-01-08 .. 2026-08-30",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 2434,
+  "requests": 2437,
   "since": "2026-05-02",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3062,
-  "riot_games_found": 787,
-  "side_resolved": 782,
-  "riot_games_ok": 782,
+  "riot_events": 3065,
+  "riot_games_found": 788,
+  "side_resolved": 783,
+  "riot_games_ok": 783,
   "riot_games_failed": 5,
-  "riot_rows_all": 7820,
-  "riot_rows_used": 7820,
+  "riot_rows_all": 7830,
+  "riot_rows_used": 7830,
   "alias_rejected": {
     "LOS": "LØS (no name kinship)",
     "NS Challengers": "Nongshim Esports Academy (no name kinship)"
   },
   "team_aliases": {
-    "Gen.G Esports": "Gen.G",
-    "kt Rolster": "KT Rolster",
     "Relove Deep Cross Gaming": "Deep Cross Gaming",
     "NONGSHIM RED FORCE": "Nongshim RedForce",
+    "kt Rolster": "KT Rolster",
     "Dplus KIA": "Dplus Kia",
     "Team Liquid Alienware": "Team Liquid",
     "DNS Challengers": "DN SOOPers Challengers",
@@ -82,6 +81,7 @@
     "Barça Esports": "Barça eSports",
     "Ici Japon Corp": "Ici Japon Corp. Esport",
     "UCAM Esports Club": "UCAM Esports",
+    "Gen.G Esports": "Gen.G",
     "Once Upon a Team": "Once Upon A Team",
     "Heretics Academy": "Team Heretics Academy",
     "BRO Challengers": "HANJIN BRION Challengers",
@@ -96,8 +96,8 @@
     "rows": 372
   },
   "written": {
-    "rows": 73890,
-    "newest": "2026-08-29",
+    "rows": 73900,
+    "newest": "2026-08-30",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
     "mb": 7.87,
@@ -108,7 +108,7 @@
       ],
       [
         "LCK",
-        4310
+        4320
       ],
       [
         "LCKC",
@@ -120,7 +120,7 @@
       ],
       [
         "LEC",
-        3250
+        3270
       ],
       [
         "AL",
@@ -132,15 +132,11 @@
       ],
       [
         "LCP",
-        2590
+        2620
       ],
       [
         "PRM",
         2590
-      ],
-      [
-        "NACL",
-        2330
       ],
       [
         "EWC",
@@ -149,6 +145,10 @@
       [
         "LAS",
         2290
+      ],
+      [
+        "NACL",
+        2280
       ],
       [
         "LFL",
@@ -164,5 +164,5 @@
       ]
     ]
   },
-  "finished": "2026-08-30T11:09:30Z"
+  "finished": "2026-08-30T16:34:28Z"
 }
