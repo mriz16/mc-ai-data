@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-08-29T20:04:57Z",
+  "started": "2026-08-30T02:03:53Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -14,50 +14,50 @@
       "detail": ""
     },
     {
-      "step": "Riot live rows: 7770",
+      "step": "Riot live rows: 7820",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "using 7770 Riot rows after 2026-07-28 (dropped 0 overlapping)",
+      "step": "using 7820 Riot rows after 2026-07-28 (dropped 0 overlapping)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "reconciled 23 Riot team names to history (1040 rows): Gen.G Esports->Gen.G, kt Rolster->KT Rolster, Relove Deep Cross Gaming->Deep Cross Gaming, NONGSHIM RED FORCE->Nongshim RedForce, Dplus KIA->Dplus Kia, Team Liquid Alienware->Team Liquid",
+      "step": "reconciled 23 Riot team names to history (1055 rows): Gen.G Esports->Gen.G, kt Rolster->KT Rolster, Relove Deep Cross Gaming->Deep Cross Gaming, NONGSHIM RED FORCE->Nongshim RedForce, Dplus KIA->Dplus Kia, Team Liquid Alienware->Team Liquid",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 14 team name variants (480 rows)",
+      "step": "merged 14 team name variants (495 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 57 player name variants (373 rows)",
+      "step": "merged 56 player name variants (372 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "wrote 73840 rows spanning 2026-01-08 .. 2026-08-29",
+      "step": "wrote 73890 rows spanning 2026-01-08 .. 2026-08-29",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 2419,
-  "since": "2026-05-01",
+  "requests": 2434,
+  "since": "2026-05-02",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3057,
-  "riot_games_found": 782,
-  "side_resolved": 777,
-  "riot_games_ok": 777,
+  "riot_events": 3061,
+  "riot_games_found": 787,
+  "side_resolved": 782,
+  "riot_games_ok": 782,
   "riot_games_failed": 5,
-  "riot_rows_all": 7770,
-  "riot_rows_used": 7770,
+  "riot_rows_all": 7820,
+  "riot_rows_used": 7820,
   "alias_rejected": {
     "LOS": "LØS (no name kinship)",
     "NS Challengers": "Nongshim Esports Academy (no name kinship)"
@@ -89,18 +89,18 @@
   },
   "canonicalised_team": {
     "names": 14,
-    "rows": 480
+    "rows": 495
   },
   "canonicalised_player": {
-    "names": 57,
-    "rows": 373
+    "names": 56,
+    "rows": 372
   },
   "written": {
-    "rows": 73840,
+    "rows": 73890,
     "newest": "2026-08-29",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
-    "mb": 7.86,
+    "mb": 7.87,
     "leagues": [
       [
         "LPL",
@@ -120,7 +120,7 @@
       ],
       [
         "LEC",
-        3220
+        3250
       ],
       [
         "AL",
@@ -152,17 +152,17 @@
       ],
       [
         "LFL",
-        2260
-      ],
-      [
-        "LIT",
-        2190
+        2240
       ],
       [
         "CBLOL",
-        2190
+        2220
+      ],
+      [
+        "LIT",
+        2180
       ]
     ]
   },
-  "finished": "2026-08-29T20:27:38Z"
+  "finished": "2026-08-30T02:37:29Z"
 }
