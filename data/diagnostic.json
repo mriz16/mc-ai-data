@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-09-01T10:38:55Z",
+  "started": "2026-09-01T15:40:19Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -24,7 +24,7 @@
       "detail": ""
     },
     {
-      "step": "reconciled 23 Riot team names to history (1130 rows): Relove Deep Cross Gaming->Deep Cross Gaming, NONGSHIM RED FORCE->Nongshim RedForce, kt Rolster->KT Rolster, Dplus KIA->Dplus Kia, Team Liquid Alienware->Team Liquid, DNS Challengers->DN SOOPers Challengers",
+      "step": "reconciled 23 Riot team names to history (1160 rows): Relove Deep Cross Gaming->Deep Cross Gaming, NONGSHIM RED FORCE->Nongshim RedForce, kt Rolster->KT Rolster, Dplus KIA->Dplus Kia, Team Liquid Alienware->Team Liquid, DNS Challengers->DN SOOPers Challengers",
       "ok": true,
       "detail": ""
     },
@@ -39,7 +39,7 @@
       "detail": ""
     },
     {
-      "step": "wrote 74010 rows spanning 2026-01-08 .. 2026-08-31",
+      "step": "wrote 74010 rows spanning 2026-01-08 .. 2026-09-01",
       "ok": true,
       "detail": ""
     }
@@ -51,7 +51,7 @@
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3069,
+  "riot_events": 3068,
   "riot_games_found": 799,
   "side_resolved": 794,
   "riot_games_ok": 794,
@@ -97,7 +97,7 @@
   },
   "written": {
     "rows": 74010,
-    "newest": "2026-08-31",
+    "newest": "2026-09-01",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
     "mb": 7.88,
@@ -164,5 +164,5 @@
       ]
     ]
   },
-  "finished": "2026-09-01T11:05:40Z"
+  "finished": "2026-09-01T16:00:17Z"
 }
