@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-09-02T01:42:25Z",
+  "started": "2026-09-02T10:04:46Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -14,12 +14,12 @@
       "detail": ""
     },
     {
-      "step": "Riot live rows: 7960",
+      "step": "Riot live rows: 7990",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "using 7960 Riot rows after 2026-07-28 (dropped 0 overlapping)",
+      "step": "using 7990 Riot rows after 2026-07-28 (dropped 0 overlapping)",
       "ok": true,
       "detail": ""
     },
@@ -39,25 +39,25 @@
       "detail": ""
     },
     {
-      "step": "wrote 74030 rows spanning 2026-01-08 .. 2026-09-01",
+      "step": "wrote 74060 rows spanning 2026-01-08 .. 2026-09-01",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 2474,
+  "requests": 2483,
   "since": "2026-05-05",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
   "riot_events": 3083,
-  "riot_games_found": 801,
-  "side_resolved": 796,
-  "riot_games_ok": 796,
+  "riot_games_found": 804,
+  "side_resolved": 799,
+  "riot_games_ok": 799,
   "riot_games_failed": 5,
-  "riot_rows_all": 7960,
-  "riot_rows_used": 7960,
+  "riot_rows_all": 7990,
+  "riot_rows_used": 7990,
   "alias_rejected": {
     "LOS": "LØS (no name kinship)",
     "NS Challengers": "Nongshim Esports Academy (no name kinship)"
@@ -96,11 +96,11 @@
     "rows": 395
   },
   "written": {
-    "rows": 74030,
+    "rows": 74060,
     "newest": "2026-09-01",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
-    "mb": 7.88,
+    "mb": 7.89,
     "leagues": [
       [
         "LPL",
@@ -120,7 +120,7 @@
       ],
       [
         "LEC",
-        3210
+        3190
       ],
       [
         "AL",
@@ -143,12 +143,12 @@
         2320
       ],
       [
-        "LAS",
+        "LFL",
         2290
       ],
       [
-        "LFL",
-        2240
+        "LAS",
+        2290
       ],
       [
         "CD",
@@ -164,5 +164,5 @@
       ]
     ]
   },
-  "finished": "2026-09-02T02:07:20Z"
+  "finished": "2026-09-02T10:23:14Z"
 }
