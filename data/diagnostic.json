@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-09-02T10:04:46Z",
+  "started": "2026-09-02T15:28:11Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -14,12 +14,12 @@
       "detail": ""
     },
     {
-      "step": "Riot live rows: 7990",
+      "step": "Riot live rows: 8020",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "using 7990 Riot rows after 2026-07-28 (dropped 0 overlapping)",
+      "step": "using 8020 Riot rows after 2026-07-28 (dropped 0 overlapping)",
       "ok": true,
       "detail": ""
     },
@@ -34,30 +34,30 @@
       "detail": ""
     },
     {
-      "step": "merged 56 player name variants (395 rows)",
+      "step": "merged 56 player name variants (393 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "wrote 74060 rows spanning 2026-01-08 .. 2026-09-01",
+      "step": "wrote 74090 rows spanning 2026-01-08 .. 2026-09-02",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 2483,
+  "requests": 2492,
   "since": "2026-05-05",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3083,
-  "riot_games_found": 804,
-  "side_resolved": 799,
-  "riot_games_ok": 799,
+  "riot_events": 3084,
+  "riot_games_found": 807,
+  "side_resolved": 802,
+  "riot_games_ok": 802,
   "riot_games_failed": 5,
-  "riot_rows_all": 7990,
-  "riot_rows_used": 7990,
+  "riot_rows_all": 8020,
+  "riot_rows_used": 8020,
   "alias_rejected": {
     "LOS": "LØS (no name kinship)",
     "NS Challengers": "Nongshim Esports Academy (no name kinship)"
@@ -93,11 +93,11 @@
   },
   "canonicalised_player": {
     "names": 56,
-    "rows": 395
+    "rows": 393
   },
   "written": {
-    "rows": 74060,
-    "newest": "2026-09-01",
+    "rows": 74090,
+    "newest": "2026-09-02",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
     "mb": 7.89,
@@ -108,7 +108,7 @@
       ],
       [
         "LCK",
-        4230
+        4280
       ],
       [
         "LCKC",
@@ -160,9 +160,9 @@
       ],
       [
         "CBLOL",
-        2180
+        2160
       ]
     ]
   },
-  "finished": "2026-09-02T10:23:14Z"
+  "finished": "2026-09-02T15:50:39Z"
 }
