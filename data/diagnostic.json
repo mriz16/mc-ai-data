@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-09-03T15:22:36Z",
+  "started": "2026-09-03T20:13:17Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -24,7 +24,7 @@
       "detail": ""
     },
     {
-      "step": "reconciled 23 Riot team names to history (1150 rows): Brod & Friends->Brod n Friends, KRX Challengers->Kiwoom DRX Challengers, DK Challengers->Dplus Kia Challengers, NightBirds->Nightbirds, VfB Stuttgart->VfB eSports, NONGSHIM RED FORCE->Nongshim RedForce",
+      "step": "reconciled 23 Riot team names to history (1135 rows): KRX Challengers->Kiwoom DRX Challengers, DK Challengers->Dplus Kia Challengers, NightBirds->Nightbirds, VfB Stuttgart->VfB eSports, NONGSHIM RED FORCE->Nongshim RedForce, Dplus KIA->Dplus Kia",
       "ok": true,
       "detail": ""
     },
@@ -34,7 +34,7 @@
       "detail": ""
     },
     {
-      "step": "merged 56 player name variants (405 rows)",
+      "step": "merged 56 player name variants (399 rows)",
       "ok": true,
       "detail": ""
     },
@@ -51,7 +51,7 @@
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3099,
+  "riot_events": 3107,
   "riot_games_found": 824,
   "side_resolved": 819,
   "riot_games_ok": 819,
@@ -63,7 +63,6 @@
     "NS Challengers": "Nongshim Esports Academy (no name kinship)"
   },
   "team_aliases": {
-    "Brod & Friends": "Brod n Friends",
     "KRX Challengers": "Kiwoom DRX Challengers",
     "DK Challengers": "Dplus Kia Challengers",
     "NightBirds": "Nightbirds",
@@ -85,6 +84,7 @@
     "Team Liquid Alienware": "Team Liquid",
     "DNS Challengers": "DN SOOPers Challengers",
     "HLE Challengers": "Hanwha Life Esports Challengers",
+    "Brod & Friends": "Brod n Friends",
     "KaBuM! Eports": "KaBuM! Ilha das Lendas"
   },
   "canonicalised_team": {
@@ -93,7 +93,7 @@
   },
   "canonicalised_player": {
     "names": 56,
-    "rows": 405
+    "rows": 399
   },
   "written": {
     "rows": 74260,
@@ -160,9 +160,9 @@
       ],
       [
         "LIT",
-        2170
+        2200
       ]
     ]
   },
-  "finished": "2026-09-03T15:47:41Z"
+  "finished": "2026-09-03T20:41:16Z"
 }
