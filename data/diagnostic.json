@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-09-05T01:43:00Z",
+  "started": "2026-09-05T09:34:12Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -14,56 +14,55 @@
       "detail": ""
     },
     {
-      "step": "Riot live rows: 8230",
+      "step": "Riot live rows: 8270",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "using 8230 Riot rows after 2026-07-28 (dropped 0 overlapping)",
+      "step": "using 8270 Riot rows after 2026-07-28 (dropped 0 overlapping)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "reconciled 23 Riot team names to history (1145 rows): VfB Stuttgart->VfB eSports, NONGSHIM RED FORCE->Nongshim RedForce, Dplus KIA->Dplus Kia, kt Rolster->KT Rolster, BOMBA Team->Bomba Team, E Wie Einfach E-Sports->E WIE EINFACH E-SPORTS",
+      "step": "reconciled 22 Riot team names to history (1135 rows): NONGSHIM RED FORCE->Nongshim RedForce, Dplus KIA->Dplus Kia, kt Rolster->KT Rolster, BOMBA Team->Bomba Team, E Wie Einfach E-Sports->E WIE EINFACH E-SPORTS, Barça Esports->Barça eSports",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 13 team name variants (485 rows)",
+      "step": "merged 13 team name variants (475 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 53 player name variants (404 rows)",
+      "step": "merged 51 player name variants (403 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "wrote 74300 rows spanning 2026-01-08 .. 2026-09-04",
+      "step": "wrote 74340 rows spanning 2026-01-08 .. 2026-09-05",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 2555,
+  "requests": 2567,
   "since": "2026-05-08",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3111,
-  "riot_games_found": 828,
-  "side_resolved": 823,
-  "riot_games_ok": 823,
+  "riot_events": 3099,
+  "riot_games_found": 832,
+  "side_resolved": 827,
+  "riot_games_ok": 827,
   "riot_games_failed": 5,
-  "riot_rows_all": 8230,
-  "riot_rows_used": 8230,
+  "riot_rows_all": 8270,
+  "riot_rows_used": 8270,
   "alias_rejected": {
     "NS Challengers": "Nongshim Esports Academy (no name kinship)",
     "LOS": "LØS (no name kinship)"
   },
   "team_aliases": {
-    "VfB Stuttgart": "VfB eSports",
     "NONGSHIM RED FORCE": "Nongshim RedForce",
     "Dplus KIA": "Dplus Kia",
     "kt Rolster": "KT Rolster",
@@ -89,18 +88,18 @@
   },
   "canonicalised_team": {
     "names": 13,
-    "rows": 485
+    "rows": 475
   },
   "canonicalised_player": {
-    "names": 53,
-    "rows": 404
+    "names": 51,
+    "rows": 403
   },
   "written": {
-    "rows": 74300,
-    "newest": "2026-09-04",
+    "rows": 74340,
+    "newest": "2026-09-05",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
-    "mb": 7.91,
+    "mb": 7.92,
     "leagues": [
       [
         "LPL",
@@ -116,7 +115,7 @@
       ],
       [
         "LJL",
-        3420
+        3450
       ],
       [
         "LEC",
@@ -132,7 +131,7 @@
       ],
       [
         "PRM",
-        2640
+        2620
       ],
       [
         "LCP",
@@ -164,5 +163,5 @@
       ]
     ]
   },
-  "finished": "2026-09-05T02:07:01Z"
+  "finished": "2026-09-05T09:57:15Z"
 }
