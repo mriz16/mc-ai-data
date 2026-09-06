@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-09-06T14:30:48Z",
+  "started": "2026-09-06T19:41:14Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -14,57 +14,55 @@
       "detail": ""
     },
     {
-      "step": "Riot live rows: 8410",
+      "step": "Riot live rows: 8460",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "using 8410 Riot rows after 2026-07-28 (dropped 0 overlapping)",
+      "step": "using 8460 Riot rows after 2026-07-28 (dropped 0 overlapping)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "reconciled 22 Riot team names to history (1130 rows): Barça Esports->Barça eSports, Ici Japon Corp->Ici Japon Corp. Esport, UCAM Esports Club->UCAM Esports, kt Challengers->KT Rolster Challengers, KRX Challengers->Kiwoom DRX Challengers, Relove Deep Cross Gaming->Deep Cross Gaming",
+      "step": "reconciled 22 Riot team names to history (1135 rows): UCAM Esports Club->UCAM Esports, kt Challengers->KT Rolster Challengers, KRX Challengers->Kiwoom DRX Challengers, Relove Deep Cross Gaming->Deep Cross Gaming, Gen.G Esports->Gen.G, NightBirds->Nightbirds",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 13 team name variants (475 rows)",
+      "step": "merged 13 team name variants (465 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 50 player name variants (384 rows)",
+      "step": "merged 50 player name variants (386 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "wrote 74480 rows spanning 2026-01-08 .. 2026-09-06",
+      "step": "wrote 74530 rows spanning 2026-01-08 .. 2026-09-06",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 2605,
+  "requests": 2620,
   "since": "2026-05-09",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3112,
-  "riot_games_found": 845,
-  "side_resolved": 841,
-  "riot_games_ok": 841,
+  "riot_events": 3116,
+  "riot_games_found": 850,
+  "side_resolved": 846,
+  "riot_games_ok": 846,
   "riot_games_failed": 4,
-  "riot_rows_all": 8410,
-  "riot_rows_used": 8410,
+  "riot_rows_all": 8460,
+  "riot_rows_used": 8460,
   "alias_rejected": {
     "NS Challengers": "Nongshim Esports Academy (no name kinship)",
     "LOS": "LØS (no name kinship)"
   },
   "team_aliases": {
-    "Barça Esports": "Barça eSports",
-    "Ici Japon Corp": "Ici Japon Corp. Esport",
     "UCAM Esports Club": "UCAM Esports",
     "kt Challengers": "KT Rolster Challengers",
     "KRX Challengers": "Kiwoom DRX Challengers",
@@ -83,23 +81,25 @@
     "DK Challengers": "Dplus Kia Challengers",
     "HLE Challengers": "Hanwha Life Esports Challengers",
     "Brod & Friends": "Brod n Friends",
+    "Barça Esports": "Barça eSports",
     "BOMBA Team": "Bomba Team",
-    "KaBuM! Eports": "KaBuM! Ilha das Lendas"
+    "KaBuM! Eports": "KaBuM! Ilha das Lendas",
+    "Ici Japon Corp": "Ici Japon Corp. Esport"
   },
   "canonicalised_team": {
     "names": 13,
-    "rows": 475
+    "rows": 465
   },
   "canonicalised_player": {
     "names": 50,
-    "rows": 384
+    "rows": 386
   },
   "written": {
-    "rows": 74480,
+    "rows": 74530,
     "newest": "2026-09-06",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
-    "mb": 7.93,
+    "mb": 7.94,
     "leagues": [
       [
         "LPL",
@@ -119,11 +119,11 @@
       ],
       [
         "LEC",
-        3200
+        3240
       ],
       [
         "AL",
-        3010
+        2980
       ],
       [
         "EM",
@@ -131,15 +131,11 @@
       ],
       [
         "PRM",
-        2600
+        2580
       ],
       [
         "LCP",
         2500
-      ],
-      [
-        "LFL",
-        2330
       ],
       [
         "NACL",
@@ -148,6 +144,10 @@
       [
         "EWC",
         2320
+      ],
+      [
+        "LFL",
+        2310
       ],
       [
         "LAS",
@@ -163,5 +163,5 @@
       ]
     ]
   },
-  "finished": "2026-09-06T14:50:04Z"
+  "finished": "2026-09-06T20:05:48Z"
 }
