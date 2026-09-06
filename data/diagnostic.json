@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-09-06T09:48:27Z",
+  "started": "2026-09-06T14:30:48Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -14,17 +14,17 @@
       "detail": ""
     },
     {
-      "step": "Riot live rows: 8330",
+      "step": "Riot live rows: 8410",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "using 8330 Riot rows after 2026-07-28 (dropped 0 overlapping)",
+      "step": "using 8410 Riot rows after 2026-07-28 (dropped 0 overlapping)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "reconciled 22 Riot team names to history (1130 rows): BOMBA Team->Bomba Team, E Wie Einfach E-Sports->E WIE EINFACH E-SPORTS, Barça Esports->Barça eSports, Ici Japon Corp->Ici Japon Corp. Esport, UCAM Esports Club->UCAM Esports, kt Challengers->KT Rolster Challengers",
+      "step": "reconciled 22 Riot team names to history (1130 rows): Barça Esports->Barça eSports, Ici Japon Corp->Ici Japon Corp. Esport, UCAM Esports Club->UCAM Esports, kt Challengers->KT Rolster Challengers, KRX Challengers->Kiwoom DRX Challengers, Relove Deep Cross Gaming->Deep Cross Gaming",
       "ok": true,
       "detail": ""
     },
@@ -34,37 +34,35 @@
       "detail": ""
     },
     {
-      "step": "merged 50 player name variants (388 rows)",
+      "step": "merged 50 player name variants (384 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "wrote 74400 rows spanning 2026-01-08 .. 2026-09-05",
+      "step": "wrote 74480 rows spanning 2026-01-08 .. 2026-09-06",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 2585,
+  "requests": 2605,
   "since": "2026-05-09",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3106,
-  "riot_games_found": 838,
-  "side_resolved": 833,
-  "riot_games_ok": 833,
-  "riot_games_failed": 5,
-  "riot_rows_all": 8330,
-  "riot_rows_used": 8330,
+  "riot_events": 3112,
+  "riot_games_found": 845,
+  "side_resolved": 841,
+  "riot_games_ok": 841,
+  "riot_games_failed": 4,
+  "riot_rows_all": 8410,
+  "riot_rows_used": 8410,
   "alias_rejected": {
     "NS Challengers": "Nongshim Esports Academy (no name kinship)",
     "LOS": "LØS (no name kinship)"
   },
   "team_aliases": {
-    "BOMBA Team": "Bomba Team",
-    "E Wie Einfach E-Sports": "E WIE EINFACH E-SPORTS",
     "Barça Esports": "Barça eSports",
     "Ici Japon Corp": "Ici Japon Corp. Esport",
     "UCAM Esports Club": "UCAM Esports",
@@ -73,6 +71,7 @@
     "Relove Deep Cross Gaming": "Deep Cross Gaming",
     "Gen.G Esports": "Gen.G",
     "NightBirds": "Nightbirds",
+    "E Wie Einfach E-Sports": "E WIE EINFACH E-SPORTS",
     "Once Upon a Team": "Once Upon A Team",
     "Heretics Academy": "Team Heretics Academy",
     "BRO Challengers": "HANJIN BRION Challengers",
@@ -84,6 +83,7 @@
     "DK Challengers": "Dplus Kia Challengers",
     "HLE Challengers": "Hanwha Life Esports Challengers",
     "Brod & Friends": "Brod n Friends",
+    "BOMBA Team": "Bomba Team",
     "KaBuM! Eports": "KaBuM! Ilha das Lendas"
   },
   "canonicalised_team": {
@@ -92,14 +92,14 @@
   },
   "canonicalised_player": {
     "names": 50,
-    "rows": 388
+    "rows": 384
   },
   "written": {
-    "rows": 74400,
-    "newest": "2026-09-05",
+    "rows": 74480,
+    "newest": "2026-09-06",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
-    "mb": 7.92,
+    "mb": 7.93,
     "leagues": [
       [
         "LPL",
@@ -107,7 +107,7 @@
       ],
       [
         "LCK",
-        4360
+        4400
       ],
       [
         "LCKC",
@@ -115,7 +115,7 @@
       ],
       [
         "LJL",
-        3450
+        3500
       ],
       [
         "LEC",
@@ -131,7 +131,7 @@
       ],
       [
         "PRM",
-        2620
+        2600
       ],
       [
         "LCP",
@@ -163,5 +163,5 @@
       ]
     ]
   },
-  "finished": "2026-09-06T10:13:39Z"
+  "finished": "2026-09-06T14:50:04Z"
 }
