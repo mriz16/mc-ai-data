@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-09-05T19:38:40Z",
+  "started": "2026-09-06T01:37:09Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -24,7 +24,7 @@
       "detail": ""
     },
     {
-      "step": "reconciled 22 Riot team names to history (1140 rows): Dplus KIA->Dplus Kia, kt Rolster->KT Rolster, BOMBA Team->Bomba Team, E Wie Einfach E-Sports->E WIE EINFACH E-SPORTS, Barça Esports->Barça eSports, Ici Japon Corp->Ici Japon Corp. Esport",
+      "step": "reconciled 22 Riot team names to history (1130 rows): BOMBA Team->Bomba Team, E Wie Einfach E-Sports->E WIE EINFACH E-SPORTS, Barça Esports->Barça eSports, Ici Japon Corp->Ici Japon Corp. Esport, UCAM Esports Club->UCAM Esports, kt Challengers->KT Rolster Challengers",
       "ok": true,
       "detail": ""
     },
@@ -34,7 +34,7 @@
       "detail": ""
     },
     {
-      "step": "merged 50 player name variants (386 rows)",
+      "step": "merged 50 player name variants (388 rows)",
       "ok": true,
       "detail": ""
     },
@@ -45,13 +45,13 @@
     }
   ],
   "outcome": "ok",
-  "requests": 2586,
-  "since": "2026-05-08",
+  "requests": 2585,
+  "since": "2026-05-09",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3103,
+  "riot_events": 3107,
   "riot_games_found": 838,
   "side_resolved": 833,
   "riot_games_ok": 833,
@@ -63,8 +63,6 @@
     "LOS": "LØS (no name kinship)"
   },
   "team_aliases": {
-    "Dplus KIA": "Dplus Kia",
-    "kt Rolster": "KT Rolster",
     "BOMBA Team": "Bomba Team",
     "E Wie Einfach E-Sports": "E WIE EINFACH E-SPORTS",
     "Barça Esports": "Barça eSports",
@@ -78,7 +76,9 @@
     "Once Upon a Team": "Once Upon A Team",
     "Heretics Academy": "Team Heretics Academy",
     "BRO Challengers": "HANJIN BRION Challengers",
+    "Dplus KIA": "Dplus Kia",
     "NONGSHIM RED FORCE": "Nongshim RedForce",
+    "kt Rolster": "KT Rolster",
     "Team Liquid Alienware": "Team Liquid",
     "DNS Challengers": "DN SOOPers Challengers",
     "DK Challengers": "Dplus Kia Challengers",
@@ -92,7 +92,7 @@
   },
   "canonicalised_player": {
     "names": 50,
-    "rows": 386
+    "rows": 388
   },
   "written": {
     "rows": 74400,
@@ -107,7 +107,7 @@
       ],
       [
         "LCK",
-        4380
+        4360
       ],
       [
         "LCKC",
@@ -163,5 +163,5 @@
       ]
     ]
   },
-  "finished": "2026-09-05T19:58:02Z"
+  "finished": "2026-09-06T01:58:52Z"
 }
