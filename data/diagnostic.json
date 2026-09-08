@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-09-08T01:45:48Z",
+  "started": "2026-09-08T10:12:04Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -29,12 +29,12 @@
       "detail": ""
     },
     {
-      "step": "merged 14 team name variants (480 rows)",
+      "step": "merged 13 team name variants (480 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 49 player name variants (393 rows)",
+      "step": "merged 48 player name variants (390 rows)",
       "ok": true,
       "detail": ""
     },
@@ -51,7 +51,7 @@
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3118,
+  "riot_events": 3121,
   "riot_games_found": 859,
   "side_resolved": 852,
   "side_fallback": 3,
@@ -88,12 +88,12 @@
     "Ici Japon Corp": "Ici Japon Corp. Esport"
   },
   "canonicalised_team": {
-    "names": 14,
+    "names": 13,
     "rows": 480
   },
   "canonicalised_player": {
-    "names": 49,
-    "rows": 393
+    "names": 48,
+    "rows": 390
   },
   "written": {
     "rows": 74620,
@@ -156,7 +156,7 @@
       ],
       [
         "CD",
-        2270
+        2240
       ],
       [
         "LIT",
@@ -164,5 +164,5 @@
       ]
     ]
   },
-  "finished": "2026-09-08T02:09:42Z"
+  "finished": "2026-09-08T10:35:43Z"
 }
