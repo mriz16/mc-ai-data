@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-09-08T20:24:33Z",
+  "started": "2026-09-09T01:52:29Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -14,61 +14,56 @@
       "detail": ""
     },
     {
-      "step": "Riot live rows: 8600",
+      "step": "Riot live rows: 8680",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "using 8600 Riot rows after 2026-07-28 (dropped 0 overlapping)",
+      "step": "using 8680 Riot rows after 2026-07-28 (dropped 0 overlapping)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "reconciled 22 Riot team names to history (1215 rows): kt Challengers->KT Rolster Challengers, KRX Challengers->Kiwoom DRX Challengers, Relove Deep Cross Gaming->Deep Cross Gaming, Gen.G Esports->Gen.G, NightBirds->Nightbirds, E Wie Einfach E-Sports->E WIE EINFACH E-SPORTS",
+      "step": "reconciled 21 Riot team names to history (1215 rows): E Wie Einfach E-Sports->E WIE EINFACH E-SPORTS, Once Upon a Team->Once Upon A Team, Heretics Academy->Team Heretics Academy, BRO Challengers->HANJIN BRION Challengers, Dplus KIA->Dplus Kia, NONGSHIM RED FORCE->Nongshim RedForce",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 13 team name variants (480 rows)",
+      "step": "merged 13 team name variants (495 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 48 player name variants (389 rows)",
+      "step": "merged 48 player name variants (401 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "wrote 74670 rows spanning 2026-01-08 .. 2026-09-08",
+      "step": "wrote 74750 rows spanning 2026-01-08 .. 2026-09-08",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 2659,
-  "since": "2026-05-11",
+  "requests": 2683,
+  "since": "2026-05-12",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3126,
-  "riot_games_found": 863,
-  "side_resolved": 857,
+  "riot_events": 3129,
+  "riot_games_found": 871,
+  "side_resolved": 865,
   "side_fallback": 3,
-  "riot_games_ok": 860,
+  "riot_games_ok": 868,
   "riot_games_failed": 3,
-  "riot_rows_all": 8600,
-  "riot_rows_used": 8600,
+  "riot_rows_all": 8680,
+  "riot_rows_used": 8680,
   "alias_rejected": {
-    "NS Challengers": "Nongshim Esports Academy (no name kinship)",
-    "LOS": "LØS (no name kinship)"
+    "LOS": "LØS (no name kinship)",
+    "NS Challengers": "Nongshim Esports Academy (no name kinship)"
   },
   "team_aliases": {
-    "kt Challengers": "KT Rolster Challengers",
-    "KRX Challengers": "Kiwoom DRX Challengers",
-    "Relove Deep Cross Gaming": "Deep Cross Gaming",
-    "Gen.G Esports": "Gen.G",
-    "NightBirds": "Nightbirds",
     "E Wie Einfach E-Sports": "E WIE EINFACH E-SPORTS",
     "Once Upon a Team": "Once Upon A Team",
     "Heretics Academy": "Team Heretics Academy",
@@ -78,9 +73,13 @@
     "kt Rolster": "KT Rolster",
     "Team Liquid Alienware": "Team Liquid",
     "DNS Challengers": "DN SOOPers Challengers",
+    "Gen.G Esports": "Gen.G",
     "DK Challengers": "Dplus Kia Challengers",
+    "kt Challengers": "KT Rolster Challengers",
     "HLE Challengers": "Hanwha Life Esports Challengers",
+    "KRX Challengers": "Kiwoom DRX Challengers",
     "Brod & Friends": "Brod n Friends",
+    "NightBirds": "Nightbirds",
     "Barça Esports": "Barça eSports",
     "BOMBA Team": "Bomba Team",
     "KaBuM! Eports": "KaBuM! Ilha das Lendas",
@@ -89,18 +88,18 @@
   },
   "canonicalised_team": {
     "names": 13,
-    "rows": 480
+    "rows": 495
   },
   "canonicalised_player": {
     "names": 48,
-    "rows": 389
+    "rows": 401
   },
   "written": {
-    "rows": 74670,
+    "rows": 74750,
     "newest": "2026-09-08",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
-    "mb": 7.95,
+    "mb": 7.96,
     "leagues": [
       [
         "LPL",
@@ -108,11 +107,11 @@
       ],
       [
         "LCK",
-        4400
+        4350
       ],
       [
         "LCKC",
-        4050
+        4010
       ],
       [
         "LJL",
@@ -136,11 +135,11 @@
       ],
       [
         "LCP",
-        2500
+        2460
       ],
       [
         "NACL",
-        2360
+        2340
       ],
       [
         "EWC",
@@ -156,7 +155,7 @@
       ],
       [
         "CD",
-        2240
+        2280
       ],
       [
         "LIT",
@@ -164,5 +163,5 @@
       ]
     ]
   },
-  "finished": "2026-09-08T20:47:59Z"
+  "finished": "2026-09-09T02:12:46Z"
 }
