@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-09-11T01:47:11Z",
+  "started": "2026-09-11T10:07:01Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -14,12 +14,12 @@
       "detail": ""
     },
     {
-      "step": "Riot live rows: 8910",
+      "step": "Riot live rows: 8930",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "using 8910 Riot rows after 2026-07-28 (dropped 0 overlapping)",
+      "step": "using 8930 Riot rows after 2026-07-28 (dropped 0 overlapping)",
       "ok": true,
       "detail": ""
     },
@@ -34,31 +34,31 @@
       "detail": ""
     },
     {
-      "step": "merged 46 player name variants (411 rows)",
+      "step": "merged 46 player name variants (413 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "wrote 74980 rows spanning 2026-01-08 .. 2026-09-10",
+      "step": "wrote 75000 rows spanning 2026-01-08 .. 2026-09-10",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 2753,
+  "requests": 2759,
   "since": "2026-05-14",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
   "riot_events": 3063,
-  "riot_games_found": 894,
-  "side_resolved": 888,
+  "riot_games_found": 896,
+  "side_resolved": 890,
   "side_fallback": 3,
-  "riot_games_ok": 891,
+  "riot_games_ok": 893,
   "riot_games_failed": 3,
-  "riot_rows_all": 8910,
-  "riot_rows_used": 8910,
+  "riot_rows_all": 8930,
+  "riot_rows_used": 8930,
   "alias_rejected": {
     "LOS": "LØS (no name kinship)",
     "NS Challengers": "Nongshim Esports Academy (no name kinship)"
@@ -91,10 +91,10 @@
   },
   "canonicalised_player": {
     "names": 46,
-    "rows": 411
+    "rows": 413
   },
   "written": {
-    "rows": 74980,
+    "rows": 75000,
     "newest": "2026-09-10",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
@@ -138,7 +138,7 @@
       ],
       [
         "NACL",
-        2380
+        2400
       ],
       [
         "EWC",
@@ -162,5 +162,5 @@
       ]
     ]
   },
-  "finished": "2026-09-11T02:12:04Z"
+  "finished": "2026-09-11T10:27:06Z"
 }
