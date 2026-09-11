@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-09-11T10:07:01Z",
+  "started": "2026-09-11T15:23:53Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -14,17 +14,17 @@
       "detail": ""
     },
     {
-      "step": "Riot live rows: 8930",
+      "step": "Riot live rows: 8940",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "using 8930 Riot rows after 2026-07-28 (dropped 0 overlapping)",
+      "step": "using 8940 Riot rows after 2026-07-28 (dropped 0 overlapping)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "reconciled 20 Riot team names to history (1240 rows): BRO Challengers->HANJIN BRION Challengers, Dplus KIA->Dplus Kia, NONGSHIM RED FORCE->Nongshim RedForce, kt Rolster->KT Rolster, Team Liquid Alienware->Team Liquid, DNS Challengers->DN SOOPers Challengers",
+      "step": "reconciled 20 Riot team names to history (1280 rows): BRO Challengers->HANJIN BRION Challengers, Dplus KIA->Dplus Kia, NONGSHIM RED FORCE->Nongshim RedForce, kt Rolster->KT Rolster, Team Liquid Alienware->Team Liquid, DNS Challengers->DN SOOPers Challengers",
       "ok": true,
       "detail": ""
     },
@@ -39,26 +39,26 @@
       "detail": ""
     },
     {
-      "step": "wrote 75000 rows spanning 2026-01-08 .. 2026-09-10",
+      "step": "wrote 75010 rows spanning 2026-01-08 .. 2026-09-11",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 2759,
+  "requests": 2762,
   "since": "2026-05-14",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3063,
-  "riot_games_found": 896,
-  "side_resolved": 890,
+  "riot_events": 3066,
+  "riot_games_found": 897,
+  "side_resolved": 891,
   "side_fallback": 3,
-  "riot_games_ok": 893,
+  "riot_games_ok": 894,
   "riot_games_failed": 3,
-  "riot_rows_all": 8930,
-  "riot_rows_used": 8930,
+  "riot_rows_all": 8940,
+  "riot_rows_used": 8940,
   "alias_rejected": {
     "LOS": "LØS (no name kinship)",
     "NS Challengers": "Nongshim Esports Academy (no name kinship)"
@@ -94,8 +94,8 @@
     "rows": 413
   },
   "written": {
-    "rows": 75000,
-    "newest": "2026-09-10",
+    "rows": 75010,
+    "newest": "2026-09-11",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
     "mb": 7.99,
@@ -110,7 +110,7 @@
       ],
       [
         "LCKC",
-        4100
+        4140
       ],
       [
         "LJL",
@@ -138,7 +138,7 @@
       ],
       [
         "NACL",
-        2400
+        2370
       ],
       [
         "EWC",
@@ -162,5 +162,5 @@
       ]
     ]
   },
-  "finished": "2026-09-11T10:27:06Z"
+  "finished": "2026-09-11T15:45:36Z"
 }
