@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-09-12T14:31:09Z",
+  "started": "2026-09-12T19:46:46Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -24,12 +24,12 @@
       "detail": ""
     },
     {
-      "step": "reconciled 20 Riot team names to history (1260 rows): NONGSHIM RED FORCE->Nongshim RedForce, kt Rolster->KT Rolster, Team Liquid Alienware->Team Liquid, DNS Challengers->DN SOOPers Challengers, Gen.G Esports->Gen.G, DK Challengers->Dplus Kia Challengers",
+      "step": "reconciled 20 Riot team names to history (1250 rows): kt Rolster->KT Rolster, Team Liquid Alienware->Team Liquid, DNS Challengers->DN SOOPers Challengers, Gen.G Esports->Gen.G, DK Challengers->Dplus Kia Challengers, kt Challengers->KT Rolster Challengers",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 11 team name variants (475 rows)",
+      "step": "merged 11 team name variants (460 rows)",
       "ok": true,
       "detail": ""
     },
@@ -51,10 +51,10 @@
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3071,
-  "riot_games_found": 902,
-  "side_resolved": 897,
-  "side_fallback": 3,
+  "riot_events": 3074,
+  "riot_games_found": 909,
+  "side_resolved": 892,
+  "side_fallback": 8,
   "riot_games_ok": 900,
   "riot_games_failed": 0,
   "riot_rows_all": 9000,
@@ -64,7 +64,6 @@
     "NS Challengers": "Nongshim Esports Academy (no name kinship)"
   },
   "team_aliases": {
-    "NONGSHIM RED FORCE": "Nongshim RedForce",
     "kt Rolster": "KT Rolster",
     "Team Liquid Alienware": "Team Liquid",
     "DNS Challengers": "DN SOOPers Challengers",
@@ -83,11 +82,12 @@
     "Heretics Academy": "Team Heretics Academy",
     "Ici Japon Corp": "Ici Japon Corp. Esport",
     "Dplus KIA": "Dplus Kia",
+    "NONGSHIM RED FORCE": "Nongshim RedForce",
     "Once Upon a Team": "Once Upon A Team"
   },
   "canonicalised_team": {
     "names": 11,
-    "rows": 475
+    "rows": 460
   },
   "canonicalised_player": {
     "names": 46,
@@ -102,7 +102,7 @@
     "leagues": [
       [
         "LPL",
-        4560
+        4610
       ],
       [
         "LCK",
@@ -118,7 +118,7 @@
       ],
       [
         "LEC",
-        3290
+        3240
       ],
       [
         "AL",
@@ -162,5 +162,5 @@
       ]
     ]
   },
-  "finished": "2026-09-12T14:59:10Z"
+  "finished": "2026-09-12T20:12:02Z"
 }
