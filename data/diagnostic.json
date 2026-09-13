@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-09-13T10:43:46Z",
+  "started": "2026-09-13T15:12:01Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -34,7 +34,7 @@
       "detail": ""
     },
     {
-      "step": "merged 46 player name variants (425 rows)",
+      "step": "merged 46 player name variants (427 rows)",
       "ok": true,
       "detail": ""
     },
@@ -52,7 +52,7 @@
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
   "riot_events": 3079,
-  "riot_games_found": 912,
+  "riot_games_found": 913,
   "side_resolved": 892,
   "side_fallback": 8,
   "riot_games_ok": 900,
@@ -91,7 +91,7 @@
   },
   "canonicalised_player": {
     "names": 46,
-    "rows": 425
+    "rows": 427
   },
   "written": {
     "rows": 75070,
@@ -118,7 +118,7 @@
       ],
       [
         "LEC",
-        3280
+        3290
       ],
       [
         "AL",
@@ -134,7 +134,7 @@
       ],
       [
         "LCP",
-        2410
+        2380
       ],
       [
         "NACL",
@@ -162,5 +162,5 @@
       ]
     ]
   },
-  "finished": "2026-09-13T11:02:51Z"
+  "finished": "2026-09-13T15:31:12Z"
 }
