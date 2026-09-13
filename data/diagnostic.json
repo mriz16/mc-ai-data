@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-09-12T19:46:46Z",
+  "started": "2026-09-13T01:44:41Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -24,7 +24,7 @@
       "detail": ""
     },
     {
-      "step": "reconciled 20 Riot team names to history (1250 rows): kt Rolster->KT Rolster, Team Liquid Alienware->Team Liquid, DNS Challengers->DN SOOPers Challengers, Gen.G Esports->Gen.G, DK Challengers->Dplus Kia Challengers, kt Challengers->KT Rolster Challengers",
+      "step": "reconciled 20 Riot team names to history (1235 rows): Team Liquid Alienware->Team Liquid, DNS Challengers->DN SOOPers Challengers, Gen.G Esports->Gen.G, DK Challengers->Dplus Kia Challengers, kt Challengers->KT Rolster Challengers, HLE Challengers->Hanwha Life Esports Challengers",
       "ok": true,
       "detail": ""
     },
@@ -34,7 +34,7 @@
       "detail": ""
     },
     {
-      "step": "merged 46 player name variants (420 rows)",
+      "step": "merged 46 player name variants (425 rows)",
       "ok": true,
       "detail": ""
     },
@@ -45,14 +45,14 @@
     }
   ],
   "outcome": "ok",
-  "requests": 2768,
-  "since": "2026-05-15",
+  "requests": 2771,
+  "since": "2026-05-16",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3074,
-  "riot_games_found": 909,
+  "riot_events": 3077,
+  "riot_games_found": 912,
   "side_resolved": 892,
   "side_fallback": 8,
   "riot_games_ok": 900,
@@ -64,7 +64,6 @@
     "NS Challengers": "Nongshim Esports Academy (no name kinship)"
   },
   "team_aliases": {
-    "kt Rolster": "KT Rolster",
     "Team Liquid Alienware": "Team Liquid",
     "DNS Challengers": "DN SOOPers Challengers",
     "Gen.G Esports": "Gen.G",
@@ -78,6 +77,7 @@
     "Barça Esports": "Barça eSports",
     "BOMBA Team": "Bomba Team",
     "KaBuM! Eports": "KaBuM! Ilha das Lendas",
+    "kt Rolster": "KT Rolster",
     "UCAM Esports Club": "UCAM Esports",
     "Heretics Academy": "Team Heretics Academy",
     "Ici Japon Corp": "Ici Japon Corp. Esport",
@@ -91,7 +91,7 @@
   },
   "canonicalised_player": {
     "names": 46,
-    "rows": 420
+    "rows": 425
   },
   "written": {
     "rows": 75070,
@@ -106,7 +106,7 @@
       ],
       [
         "LCK",
-        4350
+        4320
       ],
       [
         "LCKC",
@@ -118,7 +118,7 @@
       ],
       [
         "LEC",
-        3240
+        3280
       ],
       [
         "AL",
@@ -130,7 +130,7 @@
       ],
       [
         "PRM",
-        2550
+        2600
       ],
       [
         "LCP",
@@ -138,7 +138,7 @@
       ],
       [
         "NACL",
-        2380
+        2320
       ],
       [
         "EWC",
@@ -162,5 +162,5 @@
       ]
     ]
   },
-  "finished": "2026-09-12T20:12:02Z"
+  "finished": "2026-09-13T02:11:18Z"
 }
