@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-09-14T17:09:01Z",
+  "started": "2026-09-14T21:07:07Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -24,7 +24,7 @@
       "detail": ""
     },
     {
-      "step": "reconciled 20 Riot team names to history (1245 rows): DNS Challengers->DN SOOPers Challengers, Gen.G Esports->Gen.G, DK Challengers->Dplus Kia Challengers, kt Challengers->KT Rolster Challengers, HLE Challengers->Hanwha Life Esports Challengers, KRX Challengers->Kiwoom DRX Challengers",
+      "step": "reconciled 20 Riot team names to history (1220 rows): DK Challengers->Dplus Kia Challengers, kt Challengers->KT Rolster Challengers, HLE Challengers->Hanwha Life Esports Challengers, KRX Challengers->Kiwoom DRX Challengers, Brod & Friends->Brod n Friends, DNS Challengers->DN SOOPers Challengers",
       "ok": true,
       "detail": ""
     },
@@ -34,7 +34,7 @@
       "detail": ""
     },
     {
-      "step": "merged 46 player name variants (426 rows)",
+      "step": "merged 47 player name variants (431 rows)",
       "ok": true,
       "detail": ""
     },
@@ -51,8 +51,8 @@
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3087,
-  "riot_games_found": 920,
+  "riot_events": 3091,
+  "riot_games_found": 922,
   "side_resolved": 892,
   "side_fallback": 8,
   "riot_games_ok": 900,
@@ -64,18 +64,18 @@
     "LOS": "LØS (no name kinship)"
   },
   "team_aliases": {
-    "DNS Challengers": "DN SOOPers Challengers",
-    "Gen.G Esports": "Gen.G",
     "DK Challengers": "Dplus Kia Challengers",
     "kt Challengers": "KT Rolster Challengers",
     "HLE Challengers": "Hanwha Life Esports Challengers",
     "KRX Challengers": "Kiwoom DRX Challengers",
     "Brod & Friends": "Brod n Friends",
+    "DNS Challengers": "DN SOOPers Challengers",
     "BRO Challengers": "HANJIN BRION Challengers",
     "NightBirds": "Nightbirds",
     "Barça Esports": "Barça eSports",
     "BOMBA Team": "Bomba Team",
     "KaBuM! Eports": "KaBuM! Ilha das Lendas",
+    "Gen.G Esports": "Gen.G",
     "kt Rolster": "KT Rolster",
     "UCAM Esports Club": "UCAM Esports",
     "Heretics Academy": "Team Heretics Academy",
@@ -90,8 +90,8 @@
     "rows": 460
   },
   "canonicalised_player": {
-    "names": 46,
-    "rows": 426
+    "names": 47,
+    "rows": 431
   },
   "written": {
     "rows": 75070,
@@ -106,11 +106,11 @@
       ],
       [
         "LCK",
-        4340
+        4320
       ],
       [
         "LCKC",
-        4120
+        4090
       ],
       [
         "LJL",
@@ -122,7 +122,7 @@
       ],
       [
         "AL",
-        2980
+        2990
       ],
       [
         "EM",
@@ -162,5 +162,5 @@
       ]
     ]
   },
-  "finished": "2026-09-14T17:34:48Z"
+  "finished": "2026-09-14T21:37:10Z"
 }
