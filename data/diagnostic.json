@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-09-15T10:35:47Z",
+  "started": "2026-09-15T15:48:46Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -52,7 +52,7 @@
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
   "riot_events": 3052,
-  "riot_games_found": 922,
+  "riot_games_found": 923,
   "side_resolved": 892,
   "side_fallback": 8,
   "riot_games_ok": 900,
@@ -118,7 +118,7 @@
       ],
       [
         "LEC",
-        3250
+        3230
       ],
       [
         "AL",
@@ -162,5 +162,5 @@
       ]
     ]
   },
-  "finished": "2026-09-15T11:01:58Z"
+  "finished": "2026-09-15T16:17:26Z"
 }
