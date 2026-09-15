@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-09-14T21:07:07Z",
+  "started": "2026-09-15T02:10:36Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -29,12 +29,12 @@
       "detail": ""
     },
     {
-      "step": "merged 11 team name variants (460 rows)",
+      "step": "merged 11 team name variants (445 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 47 player name variants (431 rows)",
+      "step": "merged 47 player name variants (427 rows)",
       "ok": true,
       "detail": ""
     },
@@ -45,13 +45,13 @@
     }
   ],
   "outcome": "ok",
-  "requests": 2771,
-  "since": "2026-05-17",
+  "requests": 2770,
+  "since": "2026-05-18",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3091,
+  "riot_events": 3012,
   "riot_games_found": 922,
   "side_resolved": 892,
   "side_fallback": 8,
@@ -87,11 +87,11 @@
   },
   "canonicalised_team": {
     "names": 11,
-    "rows": 460
+    "rows": 445
   },
   "canonicalised_player": {
     "names": 47,
-    "rows": 431
+    "rows": 427
   },
   "written": {
     "rows": 75070,
@@ -106,7 +106,7 @@
       ],
       [
         "LCK",
-        4320
+        4290
       ],
       [
         "LCKC",
@@ -122,7 +122,7 @@
       ],
       [
         "AL",
-        2990
+        3030
       ],
       [
         "EM",
@@ -134,7 +134,7 @@
       ],
       [
         "LCP",
-        2380
+        2330
       ],
       [
         "NACL",
@@ -162,5 +162,5 @@
       ]
     ]
   },
-  "finished": "2026-09-14T21:37:10Z"
+  "finished": "2026-09-15T02:44:39Z"
 }
