@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-09-18T15:19:43Z",
+  "started": "2026-09-18T20:04:51Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -24,12 +24,12 @@
       "detail": ""
     },
     {
-      "step": "reconciled 20 Riot team names to history (1245 rows): Brod & Friends->Brod n Friends, DNS Challengers->DN SOOPers Challengers, BRO Challengers->HANJIN BRION Challengers, NightBirds->Nightbirds, Barça Esports->Barça eSports, BOMBA Team->Bomba Team",
+      "step": "reconciled 19 Riot team names to history (1265 rows): DNS Challengers->DN SOOPers Challengers, BRO Challengers->HANJIN BRION Challengers, NightBirds->Nightbirds, Barça Esports->Barça eSports, BOMBA Team->Bomba Team, KaBuM! Eports->KaBuM! Ilha das Lendas",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 11 team name variants (465 rows)",
+      "step": "merged 11 team name variants (470 rows)",
       "ok": true,
       "detail": ""
     },
@@ -39,7 +39,7 @@
       "detail": ""
     },
     {
-      "step": "wrote 75070 rows spanning 2026-01-08 .. 2026-09-14",
+      "step": "wrote 75070 rows spanning 2026-01-08 .. 2026-09-15",
       "ok": true,
       "detail": ""
     }
@@ -51,8 +51,8 @@
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 2981,
-  "riot_games_found": 935,
+  "riot_events": 2983,
+  "riot_games_found": 941,
   "side_resolved": 892,
   "side_fallback": 8,
   "riot_games_ok": 900,
@@ -64,7 +64,6 @@
     "LOS": "LØS (no name kinship)"
   },
   "team_aliases": {
-    "Brod & Friends": "Brod n Friends",
     "DNS Challengers": "DN SOOPers Challengers",
     "BRO Challengers": "HANJIN BRION Challengers",
     "NightBirds": "Nightbirds",
@@ -87,7 +86,7 @@
   },
   "canonicalised_team": {
     "names": 11,
-    "rows": 465
+    "rows": 470
   },
   "canonicalised_player": {
     "names": 47,
@@ -95,7 +94,7 @@
   },
   "written": {
     "rows": 75070,
-    "newest": "2026-09-14",
+    "newest": "2026-09-15",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
     "mb": 8.0,
@@ -110,7 +109,7 @@
       ],
       [
         "LCKC",
-        4100
+        4130
       ],
       [
         "LJL",
@@ -118,7 +117,7 @@
       ],
       [
         "LEC",
-        3210
+        3170
       ],
       [
         "AL",
@@ -162,5 +161,5 @@
       ]
     ]
   },
-  "finished": "2026-09-18T15:46:11Z"
+  "finished": "2026-09-18T20:30:19Z"
 }
