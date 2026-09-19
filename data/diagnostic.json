@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-09-19T14:56:52Z",
+  "started": "2026-09-19T19:42:31Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -24,7 +24,7 @@
       "detail": ""
     },
     {
-      "step": "reconciled 19 Riot team names to history (1265 rows): DNS Challengers->DN SOOPers Challengers, BRO Challengers->HANJIN BRION Challengers, NightBirds->Nightbirds, Barça Esports->Barça eSports, BOMBA Team->Bomba Team, KaBuM! Eports->KaBuM! Ilha das Lendas",
+      "step": "reconciled 19 Riot team names to history (1250 rows): BRO Challengers->HANJIN BRION Challengers, NightBirds->Nightbirds, Barça Esports->Barça eSports, BOMBA Team->Bomba Team, KaBuM! Eports->KaBuM! Ilha das Lendas, kt Challengers->KT Rolster Challengers",
       "ok": true,
       "detail": ""
     },
@@ -34,7 +34,7 @@
       "detail": ""
     },
     {
-      "step": "merged 46 player name variants (436 rows)",
+      "step": "merged 46 player name variants (437 rows)",
       "ok": true,
       "detail": ""
     },
@@ -51,8 +51,8 @@
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 2946,
-  "riot_games_found": 944,
+  "riot_events": 2948,
+  "riot_games_found": 946,
   "side_resolved": 892,
   "side_fallback": 8,
   "riot_games_ok": 900,
@@ -60,11 +60,10 @@
   "riot_rows_all": 9000,
   "riot_rows_used": 9000,
   "alias_rejected": {
-    "NS Challengers": "Nongshim Esports Academy (no name kinship)",
-    "LOS": "LØS (no name kinship)"
+    "LOS": "LØS (no name kinship)",
+    "NS Challengers": "Nongshim Esports Academy (no name kinship)"
   },
   "team_aliases": {
-    "DNS Challengers": "DN SOOPers Challengers",
     "BRO Challengers": "HANJIN BRION Challengers",
     "NightBirds": "Nightbirds",
     "Barça Esports": "Barça eSports",
@@ -77,6 +76,7 @@
     "Heretics Academy": "Team Heretics Academy",
     "Ici Japon Corp": "Ici Japon Corp. Esport",
     "DK Challengers": "Dplus Kia Challengers",
+    "DNS Challengers": "DN SOOPers Challengers",
     "Dplus KIA": "Dplus Kia",
     "NONGSHIM RED FORCE": "Nongshim RedForce",
     "KRX Challengers": "Kiwoom DRX Challengers",
@@ -90,7 +90,7 @@
   },
   "canonicalised_player": {
     "names": 46,
-    "rows": 436
+    "rows": 437
   },
   "written": {
     "rows": 75070,
@@ -109,7 +109,7 @@
       ],
       [
         "LCKC",
-        4130
+        4100
       ],
       [
         "LJL",
@@ -121,7 +121,7 @@
       ],
       [
         "AL",
-        3120
+        3150
       ],
       [
         "EM",
@@ -148,12 +148,12 @@
         2290
       ],
       [
-        "CD",
+        "LAS",
         2290
       ],
       [
-        "LAS",
-        2290
+        "CD",
+        2270
       ],
       [
         "LFL",
@@ -161,5 +161,5 @@
       ]
     ]
   },
-  "finished": "2026-09-19T15:16:02Z"
+  "finished": "2026-09-19T20:01:33Z"
 }
