@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-09-19T09:51:05Z",
+  "started": "2026-09-19T14:56:52Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -29,17 +29,17 @@
       "detail": ""
     },
     {
-      "step": "merged 11 team name variants (470 rows)",
+      "step": "merged 10 team name variants (440 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 47 player name variants (437 rows)",
+      "step": "merged 46 player name variants (436 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "wrote 75070 rows spanning 2026-01-08 .. 2026-09-15",
+      "step": "wrote 75070 rows spanning 2026-01-08 .. 2026-09-16",
       "ok": true,
       "detail": ""
     }
@@ -51,7 +51,7 @@
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 2944,
+  "riot_events": 2946,
   "riot_games_found": 944,
   "side_resolved": 892,
   "side_fallback": 8,
@@ -85,16 +85,16 @@
     "Team Liquid Alienware": "Team Liquid"
   },
   "canonicalised_team": {
-    "names": 11,
-    "rows": 470
+    "names": 10,
+    "rows": 440
   },
   "canonicalised_player": {
-    "names": 47,
-    "rows": 437
+    "names": 46,
+    "rows": 436
   },
   "written": {
     "rows": 75070,
-    "newest": "2026-09-15",
+    "newest": "2026-09-16",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
     "mb": 8.0,
@@ -121,7 +121,7 @@
       ],
       [
         "AL",
-        3100
+        3120
       ],
       [
         "EM",
@@ -161,5 +161,5 @@
       ]
     ]
   },
-  "finished": "2026-09-19T10:14:44Z"
+  "finished": "2026-09-19T15:16:02Z"
 }
