@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-09-20T14:59:56Z",
+  "started": "2026-09-20T19:53:50Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -24,22 +24,22 @@
       "detail": ""
     },
     {
-      "step": "reconciled 18 Riot team names to history (1210 rows): BOMBA Team->Bomba Team, KaBuM! Eports->KaBuM! Ilha das Lendas, kt Challengers->KT Rolster Challengers, Gen.G Esports->Gen.G, kt Rolster->KT Rolster, UCAM Esports Club->UCAM Esports",
+      "step": "reconciled 18 Riot team names to history (1195 rows): KaBuM! Eports->KaBuM! Ilha das Lendas, kt Challengers->KT Rolster Challengers, Gen.G Esports->Gen.G, kt Rolster->KT Rolster, UCAM Esports Club->UCAM Esports, Heretics Academy->Team Heretics Academy",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 11 team name variants (460 rows)",
+      "step": "merged 11 team name variants (425 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 46 player name variants (438 rows)",
+      "step": "merged 45 player name variants (432 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "wrote 75070 rows spanning 2026-01-08 .. 2026-09-17",
+      "step": "wrote 75070 rows spanning 2026-01-08 .. 2026-09-18",
       "ok": true,
       "detail": ""
     }
@@ -51,10 +51,10 @@
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 2999,
-  "riot_games_found": 941,
-  "side_resolved": 888,
-  "side_fallback": 12,
+  "riot_events": 3000,
+  "riot_games_found": 937,
+  "side_resolved": 884,
+  "side_fallback": 16,
   "riot_games_ok": 900,
   "riot_games_failed": 0,
   "riot_rows_all": 9000,
@@ -64,7 +64,6 @@
     "NS Challengers": "Nongshim Esports Academy (no name kinship)"
   },
   "team_aliases": {
-    "BOMBA Team": "Bomba Team",
     "KaBuM! Eports": "KaBuM! Ilha das Lendas",
     "kt Challengers": "KT Rolster Challengers",
     "Gen.G Esports": "Gen.G",
@@ -78,6 +77,7 @@
     "NONGSHIM RED FORCE": "Nongshim RedForce",
     "Barça Esports": "Barça eSports",
     "NightBirds": "Nightbirds",
+    "BOMBA Team": "Bomba Team",
     "KRX Challengers": "Kiwoom DRX Challengers",
     "HLE Challengers": "Hanwha Life Esports Challengers",
     "Once Upon a Team": "Once Upon A Team",
@@ -85,22 +85,22 @@
   },
   "canonicalised_team": {
     "names": 11,
-    "rows": 460
+    "rows": 425
   },
   "canonicalised_player": {
-    "names": 46,
-    "rows": 438
+    "names": 45,
+    "rows": 432
   },
   "written": {
     "rows": 75070,
-    "newest": "2026-09-17",
+    "newest": "2026-09-18",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
     "mb": 8.0,
     "leagues": [
       [
         "LPL",
-        4650
+        4690
       ],
       [
         "LCK",
@@ -116,11 +116,11 @@
       ],
       [
         "LEC",
-        3170
+        3210
       ],
       [
         "AL",
-        3150
+        3180
       ],
       [
         "EM",
@@ -135,6 +135,10 @@
         2330
       ],
       [
+        "LIT",
+        2320
+      ],
+      [
         "NACL",
         2320
       ],
@@ -143,22 +147,18 @@
         2320
       ],
       [
-        "LIT",
-        2290
-      ],
-      [
         "LAS",
         2290
       ],
       [
         "CD",
-        2270
+        2250
       ],
       [
-        "LFL",
-        2240
+        "HLL",
+        2230
       ]
     ]
   },
-  "finished": "2026-09-20T15:19:01Z"
+  "finished": "2026-09-20T20:18:19Z"
 }
