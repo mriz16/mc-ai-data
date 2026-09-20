@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-09-20T02:01:35Z",
+  "started": "2026-09-20T10:12:28Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -24,22 +24,22 @@
       "detail": ""
     },
     {
-      "step": "reconciled 18 Riot team names to history (1235 rows): NightBirds->Nightbirds, Barça Esports->Barça eSports, BOMBA Team->Bomba Team, KaBuM! Eports->KaBuM! Ilha das Lendas, kt Challengers->KT Rolster Challengers, Gen.G Esports->Gen.G",
+      "step": "reconciled 18 Riot team names to history (1225 rows): Barça Esports->Barça eSports, BOMBA Team->Bomba Team, KaBuM! Eports->KaBuM! Ilha das Lendas, kt Challengers->KT Rolster Challengers, Gen.G Esports->Gen.G, kt Rolster->KT Rolster",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 10 team name variants (440 rows)",
+      "step": "merged 11 team name variants (450 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 46 player name variants (440 rows)",
+      "step": "merged 46 player name variants (438 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "wrote 75070 rows spanning 2026-01-08 .. 2026-09-16",
+      "step": "wrote 75070 rows spanning 2026-01-08 .. 2026-09-17",
       "ok": true,
       "detail": ""
     }
@@ -51,10 +51,10 @@
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 2950,
-  "riot_games_found": 947,
-  "side_resolved": 892,
-  "side_fallback": 8,
+  "riot_events": 2954,
+  "riot_games_found": 946,
+  "side_resolved": 890,
+  "side_fallback": 10,
   "riot_games_ok": 900,
   "riot_games_failed": 0,
   "riot_rows_all": 9000,
@@ -64,7 +64,6 @@
     "NS Challengers": "Nongshim Esports Academy (no name kinship)"
   },
   "team_aliases": {
-    "NightBirds": "Nightbirds",
     "Barça Esports": "Barça eSports",
     "BOMBA Team": "Bomba Team",
     "KaBuM! Eports": "KaBuM! Ilha das Lendas",
@@ -78,29 +77,30 @@
     "DNS Challengers": "DN SOOPers Challengers",
     "Dplus KIA": "Dplus Kia",
     "NONGSHIM RED FORCE": "Nongshim RedForce",
+    "NightBirds": "Nightbirds",
     "KRX Challengers": "Kiwoom DRX Challengers",
     "HLE Challengers": "Hanwha Life Esports Challengers",
     "Once Upon a Team": "Once Upon A Team",
     "Team Liquid Alienware": "Team Liquid"
   },
   "canonicalised_team": {
-    "names": 10,
-    "rows": 440
+    "names": 11,
+    "rows": 450
   },
   "canonicalised_player": {
     "names": 46,
-    "rows": 440
+    "rows": 438
   },
   "written": {
     "rows": 75070,
-    "newest": "2026-09-16",
+    "newest": "2026-09-17",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
     "mb": 8.0,
     "leagues": [
       [
         "LPL",
-        4610
+        4630
       ],
       [
         "LCK",
@@ -160,5 +160,5 @@
       ]
     ]
   },
-  "finished": "2026-09-20T02:26:29Z"
+  "finished": "2026-09-20T10:36:53Z"
 }
