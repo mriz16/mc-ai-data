@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-09-20T10:12:28Z",
+  "started": "2026-09-20T14:59:56Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -24,12 +24,12 @@
       "detail": ""
     },
     {
-      "step": "reconciled 18 Riot team names to history (1225 rows): Barça Esports->Barça eSports, BOMBA Team->Bomba Team, KaBuM! Eports->KaBuM! Ilha das Lendas, kt Challengers->KT Rolster Challengers, Gen.G Esports->Gen.G, kt Rolster->KT Rolster",
+      "step": "reconciled 18 Riot team names to history (1210 rows): BOMBA Team->Bomba Team, KaBuM! Eports->KaBuM! Ilha das Lendas, kt Challengers->KT Rolster Challengers, Gen.G Esports->Gen.G, kt Rolster->KT Rolster, UCAM Esports Club->UCAM Esports",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 11 team name variants (450 rows)",
+      "step": "merged 11 team name variants (460 rows)",
       "ok": true,
       "detail": ""
     },
@@ -45,16 +45,16 @@
     }
   ],
   "outcome": "ok",
-  "requests": 2769,
+  "requests": 2767,
   "since": "2026-05-23",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 2954,
-  "riot_games_found": 946,
-  "side_resolved": 890,
-  "side_fallback": 10,
+  "riot_events": 2999,
+  "riot_games_found": 941,
+  "side_resolved": 888,
+  "side_fallback": 12,
   "riot_games_ok": 900,
   "riot_games_failed": 0,
   "riot_rows_all": 9000,
@@ -64,7 +64,6 @@
     "NS Challengers": "Nongshim Esports Academy (no name kinship)"
   },
   "team_aliases": {
-    "Barça Esports": "Barça eSports",
     "BOMBA Team": "Bomba Team",
     "KaBuM! Eports": "KaBuM! Ilha das Lendas",
     "kt Challengers": "KT Rolster Challengers",
@@ -77,6 +76,7 @@
     "DNS Challengers": "DN SOOPers Challengers",
     "Dplus KIA": "Dplus Kia",
     "NONGSHIM RED FORCE": "Nongshim RedForce",
+    "Barça Esports": "Barça eSports",
     "NightBirds": "Nightbirds",
     "KRX Challengers": "Kiwoom DRX Challengers",
     "HLE Challengers": "Hanwha Life Esports Challengers",
@@ -85,7 +85,7 @@
   },
   "canonicalised_team": {
     "names": 11,
-    "rows": 450
+    "rows": 460
   },
   "canonicalised_player": {
     "names": 46,
@@ -100,7 +100,7 @@
     "leagues": [
       [
         "LPL",
-        4630
+        4650
       ],
       [
         "LCK",
@@ -160,5 +160,5 @@
       ]
     ]
   },
-  "finished": "2026-09-20T10:36:53Z"
+  "finished": "2026-09-20T15:19:01Z"
 }
