@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-09-19T19:42:31Z",
+  "started": "2026-09-20T02:01:35Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -24,7 +24,7 @@
       "detail": ""
     },
     {
-      "step": "reconciled 19 Riot team names to history (1250 rows): BRO Challengers->HANJIN BRION Challengers, NightBirds->Nightbirds, Barça Esports->Barça eSports, BOMBA Team->Bomba Team, KaBuM! Eports->KaBuM! Ilha das Lendas, kt Challengers->KT Rolster Challengers",
+      "step": "reconciled 18 Riot team names to history (1235 rows): NightBirds->Nightbirds, Barça Esports->Barça eSports, BOMBA Team->Bomba Team, KaBuM! Eports->KaBuM! Ilha das Lendas, kt Challengers->KT Rolster Challengers, Gen.G Esports->Gen.G",
       "ok": true,
       "detail": ""
     },
@@ -34,7 +34,7 @@
       "detail": ""
     },
     {
-      "step": "merged 46 player name variants (437 rows)",
+      "step": "merged 46 player name variants (440 rows)",
       "ok": true,
       "detail": ""
     },
@@ -46,13 +46,13 @@
   ],
   "outcome": "ok",
   "requests": 2769,
-  "since": "2026-05-22",
+  "since": "2026-05-23",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 2948,
-  "riot_games_found": 946,
+  "riot_events": 2950,
+  "riot_games_found": 947,
   "side_resolved": 892,
   "side_fallback": 8,
   "riot_games_ok": 900,
@@ -64,7 +64,6 @@
     "NS Challengers": "Nongshim Esports Academy (no name kinship)"
   },
   "team_aliases": {
-    "BRO Challengers": "HANJIN BRION Challengers",
     "NightBirds": "Nightbirds",
     "Barça Esports": "Barça eSports",
     "BOMBA Team": "Bomba Team",
@@ -90,7 +89,7 @@
   },
   "canonicalised_player": {
     "names": 46,
-    "rows": 437
+    "rows": 440
   },
   "written": {
     "rows": 75070,
@@ -109,7 +108,7 @@
       ],
       [
         "LCKC",
-        4100
+        4070
       ],
       [
         "LJL",
@@ -161,5 +160,5 @@
       ]
     ]
   },
-  "finished": "2026-09-19T20:01:33Z"
+  "finished": "2026-09-20T02:26:29Z"
 }
