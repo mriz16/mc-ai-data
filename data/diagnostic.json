@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-09-21T11:16:49Z",
+  "started": "2026-09-21T17:17:58Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -24,7 +24,7 @@
       "detail": ""
     },
     {
-      "step": "reconciled 18 Riot team names to history (1180 rows): kt Challengers->KT Rolster Challengers, Gen.G Esports->Gen.G, kt Rolster->KT Rolster, UCAM Esports Club->UCAM Esports, Heretics Academy->Team Heretics Academy, Ici Japon Corp->Ici Japon Corp. Esport",
+      "step": "reconciled 18 Riot team names to history (1150 rows): UCAM Esports Club->UCAM Esports, Heretics Academy->Team Heretics Academy, Ici Japon Corp->Ici Japon Corp. Esport, DK Challengers->Dplus Kia Challengers, DNS Challengers->DN SOOPers Challengers, Dplus KIA->Dplus Kia",
       "ok": true,
       "detail": ""
     },
@@ -39,7 +39,7 @@
       "detail": ""
     },
     {
-      "step": "wrote 75070 rows spanning 2026-01-08 .. 2026-09-18",
+      "step": "wrote 75070 rows spanning 2026-01-08 .. 2026-09-19",
       "ok": true,
       "detail": ""
     }
@@ -51,8 +51,8 @@
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3011,
-  "riot_games_found": 937,
+  "riot_events": 3009,
+  "riot_games_found": 933,
   "side_resolved": 884,
   "side_fallback": 16,
   "riot_games_ok": 900,
@@ -64,9 +64,6 @@
     "NS Challengers": "Nongshim Esports Academy (no name kinship)"
   },
   "team_aliases": {
-    "kt Challengers": "KT Rolster Challengers",
-    "Gen.G Esports": "Gen.G",
-    "kt Rolster": "KT Rolster",
     "UCAM Esports Club": "UCAM Esports",
     "Heretics Academy": "Team Heretics Academy",
     "Ici Japon Corp": "Ici Japon Corp. Esport",
@@ -77,11 +74,14 @@
     "Barça Esports": "Barça eSports",
     "NightBirds": "Nightbirds",
     "BOMBA Team": "Bomba Team",
+    "kt Rolster": "KT Rolster",
+    "Gen.G Esports": "Gen.G",
     "KRX Challengers": "Kiwoom DRX Challengers",
     "HLE Challengers": "Hanwha Life Esports Challengers",
     "KaBuM! Eports": "KaBuM! Ilha das Lendas",
     "Once Upon a Team": "Once Upon A Team",
-    "Team Liquid Alienware": "Team Liquid"
+    "Team Liquid Alienware": "Team Liquid",
+    "kt Challengers": "KT Rolster Challengers"
   },
   "canonicalised_team": {
     "names": 11,
@@ -93,7 +93,7 @@
   },
   "written": {
     "rows": 75070,
-    "newest": "2026-09-18",
+    "newest": "2026-09-19",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
     "mb": 8.0,
@@ -104,11 +104,11 @@
       ],
       [
         "LCK",
-        4290
+        4260
       ],
       [
         "LCKC",
-        4070
+        4040
       ],
       [
         "LJL",
@@ -116,7 +116,7 @@
       ],
       [
         "LEC",
-        3210
+        3240
       ],
       [
         "AL",
@@ -160,5 +160,5 @@
       ]
     ]
   },
-  "finished": "2026-09-21T11:40:35Z"
+  "finished": "2026-09-21T17:41:50Z"
 }
