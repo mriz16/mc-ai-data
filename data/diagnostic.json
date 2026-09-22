@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-09-22T02:08:58Z",
+  "started": "2026-09-22T10:27:48Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -24,12 +24,12 @@
       "detail": ""
     },
     {
-      "step": "reconciled 19 Riot team names to history (1175 rows): DK Challengers->Dplus Kia Challengers, DNS Challengers->DN SOOPers Challengers, Dplus KIA->Dplus Kia, NONGSHIM RED FORCE->Nongshim RedForce, UCAM Esports Club->UCAM Esports, Barça Esports->Barça eSports",
+      "step": "reconciled 20 Riot team names to history (1180 rows): DK Challengers->Dplus Kia Challengers, DNS Challengers->DN SOOPers Challengers, Dplus KIA->Dplus Kia, NONGSHIM RED FORCE->Nongshim RedForce, UCAM Esports Club->UCAM Esports, Barça Esports->Barça eSports",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 11 team name variants (435 rows)",
+      "step": "merged 11 team name variants (425 rows)",
       "ok": true,
       "detail": ""
     },
@@ -51,8 +51,8 @@
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3014,
-  "riot_games_found": 919,
+  "riot_events": 3019,
+  "riot_games_found": 918,
   "side_resolved": 884,
   "side_fallback": 16,
   "riot_games_ok": 900,
@@ -82,11 +82,12 @@
     "Once Upon a Team": "Once Upon A Team",
     "Team Liquid Alienware": "Team Liquid",
     "kt Challengers": "KT Rolster Challengers",
-    "Edward Gaming Youth Team": "EDG Youth Team"
+    "Edward Gaming Youth Team": "EDG Youth Team",
+    "Saigon Warrior": "Saigon Warriors"
   },
   "canonicalised_team": {
     "names": 11,
-    "rows": 435
+    "rows": 425
   },
   "canonicalised_player": {
     "names": 44,
@@ -161,5 +162,5 @@
       ]
     ]
   },
-  "finished": "2026-09-22T02:32:44Z"
+  "finished": "2026-09-22T10:52:04Z"
 }
