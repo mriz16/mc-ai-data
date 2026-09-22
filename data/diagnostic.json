@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-09-22T10:27:48Z",
+  "started": "2026-09-22T15:51:21Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -24,7 +24,7 @@
       "detail": ""
     },
     {
-      "step": "reconciled 20 Riot team names to history (1180 rows): DK Challengers->Dplus Kia Challengers, DNS Challengers->DN SOOPers Challengers, Dplus KIA->Dplus Kia, NONGSHIM RED FORCE->Nongshim RedForce, UCAM Esports Club->UCAM Esports, Barça Esports->Barça eSports",
+      "step": "reconciled 20 Riot team names to history (1190 rows): DK Challengers->Dplus Kia Challengers, DNS Challengers->DN SOOPers Challengers, Dplus KIA->Dplus Kia, NONGSHIM RED FORCE->Nongshim RedForce, UCAM Esports Club->UCAM Esports, Barça Esports->Barça eSports",
       "ok": true,
       "detail": ""
     },
@@ -34,7 +34,7 @@
       "detail": ""
     },
     {
-      "step": "merged 44 player name variants (407 rows)",
+      "step": "merged 44 player name variants (409 rows)",
       "ok": true,
       "detail": ""
     },
@@ -51,8 +51,8 @@
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3019,
-  "riot_games_found": 918,
+  "riot_events": 3017,
+  "riot_games_found": 915,
   "side_resolved": 884,
   "side_fallback": 16,
   "riot_games_ok": 900,
@@ -91,7 +91,7 @@
   },
   "canonicalised_player": {
     "names": 44,
-    "rows": 407
+    "rows": 409
   },
   "written": {
     "rows": 75070,
@@ -162,5 +162,5 @@
       ]
     ]
   },
-  "finished": "2026-09-22T10:52:04Z"
+  "finished": "2026-09-22T16:12:04Z"
 }
