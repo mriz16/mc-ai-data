@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-09-22T20:35:09Z",
+  "started": "2026-09-23T02:08:20Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -24,35 +24,35 @@
       "detail": ""
     },
     {
-      "step": "reconciled 20 Riot team names to history (1190 rows): DK Challengers->Dplus Kia Challengers, DNS Challengers->DN SOOPers Challengers, Dplus KIA->Dplus Kia, NONGSHIM RED FORCE->Nongshim RedForce, UCAM Esports Club->UCAM Esports, Barça Esports->Barça eSports",
+      "step": "reconciled 20 Riot team names to history (1185 rows): NONGSHIM RED FORCE->Nongshim RedForce, UCAM Esports Club->UCAM Esports, Barça Esports->Barça eSports, NightBirds->Nightbirds, BOMBA Team->Bomba Team, Ici Japon Corp->Ici Japon Corp. Esport",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 11 team name variants (415 rows)",
+      "step": "merged 11 team name variants (420 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 44 player name variants (413 rows)",
+      "step": "merged 43 player name variants (412 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "wrote 75070 rows spanning 2026-01-08 .. 2026-09-21",
+      "step": "wrote 75070 rows spanning 2026-01-08 .. 2026-09-22",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 2765,
-  "since": "2026-05-25",
+  "requests": 2764,
+  "since": "2026-05-26",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3013,
-  "riot_games_found": 912,
+  "riot_events": 2942,
+  "riot_games_found": 911,
   "side_resolved": 884,
   "side_fallback": 16,
   "riot_games_ok": 900,
@@ -64,9 +64,6 @@
     "NS Challengers": "Nongshim Esports Academy (no name kinship)"
   },
   "team_aliases": {
-    "DK Challengers": "Dplus Kia Challengers",
-    "DNS Challengers": "DN SOOPers Challengers",
-    "Dplus KIA": "Dplus Kia",
     "NONGSHIM RED FORCE": "Nongshim RedForce",
     "UCAM Esports Club": "UCAM Esports",
     "Barça Esports": "Barça eSports",
@@ -76,26 +73,29 @@
     "Heretics Academy": "Team Heretics Academy",
     "kt Rolster": "KT Rolster",
     "Gen.G Esports": "Gen.G",
+    "Dplus KIA": "Dplus Kia",
+    "DNS Challengers": "DN SOOPers Challengers",
     "KRX Challengers": "Kiwoom DRX Challengers",
     "HLE Challengers": "Hanwha Life Esports Challengers",
     "KaBuM! Eports": "KaBuM! Ilha das Lendas",
     "Once Upon a Team": "Once Upon A Team",
     "Team Liquid Alienware": "Team Liquid",
     "kt Challengers": "KT Rolster Challengers",
+    "DK Challengers": "Dplus Kia Challengers",
     "Edward Gaming Youth Team": "EDG Youth Team",
     "Saigon Warrior": "Saigon Warriors"
   },
   "canonicalised_team": {
     "names": 11,
-    "rows": 415
+    "rows": 420
   },
   "canonicalised_player": {
-    "names": 44,
-    "rows": 413
+    "names": 43,
+    "rows": 412
   },
   "written": {
     "rows": 75070,
-    "newest": "2026-09-21",
+    "newest": "2026-09-22",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
     "mb": 8.0,
@@ -106,11 +106,11 @@
       ],
       [
         "LCK",
-        4240
+        4220
       ],
       [
         "LCKC",
-        4040
+        4020
       ],
       [
         "LJL",
@@ -133,10 +133,6 @@
         2550
       ],
       [
-        "LCP",
-        2330
-      ],
-      [
         "LIT",
         2320
       ],
@@ -147,6 +143,10 @@
       [
         "EWC",
         2320
+      ],
+      [
+        "LCP",
+        2300
       ],
       [
         "LAS",
@@ -162,5 +162,5 @@
       ]
     ]
   },
-  "finished": "2026-09-22T21:00:34Z"
+  "finished": "2026-09-23T02:27:54Z"
 }
