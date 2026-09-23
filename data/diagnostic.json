@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-09-23T10:22:56Z",
+  "started": "2026-09-23T15:40:58Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -24,17 +24,17 @@
       "detail": ""
     },
     {
-      "step": "reconciled 20 Riot team names to history (1180 rows): UCAM Esports Club->UCAM Esports, Barça Esports->Barça eSports, NightBirds->Nightbirds, BOMBA Team->Bomba Team, Ici Japon Corp->Ici Japon Corp. Esport, Heretics Academy->Team Heretics Academy",
+      "step": "reconciled 20 Riot team names to history (1140 rows): BOMBA Team->Bomba Team, Ici Japon Corp->Ici Japon Corp. Esport, Heretics Academy->Team Heretics Academy, kt Rolster->KT Rolster, Gen.G Esports->Gen.G, Dplus KIA->Dplus Kia",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 11 team name variants (415 rows)",
+      "step": "merged 11 team name variants (405 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 43 player name variants (414 rows)",
+      "step": "merged 43 player name variants (422 rows)",
       "ok": true,
       "detail": ""
     },
@@ -51,8 +51,8 @@
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 2946,
-  "riot_games_found": 910,
+  "riot_events": 2950,
+  "riot_games_found": 905,
   "side_resolved": 884,
   "side_fallback": 16,
   "riot_games_ok": 900,
@@ -64,9 +64,6 @@
     "NS Challengers": "Nongshim Esports Academy (no name kinship)"
   },
   "team_aliases": {
-    "UCAM Esports Club": "UCAM Esports",
-    "Barça Esports": "Barça eSports",
-    "NightBirds": "Nightbirds",
     "BOMBA Team": "Bomba Team",
     "Ici Japon Corp": "Ici Japon Corp. Esport",
     "Heretics Academy": "Team Heretics Academy",
@@ -78,20 +75,23 @@
     "KRX Challengers": "Kiwoom DRX Challengers",
     "HLE Challengers": "Hanwha Life Esports Challengers",
     "KaBuM! Eports": "KaBuM! Ilha das Lendas",
+    "NightBirds": "Nightbirds",
     "Once Upon a Team": "Once Upon A Team",
     "Team Liquid Alienware": "Team Liquid",
     "kt Challengers": "KT Rolster Challengers",
+    "UCAM Esports Club": "UCAM Esports",
+    "Barça Esports": "Barça eSports",
     "DK Challengers": "Dplus Kia Challengers",
     "Edward Gaming Youth Team": "EDG Youth Team",
     "Saigon Warrior": "Saigon Warriors"
   },
   "canonicalised_team": {
     "names": 11,
-    "rows": 415
+    "rows": 405
   },
   "canonicalised_player": {
     "names": 43,
-    "rows": 414
+    "rows": 422
   },
   "written": {
     "rows": 75070,
@@ -162,5 +162,5 @@
       ]
     ]
   },
-  "finished": "2026-09-23T10:47:11Z"
+  "finished": "2026-09-23T16:01:55Z"
 }
