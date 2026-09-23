@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-09-23T02:08:20Z",
+  "started": "2026-09-23T10:22:56Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -24,17 +24,17 @@
       "detail": ""
     },
     {
-      "step": "reconciled 20 Riot team names to history (1185 rows): NONGSHIM RED FORCE->Nongshim RedForce, UCAM Esports Club->UCAM Esports, Barça Esports->Barça eSports, NightBirds->Nightbirds, BOMBA Team->Bomba Team, Ici Japon Corp->Ici Japon Corp. Esport",
+      "step": "reconciled 20 Riot team names to history (1180 rows): UCAM Esports Club->UCAM Esports, Barça Esports->Barça eSports, NightBirds->Nightbirds, BOMBA Team->Bomba Team, Ici Japon Corp->Ici Japon Corp. Esport, Heretics Academy->Team Heretics Academy",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 11 team name variants (420 rows)",
+      "step": "merged 11 team name variants (415 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 43 player name variants (412 rows)",
+      "step": "merged 43 player name variants (414 rows)",
       "ok": true,
       "detail": ""
     },
@@ -51,8 +51,8 @@
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 2942,
-  "riot_games_found": 911,
+  "riot_events": 2946,
+  "riot_games_found": 910,
   "side_resolved": 884,
   "side_fallback": 16,
   "riot_games_ok": 900,
@@ -64,7 +64,6 @@
     "NS Challengers": "Nongshim Esports Academy (no name kinship)"
   },
   "team_aliases": {
-    "NONGSHIM RED FORCE": "Nongshim RedForce",
     "UCAM Esports Club": "UCAM Esports",
     "Barça Esports": "Barça eSports",
     "NightBirds": "Nightbirds",
@@ -74,6 +73,7 @@
     "kt Rolster": "KT Rolster",
     "Gen.G Esports": "Gen.G",
     "Dplus KIA": "Dplus Kia",
+    "NONGSHIM RED FORCE": "Nongshim RedForce",
     "DNS Challengers": "DN SOOPers Challengers",
     "KRX Challengers": "Kiwoom DRX Challengers",
     "HLE Challengers": "Hanwha Life Esports Challengers",
@@ -87,11 +87,11 @@
   },
   "canonicalised_team": {
     "names": 11,
-    "rows": 420
+    "rows": 415
   },
   "canonicalised_player": {
     "names": 43,
-    "rows": 412
+    "rows": 414
   },
   "written": {
     "rows": 75070,
@@ -106,7 +106,7 @@
       ],
       [
         "LCK",
-        4220
+        4200
       ],
       [
         "LCKC",
@@ -162,5 +162,5 @@
       ]
     ]
   },
-  "finished": "2026-09-23T02:27:54Z"
+  "finished": "2026-09-23T10:47:11Z"
 }
