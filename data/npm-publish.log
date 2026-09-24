@@ -1,15 +1,15 @@
-=== npm publish attempt 2026-09-24 16:25 UTC ===
+=== npm publish attempt 2026-09-24 21:16 UTC ===
 token present: yes (length 40)
 --- npm whoami ---
 mriz16
 --- npm version ---
-v1.0.232
+v1.0.233
 --- npm publish ---
 npm warn publish npm auto-corrected some errors in your package.json when publishing.  Please run "npm pkg fix" to address these errors.
 npm warn publish errors corrected:
 npm warn publish "repository.url" was normalized to "git+https://github.com/mriz16/mc-ai-data.git"
 npm notice
-npm notice 📦  mc-ai-data-mriz16@1.0.232
+npm notice 📦  mc-ai-data-mriz16@1.0.233
 npm notice Tarball Contents
 npm notice 3.6kB data/diagnostic.json
 npm notice 8.0MB data/latest.json
@@ -17,15 +17,15 @@ npm notice 155B data/npm-publish.log
 npm notice 355B package.json
 npm notice Tarball Details
 npm notice name: mc-ai-data-mriz16
-npm notice version: 1.0.232
-npm notice filename: mc-ai-data-mriz16-1.0.232.tgz
+npm notice version: 1.0.233
+npm notice filename: mc-ai-data-mriz16-1.0.233.tgz
 npm notice package size: 1.3 MB
 npm notice unpacked size: 8.0 MB
-npm notice shasum: 0f72ab350f6cfcf920406b7f575e01cf2b95fcd6
-npm notice integrity: sha512-/UTqyodGkJjst[...]x+tFcM9vjw7ew==
+npm notice shasum: e577c22ca4e3ea50287f35d279d139f71843b314
+npm notice integrity: sha512-8zf5Tv1fFkLmh[...]bF9aJUkN472SQ==
 npm notice total files: 4
 npm notice
 npm notice Publishing to https://registry.npmjs.org/ with tag latest and public access
 npm notice Your package is being processed and may take a few minutes to become available.
-+ mc-ai-data-mriz16@1.0.232
++ mc-ai-data-mriz16@1.0.233
 exit code: 0
