@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-09-25T10:42:41Z",
+  "started": "2026-09-25T16:02:42Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -24,7 +24,7 @@
       "detail": ""
     },
     {
-      "step": "reconciled 20 Riot team names to history (1170 rows): kt Rolster->KT Rolster, Gen.G Esports->Gen.G, Dplus KIA->Dplus Kia, NONGSHIM RED FORCE->Nongshim RedForce, DNS Challengers->DN SOOPers Challengers, KRX Challengers->Kiwoom DRX Challengers",
+      "step": "reconciled 20 Riot team names to history (1195 rows): kt Rolster->KT Rolster, Gen.G Esports->Gen.G, Dplus KIA->Dplus Kia, NONGSHIM RED FORCE->Nongshim RedForce, DNS Challengers->DN SOOPers Challengers, KRX Challengers->Kiwoom DRX Challengers",
       "ok": true,
       "detail": ""
     },
@@ -39,7 +39,7 @@
       "detail": ""
     },
     {
-      "step": "wrote 74880 rows spanning 2026-01-08 .. 2026-09-24",
+      "step": "wrote 74880 rows spanning 2026-01-08 .. 2026-09-25",
       "ok": true,
       "detail": ""
     }
@@ -51,7 +51,7 @@
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 2958,
+  "riot_events": 2962,
   "riot_games_found": 881,
   "side_resolved": 865,
   "side_fallback": 16,
@@ -95,7 +95,7 @@
   },
   "written": {
     "rows": 74880,
-    "newest": "2026-09-24",
+    "newest": "2026-09-25",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
     "mb": 7.98,
@@ -106,11 +106,11 @@
       ],
       [
         "LCK",
-        4200
+        4170
       ],
       [
         "LCKC",
-        4020
+        4000
       ],
       [
         "LJL",
@@ -162,5 +162,5 @@
       ]
     ]
   },
-  "finished": "2026-09-25T11:04:52Z"
+  "finished": "2026-09-25T16:26:27Z"
 }
