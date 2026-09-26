@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-09-25T20:48:59Z",
+  "started": "2026-09-26T02:18:11Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -14,12 +14,12 @@
       "detail": ""
     },
     {
-      "step": "Riot live rows: 8720",
+      "step": "Riot live rows: 8750",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "using 8720 Riot rows after 2026-07-28 (dropped 0 overlapping)",
+      "step": "using 8750 Riot rows after 2026-07-28 (dropped 0 overlapping)",
       "ok": true,
       "detail": ""
     },
@@ -39,26 +39,26 @@
       "detail": ""
     },
     {
-      "step": "wrote 74790 rows spanning 2026-01-08 .. 2026-09-25",
+      "step": "wrote 74820 rows spanning 2026-01-08 .. 2026-09-25",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 2679,
-  "since": "2026-05-28",
+  "requests": 2688,
+  "since": "2026-05-29",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 2962,
-  "riot_games_found": 872,
-  "side_resolved": 856,
+  "riot_events": 2963,
+  "riot_games_found": 875,
+  "side_resolved": 859,
   "side_fallback": 16,
-  "riot_games_ok": 872,
+  "riot_games_ok": 875,
   "riot_games_failed": 0,
-  "riot_rows_all": 8720,
-  "riot_rows_used": 8720,
+  "riot_rows_all": 8750,
+  "riot_rows_used": 8750,
   "alias_rejected": {
     "LOS": "LØS (no name kinship)",
     "NS Challengers": "Nongshim Esports Academy (no name kinship)"
@@ -94,7 +94,7 @@
     "rows": 420
   },
   "written": {
-    "rows": 74790,
+    "rows": 74820,
     "newest": "2026-09-25",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
@@ -150,7 +150,7 @@
       ],
       [
         "NACL",
-        2260
+        2240
       ],
       [
         "HLL",
@@ -162,5 +162,5 @@
       ]
     ]
   },
-  "finished": "2026-09-25T21:12:22Z"
+  "finished": "2026-09-26T02:41:25Z"
 }
