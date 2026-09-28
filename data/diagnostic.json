@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-09-28T12:12:02Z",
+  "started": "2026-09-28T22:42:00Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -14,63 +14,63 @@
       "detail": ""
     },
     {
-      "step": "Riot live rows: 8520",
+      "step": "Riot live rows: 8200",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "using 8520 Riot rows after 2026-07-28 (dropped 0 overlapping)",
+      "step": "using 8200 Riot rows after 2026-07-28 (dropped 0 overlapping)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "reconciled 19 Riot team names to history (1180 rows): kt Rolster->KT Rolster, BOMBA Team->Bomba Team, KaBuM! Eports->KaBuM! Ilha das Lendas, NONGSHIM RED FORCE->Nongshim RedForce, NightBirds->Nightbirds, Once Upon a Team->Once Upon A Team",
+      "step": "reconciled 19 Riot team names to history (1180 rows): BOMBA Team->Bomba Team, KaBuM! Eports->KaBuM! Ilha das Lendas, NONGSHIM RED FORCE->Nongshim RedForce, NightBirds->Nightbirds, Once Upon a Team->Once Upon A Team, Team Liquid Alienware->Team Liquid",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 10 team name variants (355 rows)",
+      "step": "merged 8 team name variants (300 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 42 player name variants (418 rows)",
+      "step": "merged 41 player name variants (401 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "wrote 74590 rows spanning 2026-01-08 .. 2026-09-27",
+      "step": "wrote 74270 rows spanning 2026-01-08 .. 2026-09-28",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 2619,
+  "requests": 2522,
   "since": "2026-05-31",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 2973,
-  "riot_games_found": 852,
-  "side_resolved": 836,
+  "riot_events": 3053,
+  "riot_games_found": 820,
+  "side_resolved": 804,
   "side_fallback": 16,
-  "riot_games_ok": 852,
+  "riot_games_ok": 820,
   "riot_games_failed": 0,
-  "riot_rows_all": 8520,
-  "riot_rows_used": 8520,
+  "riot_rows_all": 8200,
+  "riot_rows_used": 8200,
   "alias_rejected": {
     "LOS": "LØS (no name kinship)",
     "NS Challengers": "Nongshim Esports Academy (no name kinship)"
   },
   "team_aliases": {
-    "kt Rolster": "KT Rolster",
     "BOMBA Team": "Bomba Team",
     "KaBuM! Eports": "KaBuM! Ilha das Lendas",
     "NONGSHIM RED FORCE": "Nongshim RedForce",
     "NightBirds": "Nightbirds",
     "Once Upon a Team": "Once Upon A Team",
     "Team Liquid Alienware": "Team Liquid",
+    "kt Rolster": "KT Rolster",
     "Dplus KIA": "Dplus Kia",
     "kt Challengers": "KT Rolster Challengers",
     "KRX Challengers": "Kiwoom DRX Challengers",
@@ -85,19 +85,19 @@
     "Saigon 9Gaming Esports": "ZEN Esports"
   },
   "canonicalised_team": {
-    "names": 10,
-    "rows": 355
+    "names": 8,
+    "rows": 300
   },
   "canonicalised_player": {
-    "names": 42,
-    "rows": 418
+    "names": 41,
+    "rows": 401
   },
   "written": {
-    "rows": 74590,
-    "newest": "2026-09-27",
+    "rows": 74270,
+    "newest": "2026-09-28",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
-    "mb": 7.95,
+    "mb": 7.92,
     "leagues": [
       [
         "LPL",
@@ -105,7 +105,7 @@
       ],
       [
         "LCK",
-        4040
+        3990
       ],
       [
         "LCKC",
@@ -116,12 +116,12 @@
         3500
       ],
       [
-        "AL",
-        3100
-      ],
-      [
         "LEC",
         3080
+      ],
+      [
+        "AL",
+        3070
       ],
       [
         "EM",
@@ -129,7 +129,7 @@
       ],
       [
         "PRM",
-        2510
+        2430
       ],
       [
         "EWC",
@@ -153,7 +153,7 @@
       ],
       [
         "HLL",
-        2200
+        2180
       ],
       [
         "LCP",
@@ -161,5 +161,5 @@
       ]
     ]
   },
-  "finished": "2026-09-28T12:32:58Z"
+  "finished": "2026-09-28T23:01:01Z"
 }
