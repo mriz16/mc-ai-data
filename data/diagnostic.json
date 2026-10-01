@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-10-01T02:48:29Z",
+  "started": "2026-10-01T11:57:20Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -14,12 +14,12 @@
       "detail": ""
     },
     {
-      "step": "Riot live rows: 7830",
+      "step": "Riot live rows: 7800",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "using 7830 Riot rows after 2026-07-28 (dropped 0 overlapping)",
+      "step": "using 7800 Riot rows after 2026-07-28 (dropped 0 overlapping)",
       "ok": true,
       "detail": ""
     },
@@ -34,31 +34,31 @@
       "detail": ""
     },
     {
-      "step": "merged 34 player name variants (366 rows)",
+      "step": "merged 34 player name variants (364 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "wrote 73900 rows spanning 2026-01-08 .. 2026-09-30",
+      "step": "wrote 73870 rows spanning 2026-01-08 .. 2026-09-30",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 2409,
+  "requests": 2400,
   "since": "2026-06-03",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3039,
-  "riot_games_found": 783,
-  "side_resolved": 767,
+  "riot_events": 3041,
+  "riot_games_found": 780,
+  "side_resolved": 764,
   "side_fallback": 16,
-  "riot_games_ok": 783,
+  "riot_games_ok": 780,
   "riot_games_failed": 0,
-  "riot_rows_all": 7830,
-  "riot_rows_used": 7830,
+  "riot_rows_all": 7800,
+  "riot_rows_used": 7800,
   "alias_rejected": {
     "LOS": "LØS (no name kinship)",
     "NS Challengers": "Nongshim Esports Academy (no name kinship)"
@@ -88,10 +88,10 @@
   },
   "canonicalised_player": {
     "names": 34,
-    "rows": 366
+    "rows": 364
   },
   "written": {
-    "rows": 73900,
+    "rows": 73870,
     "newest": "2026-09-30",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
@@ -146,12 +146,12 @@
         2220
       ],
       [
-        "LCP",
-        2180
-      ],
-      [
         "LCS",
         2150
+      ],
+      [
+        "LCP",
+        2140
       ],
       [
         "CD",
@@ -159,5 +159,5 @@
       ]
     ]
   },
-  "finished": "2026-10-01T03:09:05Z"
+  "finished": "2026-10-01T12:17:36Z"
 }
