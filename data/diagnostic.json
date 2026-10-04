@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-10-04T11:26:09Z",
+  "started": "2026-10-04T16:04:11Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -24,22 +24,22 @@
       "detail": ""
     },
     {
-      "step": "reconciled 19 Riot team names to history (1235 rows): Gen.G Esports->Gen.G, kt Rolster->KT Rolster, UCAM Esports Club->UCAM Esports, Barça Esports->Barça eSports, BOMBA Team->Bomba Team, KaBuM! Eports->KaBuM! Ilha das Lendas",
+      "step": "reconciled 19 Riot team names to history (1245 rows): UCAM Esports Club->UCAM Esports, Barça Esports->Barça eSports, BOMBA Team->Bomba Team, KaBuM! Eports->KaBuM! Ilha das Lendas, Dplus KIA->Dplus Kia, NightBirds->Nightbirds",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 6 team name variants (215 rows)",
+      "step": "merged 6 team name variants (205 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 33 player name variants (367 rows)",
+      "step": "merged 33 player name variants (362 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "wrote 73730 rows spanning 2026-01-08 .. 2026-10-03",
+      "step": "wrote 73730 rows spanning 2026-01-08 .. 2026-10-04",
       "ok": true,
       "detail": ""
     }
@@ -64,14 +64,14 @@
     "LOS": "LØS (no name kinship)"
   },
   "team_aliases": {
-    "Gen.G Esports": "Gen.G",
-    "kt Rolster": "KT Rolster",
     "UCAM Esports Club": "UCAM Esports",
     "Barça Esports": "Barça eSports",
     "BOMBA Team": "Bomba Team",
     "KaBuM! Eports": "KaBuM! Ilha das Lendas",
     "Dplus KIA": "Dplus Kia",
     "NightBirds": "Nightbirds",
+    "kt Rolster": "KT Rolster",
+    "Gen.G Esports": "Gen.G",
     "Team Liquid Alienware": "Team Liquid",
     "Heretics Academy": "Team Heretics Academy",
     "DNS Challengers": "DN SOOPers Challengers",
@@ -86,15 +86,15 @@
   },
   "canonicalised_team": {
     "names": 6,
-    "rows": 215
+    "rows": 205
   },
   "canonicalised_player": {
     "names": 33,
-    "rows": 367
+    "rows": 362
   },
   "written": {
     "rows": 73730,
-    "newest": "2026-10-03",
+    "newest": "2026-10-04",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
     "mb": 7.86,
@@ -104,12 +104,12 @@
         4690
       ],
       [
-        "LCK",
-        3820
-      ],
-      [
         "LCKC",
         3810
+      ],
+      [
+        "LCK",
+        3790
       ],
       [
         "LJL",
@@ -156,10 +156,10 @@
         2110
       ],
       [
-        "HLL",
-        2100
+        "ROL",
+        2090
       ]
     ]
   },
-  "finished": "2026-10-04T11:42:18Z"
+  "finished": "2026-10-04T16:21:45Z"
 }
