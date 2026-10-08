@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-10-08T12:21:58Z",
+  "started": "2026-10-08T22:34:53Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -14,12 +14,12 @@
       "detail": ""
     },
     {
-      "step": "Riot live rows: 7590",
+      "step": "Riot live rows: 7560",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "using 7590 Riot rows after 2026-07-28 (dropped 0 overlapping)",
+      "step": "using 7560 Riot rows after 2026-07-28 (dropped 0 overlapping)",
       "ok": true,
       "detail": ""
     },
@@ -34,31 +34,31 @@
       "detail": ""
     },
     {
-      "step": "merged 31 player name variants (370 rows)",
+      "step": "merged 31 player name variants (366 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "wrote 73660 rows spanning 2026-01-08 .. 2026-10-07",
+      "step": "wrote 73630 rows spanning 2026-01-08 .. 2026-10-08",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 2338,
+  "requests": 2329,
   "since": "2026-06-10",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3108,
-  "riot_games_found": 759,
-  "side_resolved": 743,
+  "riot_events": 3109,
+  "riot_games_found": 756,
+  "side_resolved": 740,
   "side_fallback": 16,
-  "riot_games_ok": 759,
+  "riot_games_ok": 756,
   "riot_games_failed": 0,
-  "riot_rows_all": 7590,
-  "riot_rows_used": 7590,
+  "riot_rows_all": 7560,
+  "riot_rows_used": 7560,
   "alias_rejected": {
     "NS Challengers": "Nongshim Esports Academy (no name kinship)",
     "LOS": "LØS (no name kinship)"
@@ -90,11 +90,11 @@
   },
   "canonicalised_player": {
     "names": 31,
-    "rows": 370
+    "rows": 366
   },
   "written": {
-    "rows": 73660,
-    "newest": "2026-10-07",
+    "rows": 73630,
+    "newest": "2026-10-08",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
     "mb": 7.86,
@@ -128,12 +128,12 @@
         2840
       ],
       [
-        "PRM",
-        2340
-      ],
-      [
         "EWC",
         2320
+      ],
+      [
+        "PRM",
+        2300
       ],
       [
         "LAS",
@@ -161,5 +161,5 @@
       ]
     ]
   },
-  "finished": "2026-10-08T12:45:42Z"
+  "finished": "2026-10-08T22:52:32Z"
 }
