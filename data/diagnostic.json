@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-10-09T21:56:48Z",
+  "started": "2026-10-10T03:03:29Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -14,12 +14,12 @@
       "detail": ""
     },
     {
-      "step": "Riot live rows: 7570",
+      "step": "Riot live rows: 7580",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "using 7570 Riot rows after 2026-07-28 (dropped 0 overlapping)",
+      "step": "using 7580 Riot rows after 2026-07-28 (dropped 0 overlapping)",
       "ok": true,
       "detail": ""
     },
@@ -29,7 +29,7 @@
       "detail": ""
     },
     {
-      "step": "merged 6 team name variants (220 rows)",
+      "step": "merged 6 team name variants (235 rows)",
       "ok": true,
       "detail": ""
     },
@@ -39,26 +39,26 @@
       "detail": ""
     },
     {
-      "step": "wrote 73640 rows spanning 2026-01-08 .. 2026-10-08",
+      "step": "wrote 73650 rows spanning 2026-01-08 .. 2026-10-09",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 2331,
-  "since": "2026-06-11",
+  "requests": 2334,
+  "since": "2026-06-12",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3032,
-  "riot_games_found": 757,
-  "side_resolved": 741,
+  "riot_events": 3033,
+  "riot_games_found": 758,
+  "side_resolved": 742,
   "side_fallback": 16,
-  "riot_games_ok": 757,
+  "riot_games_ok": 758,
   "riot_games_failed": 0,
-  "riot_rows_all": 7570,
-  "riot_rows_used": 7570,
+  "riot_rows_all": 7580,
+  "riot_rows_used": 7580,
   "alias_rejected": {
     "NS Challengers": "Nongshim Esports Academy (no name kinship)",
     "LOS": "LØS (no name kinship)"
@@ -86,15 +86,15 @@
   },
   "canonicalised_team": {
     "names": 6,
-    "rows": 220
+    "rows": 235
   },
   "canonicalised_player": {
     "names": 31,
     "rows": 369
   },
   "written": {
-    "rows": 73640,
-    "newest": "2026-10-08",
+    "rows": 73650,
+    "newest": "2026-10-09",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
     "mb": 7.86,
@@ -140,12 +140,12 @@
         2290
       ],
       [
-        "LIT",
-        2190
-      ],
-      [
         "CBLOL",
         2180
+      ],
+      [
+        "LIT",
+        2160
       ],
       [
         "LCS",
@@ -161,5 +161,5 @@
       ]
     ]
   },
-  "finished": "2026-10-09T22:13:11Z"
+  "finished": "2026-10-10T03:29:35Z"
 }
