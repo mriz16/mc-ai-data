@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-10-11T11:42:52Z",
+  "started": "2026-10-11T16:54:07Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -24,7 +24,7 @@
       "detail": ""
     },
     {
-      "step": "reconciled 19 Riot team names to history (1245 rows): kt Rolster->KT Rolster, Dplus KIA->Dplus Kia, Gen.G Esports->Gen.G, Team Liquid Alienware->Team Liquid, Heretics Academy->Team Heretics Academy, DNS Challengers->DN SOOPers Challengers",
+      "step": "reconciled 19 Riot team names to history (1260 rows): kt Rolster->KT Rolster, Dplus KIA->Dplus Kia, Gen.G Esports->Gen.G, Team Liquid Alienware->Team Liquid, Heretics Academy->Team Heretics Academy, DNS Challengers->DN SOOPers Challengers",
       "ok": true,
       "detail": ""
     },
@@ -34,24 +34,24 @@
       "detail": ""
     },
     {
-      "step": "merged 30 player name variants (369 rows)",
+      "step": "merged 28 player name variants (363 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "wrote 73680 rows spanning 2026-01-08 .. 2026-10-10",
+      "step": "wrote 73680 rows spanning 2026-01-08 .. 2026-10-11",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 2344,
+  "requests": 2343,
   "since": "2026-06-13",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3037,
+  "riot_events": 3038,
   "riot_games_found": 761,
   "side_resolved": 745,
   "side_fallback": 16,
@@ -89,12 +89,12 @@
     "rows": 220
   },
   "canonicalised_player": {
-    "names": 30,
-    "rows": 369
+    "names": 28,
+    "rows": 363
   },
   "written": {
     "rows": 73680,
-    "newest": "2026-10-10",
+    "newest": "2026-10-11",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
     "mb": 7.86,
@@ -161,5 +161,5 @@
       ]
     ]
   },
-  "finished": "2026-10-11T12:03:33Z"
+  "finished": "2026-10-11T17:16:38Z"
 }
