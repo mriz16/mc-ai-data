@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-10-10T20:47:56Z",
+  "started": "2026-10-11T02:34:31Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -14,12 +14,12 @@
       "detail": ""
     },
     {
-      "step": "Riot live rows: 7580",
+      "step": "Riot live rows: 7610",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "using 7580 Riot rows after 2026-07-28 (dropped 0 overlapping)",
+      "step": "using 7610 Riot rows after 2026-07-28 (dropped 0 overlapping)",
       "ok": true,
       "detail": ""
     },
@@ -29,36 +29,36 @@
       "detail": ""
     },
     {
-      "step": "merged 6 team name variants (235 rows)",
+      "step": "merged 6 team name variants (220 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 31 player name variants (369 rows)",
+      "step": "merged 30 player name variants (369 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "wrote 73650 rows spanning 2026-01-08 .. 2026-10-09",
+      "step": "wrote 73680 rows spanning 2026-01-08 .. 2026-10-10",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 2334,
-  "since": "2026-06-12",
+  "requests": 2343,
+  "since": "2026-06-13",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3035,
-  "riot_games_found": 758,
-  "side_resolved": 742,
+  "riot_events": 3037,
+  "riot_games_found": 761,
+  "side_resolved": 745,
   "side_fallback": 16,
-  "riot_games_ok": 758,
+  "riot_games_ok": 761,
   "riot_games_failed": 0,
-  "riot_rows_all": 7580,
-  "riot_rows_used": 7580,
+  "riot_rows_all": 7610,
+  "riot_rows_used": 7610,
   "alias_rejected": {
     "NS Challengers": "Nongshim Esports Academy (no name kinship)",
     "LOS": "LØS (no name kinship)"
@@ -86,15 +86,15 @@
   },
   "canonicalised_team": {
     "names": 6,
-    "rows": 235
+    "rows": 220
   },
   "canonicalised_player": {
-    "names": 31,
+    "names": 30,
     "rows": 369
   },
   "written": {
-    "rows": 73650,
-    "newest": "2026-10-09",
+    "rows": 73680,
+    "newest": "2026-10-10",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
     "mb": 7.86,
@@ -141,7 +141,7 @@
       ],
       [
         "CBLOL",
-        2180
+        2230
       ],
       [
         "LIT",
@@ -161,5 +161,5 @@
       ]
     ]
   },
-  "finished": "2026-10-10T21:11:57Z"
+  "finished": "2026-10-11T02:56:08Z"
 }
