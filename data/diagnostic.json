@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-10-17T09:49:27Z",
+  "started": "2026-10-17T14:32:31Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -24,7 +24,7 @@
       "detail": ""
     },
     {
-      "step": "reconciled 19 Riot team names to history (1325 rows): Dplus KIA->Dplus Kia, Heretics Academy->Team Heretics Academy, DNS Challengers->DN SOOPers Challengers, KRX Challengers->Kiwoom DRX Challengers, KaBuM! Eports->KaBuM! Ilha das Lendas, kt Challengers->KT Rolster Challengers",
+      "step": "reconciled 19 Riot team names to history (1325 rows): Heretics Academy->Team Heretics Academy, DNS Challengers->DN SOOPers Challengers, KRX Challengers->Kiwoom DRX Challengers, KaBuM! Eports->KaBuM! Ilha das Lendas, kt Challengers->KT Rolster Challengers, DK Challengers->Dplus Kia Challengers",
       "ok": true,
       "detail": ""
     },
@@ -39,7 +39,7 @@
       "detail": ""
     },
     {
-      "step": "wrote 73730 rows spanning 2026-01-08 .. 2026-10-16",
+      "step": "wrote 73730 rows spanning 2026-01-08 .. 2026-10-17",
       "ok": true,
       "detail": ""
     }
@@ -51,10 +51,10 @@
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3047,
+  "riot_events": 3048,
   "riot_games_found": 766,
-  "side_resolved": 722,
-  "side_fallback": 44,
+  "side_resolved": 718,
+  "side_fallback": 48,
   "riot_games_ok": 766,
   "riot_games_failed": 0,
   "riot_rows_all": 7660,
@@ -64,7 +64,6 @@
     "LOS": "LØS (no name kinship)"
   },
   "team_aliases": {
-    "Dplus KIA": "Dplus Kia",
     "Heretics Academy": "Team Heretics Academy",
     "DNS Challengers": "DN SOOPers Challengers",
     "KRX Challengers": "Kiwoom DRX Challengers",
@@ -77,6 +76,7 @@
     "Xi'an Team WE": "Team WE",
     "Edward Gaming Youth Team": "EDG Youth Team",
     "Team Liquid Alienware": "Team Liquid",
+    "Dplus KIA": "Dplus Kia Challengers",
     "Saigon Warrior": "Saigon Warriors",
     "Saigon 9Gaming Esports": "ZEN Esports",
     "UCAM Esports Club": "UCAM Esports",
@@ -94,7 +94,7 @@
   },
   "written": {
     "rows": 73730,
-    "newest": "2026-10-16",
+    "newest": "2026-10-17",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
     "mb": 7.87,
@@ -109,7 +109,7 @@
       ],
       [
         "LCK",
-        3610
+        3570
       ],
       [
         "LJL",
@@ -161,5 +161,5 @@
       ]
     ]
   },
-  "finished": "2026-10-17T10:13:15Z"
+  "finished": "2026-10-17T14:50:22Z"
 }
