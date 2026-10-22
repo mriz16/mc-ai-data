@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-10-22T16:11:21Z",
+  "started": "2026-10-22T20:55:55Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -14,12 +14,12 @@
       "detail": ""
     },
     {
-      "step": "Riot live rows: 7630",
+      "step": "Riot live rows: 7660",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "using 7630 Riot rows after 2026-07-28 (dropped 0 overlapping)",
+      "step": "using 7660 Riot rows after 2026-07-28 (dropped 0 overlapping)",
       "ok": true,
       "detail": ""
     },
@@ -34,31 +34,31 @@
       "detail": ""
     },
     {
-      "step": "merged 26 player name variants (365 rows)",
+      "step": "merged 26 player name variants (363 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "wrote 73700 rows spanning 2026-01-08 .. 2026-10-18",
+      "step": "wrote 73730 rows spanning 2026-01-08 .. 2026-10-22",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 2349,
+  "requests": 2358,
   "since": "2026-06-24",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3047,
-  "riot_games_found": 763,
-  "side_resolved": 715,
+  "riot_events": 3048,
+  "riot_games_found": 766,
+  "side_resolved": 718,
   "side_fallback": 48,
-  "riot_games_ok": 763,
+  "riot_games_ok": 766,
   "riot_games_failed": 0,
-  "riot_rows_all": 7630,
-  "riot_rows_used": 7630,
+  "riot_rows_all": 7660,
+  "riot_rows_used": 7660,
   "alias_rejected": {
     "NS Challengers": "Nongshim Esports Academy (no name kinship)",
     "LOS": "LØS (no name kinship)"
@@ -90,11 +90,11 @@
   },
   "canonicalised_player": {
     "names": 26,
-    "rows": 365
+    "rows": 363
   },
   "written": {
-    "rows": 73700,
-    "newest": "2026-10-18",
+    "rows": 73730,
+    "newest": "2026-10-22",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
     "mb": 7.87,
@@ -161,5 +161,5 @@
       ]
     ]
   },
-  "finished": "2026-10-22T16:32:33Z"
+  "finished": "2026-10-22T21:23:38Z"
 }
