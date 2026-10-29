@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-10-28T21:57:22Z",
+  "started": "2026-10-29T03:12:03Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -14,12 +14,12 @@
       "detail": ""
     },
     {
-      "step": "Riot live rows: 7120",
+      "step": "Riot live rows: 7110",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "using 7120 Riot rows after 2026-07-28 (dropped 0 overlapping)",
+      "step": "using 7110 Riot rows after 2026-07-28 (dropped 0 overlapping)",
       "ok": true,
       "detail": ""
     },
@@ -34,31 +34,31 @@
       "detail": ""
     },
     {
-      "step": "merged 27 player name variants (328 rows)",
+      "step": "merged 27 player name variants (324 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "wrote 73190 rows spanning 2026-01-08 .. 2026-10-28",
+      "step": "wrote 73180 rows spanning 2026-01-08 .. 2026-10-28",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 2197,
-  "since": "2026-06-30",
+  "requests": 2193,
+  "since": "2026-07-01",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3073,
-  "riot_games_found": 712,
-  "side_resolved": 667,
+  "riot_events": 3074,
+  "riot_games_found": 711,
+  "side_resolved": 666,
   "side_fallback": 45,
-  "riot_games_ok": 712,
+  "riot_games_ok": 711,
   "riot_games_failed": 0,
-  "riot_rows_all": 7120,
-  "riot_rows_used": 7120,
+  "riot_rows_all": 7110,
+  "riot_rows_used": 7110,
   "alias_rejected": {
     "LOS": "LØS (no name kinship)"
   },
@@ -90,10 +90,10 @@
   },
   "canonicalised_player": {
     "names": 27,
-    "rows": 328
+    "rows": 324
   },
   "written": {
-    "rows": 73190,
+    "rows": 73180,
     "newest": "2026-10-28",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
@@ -161,5 +161,5 @@
       ]
     ]
   },
-  "finished": "2026-10-28T22:19:19Z"
+  "finished": "2026-10-29T03:34:01Z"
 }
