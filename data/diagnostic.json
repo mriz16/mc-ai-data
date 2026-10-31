@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-10-31T16:25:49Z",
+  "started": "2026-10-31T20:44:12Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -14,17 +14,17 @@
       "detail": ""
     },
     {
-      "step": "Riot live rows: 7040",
+      "step": "Riot live rows: 7020",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "using 7040 Riot rows after 2026-07-28 (dropped 0 overlapping)",
+      "step": "using 7020 Riot rows after 2026-07-28 (dropped 0 overlapping)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "reconciled 20 Riot team names to history (1265 rows): BOMBA Team->Bomba Team, kt Challengers->KT Rolster Challengers, DNS Challengers->DN SOOPers Challengers, Gen.G Esports->Gen.G, DK Challengers->Dplus Kia Challengers, KaBuM! Eports->KaBuM! Ilha das Lendas",
+      "step": "reconciled 20 Riot team names to history (1245 rows): kt Challengers->KT Rolster Challengers, DNS Challengers->DN SOOPers Challengers, Gen.G Esports->Gen.G, DK Challengers->Dplus Kia Challengers, KaBuM! Eports->KaBuM! Ilha das Lendas, NightBirds->Nightbirds",
       "ok": true,
       "detail": ""
     },
@@ -39,31 +39,30 @@
       "detail": ""
     },
     {
-      "step": "wrote 73110 rows spanning 2026-01-08 .. 2026-10-30",
+      "step": "wrote 73090 rows spanning 2026-01-08 .. 2026-10-31",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 2172,
+  "requests": 2166,
   "since": "2026-07-03",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3077,
-  "riot_games_found": 704,
-  "side_resolved": 659,
+  "riot_events": 3079,
+  "riot_games_found": 702,
+  "side_resolved": 657,
   "side_fallback": 45,
-  "riot_games_ok": 704,
+  "riot_games_ok": 702,
   "riot_games_failed": 0,
-  "riot_rows_all": 7040,
-  "riot_rows_used": 7040,
+  "riot_rows_all": 7020,
+  "riot_rows_used": 7020,
   "alias_rejected": {
     "LOS": "LØS (no name kinship)"
   },
   "team_aliases": {
-    "BOMBA Team": "Bomba Team",
     "kt Challengers": "KT Rolster Challengers",
     "DNS Challengers": "DN SOOPers Challengers",
     "Gen.G Esports": "Gen.G",
@@ -72,6 +71,7 @@
     "NightBirds": "Nightbirds",
     "TOP ESPORTS": "Top Esports",
     "Xi'an Team WE": "Team WE",
+    "BOMBA Team": "Bomba Team",
     "Edward Gaming Youth Team": "EDG Youth Team",
     "Team Liquid Alienware": "Team Liquid",
     "Dplus KIA": "Dplus Kia",
@@ -93,8 +93,8 @@
     "rows": 313
   },
   "written": {
-    "rows": 73110,
-    "newest": "2026-10-30",
+    "rows": 73090,
+    "newest": "2026-10-31",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
     "mb": 7.8,
@@ -161,5 +161,5 @@
       ]
     ]
   },
-  "finished": "2026-10-31T16:40:59Z"
+  "finished": "2026-10-31T21:00:44Z"
 }
