@@ -1,18 +1,18 @@
-=== npm publish attempt 2026-10-31 21:00 UTC ===
+=== npm publish attempt 2026-11-01 03:13 UTC ===
 token present: yes (length 40)
 --- npm whoami ---
 npm error code E401
 npm error 401 Unauthorized - GET https://registry.npmjs.org/-/whoami
-npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-10-31T21_00_47_214Z-debug-0.log
+npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-11-01T03_13_49_202Z-debug-0.log
 (whoami failed - token invalid, expired, or wrong type)
 --- npm version ---
-v1.0.373
+v1.0.374
 --- npm publish ---
 npm warn publish npm auto-corrected some errors in your package.json when publishing.  Please run "npm pkg fix" to address these errors.
 npm warn publish errors corrected:
 npm warn publish "repository.url" was normalized to "git+https://github.com/mriz16/mc-ai-data.git"
 npm notice
-npm notice 📦  mc-ai-data-mriz16@1.0.373
+npm notice 📦  mc-ai-data-mriz16@1.0.374
 npm notice Tarball Contents
 npm notice 3.5kB data/diagnostic.json
 npm notice 7.8MB data/latest.json
@@ -20,21 +20,21 @@ npm notice 408B data/npm-publish.log
 npm notice 355B package.json
 npm notice Tarball Details
 npm notice name: mc-ai-data-mriz16
-npm notice version: 1.0.373
-npm notice filename: mc-ai-data-mriz16-1.0.373.tgz
+npm notice version: 1.0.374
+npm notice filename: mc-ai-data-mriz16-1.0.374.tgz
 npm notice package size: 1.2 MB
 npm notice unpacked size: 7.8 MB
-npm notice shasum: 1858d8e77d7f6b56736ddaa6d93987fdbd332084
-npm notice integrity: sha512-qR0su1DafKlU1[...]K1TYoAm1oc3sg==
+npm notice shasum: ac12a03cbb052dff413a15c2b05239aa98cee635
+npm notice integrity: sha512-Itm7Jks3bNJ42[...]BCFsY6JImxG8Q==
 npm notice total files: 4
 npm notice
 npm notice Publishing to https://registry.npmjs.org/ with tag latest and public access
 npm error code E404
 npm error 404 Not Found - PUT https://registry.npmjs.org/mc-ai-data-mriz16 - Not found
 npm error 404
-npm error 404  'mc-ai-data-mriz16@1.0.373' is not in this registry.
+npm error 404  'mc-ai-data-mriz16@1.0.374' is not in this registry.
 npm error 404
 npm error 404 Note that you can also install from a
 npm error 404 tarball, folder, http url, or git url.
-npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-10-31T21_00_47_882Z-debug-0.log
+npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-11-01T03_13_50_293Z-debug-0.log
 exit code: 1
