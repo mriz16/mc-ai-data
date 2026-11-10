@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-11-10T00:55:59Z",
+  "started": "2026-11-10T13:52:53Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -14,51 +14,51 @@
       "detail": ""
     },
     {
-      "step": "Riot live rows: 6940",
+      "step": "Riot live rows: 6920",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "using 6940 Riot rows after 2026-07-28 (dropped 0 overlapping)",
+      "step": "using 6920 Riot rows after 2026-07-28 (dropped 0 overlapping)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "reconciled 20 Riot team names to history (1315 rows): Gen.G Esports->Gen.G, DK Challengers->Dplus Kia Challengers, kt Challengers->KT Rolster Challengers, KaBuM! Eports->KaBuM! Ilha das Lendas, NightBirds->Nightbirds, TOP ESPORTS->Top Esports",
+      "step": "reconciled 20 Riot team names to history (1330 rows): Gen.G Esports->Gen.G, DK Challengers->Dplus Kia Challengers, kt Challengers->KT Rolster Challengers, KaBuM! Eports->KaBuM! Ilha das Lendas, NightBirds->Nightbirds, TOP ESPORTS->Top Esports",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 4 team name variants (120 rows)",
+      "step": "merged 3 team name variants (95 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "merged 25 player name variants (292 rows)",
+      "step": "merged 26 player name variants (292 rows)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "wrote 73010 rows spanning 2026-01-08 .. 2026-11-08",
+      "step": "wrote 72990 rows spanning 2026-01-08 .. 2026-11-10",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 2140,
+  "requests": 2134,
   "since": "2026-07-13",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3087,
-  "riot_games_found": 694,
-  "side_resolved": 649,
+  "riot_events": 3089,
+  "riot_games_found": 692,
+  "side_resolved": 647,
   "side_fallback": 45,
-  "riot_games_ok": 694,
+  "riot_games_ok": 692,
   "riot_games_failed": 0,
-  "riot_rows_all": 6940,
-  "riot_rows_used": 6940,
+  "riot_rows_all": 6920,
+  "riot_rows_used": 6920,
   "alias_rejected": {
     "LOS": "LØS (no name kinship)"
   },
@@ -85,16 +85,16 @@
     "BILIBILI GAMING": "Bilibili Gaming"
   },
   "canonicalised_team": {
-    "names": 4,
-    "rows": 120
+    "names": 3,
+    "rows": 95
   },
   "canonicalised_player": {
-    "names": 25,
+    "names": 26,
     "rows": 292
   },
   "written": {
-    "rows": 73010,
-    "newest": "2026-11-08",
+    "rows": 72990,
+    "newest": "2026-11-10",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
     "mb": 7.78,
@@ -125,7 +125,7 @@
       ],
       [
         "LEC",
-        2800
+        2750
       ],
       [
         "EWC",
@@ -161,5 +161,5 @@
       ]
     ]
   },
-  "finished": "2026-11-10T01:10:58Z"
+  "finished": "2026-11-10T14:07:30Z"
 }
