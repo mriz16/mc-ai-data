@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-11-14T21:45:07Z",
+  "started": "2026-11-15T03:30:58Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -14,17 +14,17 @@
       "detail": ""
     },
     {
-      "step": "Riot live rows: 6900",
+      "step": "Riot live rows: 6890",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "using 6900 Riot rows after 2026-07-28 (dropped 0 overlapping)",
+      "step": "using 6890 Riot rows after 2026-07-28 (dropped 0 overlapping)",
       "ok": true,
       "detail": ""
     },
     {
-      "step": "reconciled 20 Riot team names to history (1365 rows): Gen.G Esports->Gen.G, DK Challengers->Dplus Kia Challengers, kt Challengers->KT Rolster Challengers, KaBuM! Eports->KaBuM! Ilha das Lendas, NightBirds->Nightbirds, TOP ESPORTS->Top Esports",
+      "step": "reconciled 20 Riot team names to history (1405 rows): Gen.G Esports->Gen.G, DK Challengers->Dplus Kia Challengers, kt Challengers->KT Rolster Challengers, KaBuM! Eports->KaBuM! Ilha das Lendas, NightBirds->Nightbirds, TOP ESPORTS->Top Esports",
       "ok": true,
       "detail": ""
     },
@@ -39,26 +39,26 @@
       "detail": ""
     },
     {
-      "step": "wrote 72970 rows spanning 2026-01-08 .. 2026-11-13",
+      "step": "wrote 72960 rows spanning 2026-01-08 .. 2026-11-14",
       "ok": true,
       "detail": ""
     }
   ],
   "outcome": "ok",
-  "requests": 2128,
-  "since": "2026-07-17",
+  "requests": 2122,
+  "since": "2026-07-18",
   "history_source": "./oracles_elixir.json.gz",
   "history_file_rows": 66070,
   "oe_rows": 66070,
   "oe_newest": "2026-07-28",
-  "riot_events": 3092,
-  "riot_games_found": 690,
-  "side_resolved": 650,
+  "riot_events": 3093,
+  "riot_games_found": 689,
+  "side_resolved": 649,
   "side_fallback": 40,
-  "riot_games_ok": 690,
+  "riot_games_ok": 689,
   "riot_games_failed": 0,
-  "riot_rows_all": 6900,
-  "riot_rows_used": 6900,
+  "riot_rows_all": 6890,
+  "riot_rows_used": 6890,
   "alias_rejected": {
     "LOS": "LØS (no name kinship)"
   },
@@ -93,8 +93,8 @@
     "rows": 287
   },
   "written": {
-    "rows": 72970,
-    "newest": "2026-11-13",
+    "rows": 72960,
+    "newest": "2026-11-14",
     "oldest": "2026-01-08",
     "history_through": "2026-07-28",
     "mb": 7.78,
@@ -125,7 +125,7 @@
       ],
       [
         "LEC",
-        2750
+        2700
       ],
       [
         "EWC",
@@ -161,5 +161,5 @@
       ]
     ]
   },
-  "finished": "2026-11-14T22:03:19Z"
+  "finished": "2026-11-15T03:59:33Z"
 }
