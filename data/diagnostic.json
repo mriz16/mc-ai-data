@@ -1,7 +1,7 @@
 {
   "version": 8,
   "source": "oracles_elixir + riot_esports",
-  "started": "2026-11-25T01:41:35Z",
+  "started": "2026-11-25T16:20:12Z",
   "steps": [
     {
       "step": "history file: 66070 rows (full file, not windowed)",
@@ -161,5 +161,5 @@
       ]
     ]
   },
-  "finished": "2026-11-25T01:59:18Z"
+  "finished": "2026-11-25T16:43:56Z"
 }
